@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Prevent MyCharleston Timeouts
 // @namespace    https://github.com/dwtaber/userscripts
-// @version      0.2
+// @version      0.2.1
 // @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/PreventMyCharlestonTimeouts.js
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/PreventMyCharlestonTimeouts.js
 // @description  Triggers MyCharleston's resetTimeout function every 30 seconds.
