@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LibChat Volume Slider
 // @namespace    https://github.com/dwtaber/userscripts
-// @version      0.2.1
+// @version      0.2.2
 // @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/LibChatVolumeSlider.js
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/LibChatVolumeSlider.js
 // @description  Allows volume adjustment for LibChat notification sounds
