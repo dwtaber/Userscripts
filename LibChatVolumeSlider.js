@@ -7,6 +7,7 @@
 // @description  Allows volume adjustment for LibChat notification sounds
 // @author       dwtaber@gmail.com
 // @match        https://*.libanswers.com/admin/dashboard
+// @match        https://answers.library.cofc.edu/admin/dashboard
 // @grant        none
 // ==/UserScript==
 
