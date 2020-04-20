@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LibChat Volume Slider
 // @namespace    https://github.com/dwtaber/userscripts
-// @version      0.2
+// @version      0.2.1
 // @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/LibChatVolumeSlider.js
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/LibChatVolumeSlider.js
 // @description  Allows volume adjustment for LibChat notification sounds
@@ -9,6 +9,11 @@
 // @match        https://*.libanswers.com/admin/dashboard
 // @grant        none
 // ==/UserScript==
+
+
+//Default volume.  Any number between 0 and 100.
+const defaultVolume = 20
+;
 
 //Inject slider style into document head.
 const volumeSliderStyle = `
@@ -42,7 +47,7 @@ slider.setAttribute("id","volumeSlider");
 slider.setAttribute("type","range");
 slider.setAttribute("min","0");
 slider.setAttribute("max","100");
-slider.setAttribute("value","20");
+slider.setAttribute("value",defaultVolume);
 
 const label = document.createElement("span");
 label.setAttribute("id","toggleLabel")
