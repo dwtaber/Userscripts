@@ -5,7 +5,7 @@
 // @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/LibChatVolumeSlider.js
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/LibChatVolumeSlider.js
 // @description  Allows volume adjustment for LibChat notification sounds
-// @author       dwtaber@cofc.edu
+// @author       dwtaber@gmail.com
 // @match        https://*.libanswers.com/admin/dashboard
 // @grant        none
 // ==/UserScript==
