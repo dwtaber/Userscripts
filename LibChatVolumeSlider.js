@@ -5,7 +5,7 @@
 // @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/LibChatVolumeSlider.js
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/LibChatVolumeSlider.js
 // @description  Allows volume adjustment for LibChat notification sounds
-// @author       dwtaber@gmail.com
+// @author       dwtaber@cofc.edu
 // @match        https://*.libanswers.com/admin/dashboard
 // @grant        none
 // ==/UserScript==
@@ -61,19 +61,19 @@ targetNode.after(container);
 const sounds = document.getElementsByTagName("audio");
 
 //Initial volume level.
-let sliderVolume = parseVolume(slider.value);
+let sliderVolume = parseSlider(slider.value);
 
 //Update volume with slider.
 slider.oninput = setVolume();
 
 
 function parseSlider() {
-    sliderVolume = parseInt(numberString)/100;
+    sliderVolume = parseInt(slider.value)/100;
 }
 
 function setVolume() {
-    parseVolume();
-    for (sound in sounds)
+    parseSlider();
+    for (let sound in sounds)
     {
         sound.setAttribute("volume",sliderVolume);
     }
