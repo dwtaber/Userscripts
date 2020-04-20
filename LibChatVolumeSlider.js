@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         LibChat Volume Slider
 // @namespace    https://github.com/dwtaber/userscripts
-// @version      0.1
+// @version      0.2
 // @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/LibChatVolumeSlider.js
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/LibChatVolumeSlider.js
 // @description  Allows volume adjustment for LibChat notification sounds
-// @author       dwtaber@cofc.edu
+// @author       dwtaber@gmail.com
 // @match        https://*.libanswers.com/admin/dashboard
 // @grant        none
 // ==/UserScript==
@@ -52,19 +52,21 @@ label.setAttribute("class","toggleLabel");
 container.append(wrapper);
 wrapper.append(slider);
 container.append(label);
+label.append("Volume");
 
 //Insert node at target location.
 const targetNode = document.getElementById("notifyToggleGroup").parentNode.childNodes[2];
 targetNode.after(container);
 
 //Identify alert sounds.
-const sounds = document.getElementsByTagName("audio");
+var alertSounds = document.getElementsByTagName("audio");
 
 //Initial volume level.
-let sliderVolume = parseSlider(slider.value);
+var sliderVolume;
+document.onload = setVolume();
 
 //Update volume with slider.
-slider.oninput = setVolume();
+slider.addEventListener("input",setVolume);
 
 
 function parseSlider() {
@@ -73,8 +75,7 @@ function parseSlider() {
 
 function setVolume() {
     parseSlider();
-    for (let sound in sounds)
-    {
-        sound.setAttribute("volume",sliderVolume);
-    }
+    document.getElementById("sound").volume = sliderVolume;
+    document.getElementById("sound_msg").volume = sliderVolume;
+    document.getElementById("sound_la").volume = sliderVolume;
 }
