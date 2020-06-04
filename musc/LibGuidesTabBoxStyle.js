@@ -15,17 +15,19 @@
 
     //Inject style into document head.
     const tabBoxStyleContent = `
-    ul.nav.nav-tabs li.active a {
-        color: #005486
-    }
-
-    ul.nav.nav-tabs a {
-        color: #999;
-        font-size: 0.9em !important;
+    ul.nav.nav-tabs>li.active>a {
+        color: #005486;
+        background-color: #d9e9f2;
         font-weight: 600;
     }
+
+    ul.nav.nav-tabs>li>a {
+        color: #999;
+        font-size: 0.9em !important;
+        margin-bottom: 0;
+    }
     `;
-    
+
     const tabBoxStyle = document.createElement("style");
     tabBoxStyle.innerHTML = tabBoxStyleContent;
     document.head.append(tabBoxStyle);
