@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/musc/LibGuidesTabBoxStyle.js
 // @description  Allows volume adjustment for LibChat notification sounds
 // @author       dwtaber@gmail.com
-// @match        http://musc.libguides.com/*
+// @match        http*://musc.libguides.com/*
 // @grant        none
 // ==/UserScript==
 
@@ -14,7 +14,7 @@
     'use strict';
 
     //Inject style into document head.
-    const volumeSliderStyle = `
+    const tabBoxStyleContent = `
     ul.nav.nav-tabs li.active a {
         color: #005486
     }
@@ -26,4 +26,8 @@
     }
     `;
     
+    const tabBoxStyle = document.createElement("style");
+    tabBoxStyle.innerHTML = tabBoxStyleContent;
+    document.head.append(tabBoxStyle);
+
 })();
