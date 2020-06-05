@@ -4,7 +4,7 @@
 // @version      0.1
 // @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/musc/LibGuidesTabBoxStyle.js
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/musc/LibGuidesTabBoxStyle.js
-// @description  Allows volume adjustment for LibChat notification sounds
+// @description  Alters styling of tabbed boxes on MUSC LibGuides
 // @author       dwtaber@gmail.com
 // @match        http*://musc.libguides.com/*
 // @grant        none
