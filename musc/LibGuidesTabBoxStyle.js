@@ -22,7 +22,7 @@
     }
 
     ul.nav.nav-tabs>li>a {
-        color: #999;
+        color: #000;
         font-size: 0.9em;
         margin-bottom: 0;
     }
