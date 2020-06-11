@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LibGuides Tab Box Style
 // @namespace    https://github.com/dwtaber/userscripts
-// @version      0.1.2
+// @version      0.2
 // @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/musc/LibGuidesTabBoxStyle.js
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/musc/LibGuidesTabBoxStyle.js
 // @description  Alters styling of tabbed boxes on MUSC LibGuides
@@ -22,7 +22,7 @@
     }
 
     ul.nav.nav-tabs>li>a {
-        color: #000;
+        color: #000000;
         font-size: 0.9em;
         margin-bottom: 0;
     }
