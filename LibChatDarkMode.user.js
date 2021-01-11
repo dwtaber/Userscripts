@@ -2,8 +2,8 @@
 // @name         LibChat Dark Mode
 // @namespace    https://github.com/dwtaber/userscripts
 // @version      0.1
-// @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/LibChatDarkMode.js
-// @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/LibChatDarkMode.js
+// @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/LibChatDarkMode.user.js
+// @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/LibChatDarkMode.user.js
 // @description  Dark mode for LibChat
 // @author       dwtaber@gmail.com
 // @match        https://*.libanswers.com/admin/dashboard
