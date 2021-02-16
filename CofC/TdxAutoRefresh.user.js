@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         TDX Auto-refresh
 // @namespace    https://github.com/dwtaber/userscripts
-// @version      0.8
+// @version      0.8.1
 // @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxAutoRefresh.user.js
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxAutoRefresh.user.js
 // @description  Refreshes all modules in TDNext desktops at a specified interval.
