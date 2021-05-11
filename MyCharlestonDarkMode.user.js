@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MyCharleston Admin Dark Mode
 // @namespace    https://github.com/dwtaber/userscripts
-// @version      0.1.1
+// @version      0.1.2
 // @description  Dark mode for MyCharleston admin console
 // @author       Dan Taber
 // @match        https://github.com/dwtaber/Userscripts/blob/master/MyCharlestonDarkMode.user.js
@@ -133,4 +133,4 @@ styleTag.innerHTML = darkModeStyle;
 document.head.append(styleTag);
 
 // Removes a layout image.
-document.getElementsByClassName("bg1")[0].getElementsByTagName("img")[0].remove()
+// document.getElementsByClassName("bg1")[0].getElementsByTagName("img")[0].remove()
