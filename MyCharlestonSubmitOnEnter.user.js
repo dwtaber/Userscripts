@@ -10,4 +10,4 @@
 
 
 // Submit on Enter.
-document.getElementsByName("UserName")[0].type = "submit";
+document.getElementsByName("search_btn")[0].type = "submit";
