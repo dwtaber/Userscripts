@@ -4,7 +4,7 @@
 // @version      0.1.2
 // @description  Dark mode for MyCharleston admin console
 // @author       Dan Taber
-// @match        https://github.com/dwtaber/Userscripts/blob/master/MyCharlestonDarkMode.user.js
+// @match        https://github.com/dwtaber/Userscripts/CofC/blob/master/MyCharlestonDarkMode.user.js
 // @include      https://my.cofc.edu/jsp/admin/*
 // @include      https://my.cofc.edu/jsp/*
 // @include      https://my.cofc.edu/cp/*
@@ -131,6 +131,3 @@ a:link, .leaf a:link, .location a:link, a:visited
 const styleTag = document.createElement("style");
 styleTag.innerHTML = darkModeStyle;
 document.head.append(styleTag);
-
-// Removes a layout image.
-// document.getElementsByClassName("bg1")[0].getElementsByTagName("img")[0].remove()
