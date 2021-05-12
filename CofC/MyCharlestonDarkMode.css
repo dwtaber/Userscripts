@@ -1,20 +1,3 @@
-// ==UserScript==
-// @name         MyCharleston Admin Dark Mode
-// @namespace    https://github.com/dwtaber/userscripts
-// @version      0.1.3
-// @description  Dark mode for MyCharleston admin console
-// @author       Dan Taber
-// @match        https://github.com/dwtaber/Userscripts/blob/master/MyCharlestonDarkMode.user.js
-// @include      https://my.cofc.edu/jsp/admin/*
-// @include      https://my.cofc.edu/jsp/*
-// @include      https://my.cofc.edu/cp/*
-// @exclude      https://my.cofc.edu/cp/home/displaylogin
-// @grant        none
-// ==/UserScript==
-
-// Inject dark mode style into document head.
-const darkModeStyle = `
-
 body
 {
     background-color: #1E1E1E;
@@ -149,11 +132,3 @@ input.btn:hover {
     text-decoration: none;
     cursor: pointer;
 }
-`;
-
-const styleTag = document.createElement("style");
-styleTag.innerHTML = darkModeStyle;
-document.head.append(styleTag);
-
-// Removes a layout image.
-// document.getElementsByClassName("bg1")[0].getElementsByTagName("img")[0].remove()
