@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MyCharleston Admin Dark Mode
 // @namespace    https://github.com/dwtaber/userscripts
-// @version      0.1.5
+// @version      0.1.6
 // @description  Dark mode for MyCharleston admin console
 // @author       Dan Taber
 // @match        https://github.com/dwtaber/Userscripts/blob/master/CofC/MyCharlestonDarkMode.user.js
@@ -12,7 +12,7 @@
 // @grant        none
 // ==/UserScript==
 
-// Inject dark mode style into document head.
+// The style sheet to be injected.
 const darkModeStyle = `
 
 body
@@ -140,7 +140,8 @@ span.node a:hover
     text-decoration: underline;
 }
 
-input.btn:hover {
+input.btn:hover
+{
     color: #FFF;
     background-color: #505050;
     border-width: 1px;
@@ -149,11 +150,27 @@ input.btn:hover {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Hovering over search results highlights that row. */
+tr:hover > td.datarowitem,
+tr:hover > td.datarowitem-username
+{
+	background-color: #333;
+    cursor: pointer;
+}
+
 `;
 
+// Inject dark mode style sheet into document head.
 const styleTag = document.createElement("style");
 styleTag.innerHTML = darkModeStyle;
 document.head.append(styleTag);
 
-// Removes a layout image.
-// document.getElementsByClassName("bg1")[0].getElementsByTagName("img")[0].remove()
+// Clicking anywhere within a row opens that user record.
+const dataRowItems = document.getElementsByClassName("datarowitem-username")
+if (dataRowItems != null) {
+    for (let item of dataRowItems) {
+        let uri = item.firstChild.firstChild.href;
+        item.parentNode.onclick = function(){window.location.href = uri}
+    }
+}
