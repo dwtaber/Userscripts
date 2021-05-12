@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         MyCharleston Admin Dark Mode
 // @namespace    https://github.com/dwtaber/userscripts
-// @version      0.1.3
+// @version      0.1.4
 // @description  Dark mode for MyCharleston admin console
 // @author       Dan Taber
-// @match        https://github.com/dwtaber/Userscripts/blob/master/MyCharlestonDarkMode.user.js
+// @match        https://github.com/dwtaber/Userscripts/CofC/blob/master/MyCharlestonDarkMode.user.js
 // @include      https://my.cofc.edu/jsp/admin/*
 // @include      https://my.cofc.edu/jsp/*
 // @include      https://my.cofc.edu/cp/*
