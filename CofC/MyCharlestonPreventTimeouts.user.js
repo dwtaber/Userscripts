@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         MyCharleston Prevent Timeouts
-// @version      2021.05.13.0
+// @version      2021.05.13.1
 // @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonPreventTimeouts.user.js
 // @updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonPreventTimeouts.user.js
-// @namespace    https://github.com/dwtaber/userscripts
-// @supportURL   https://github.com/dwtaber/userscripts
+// @namespace    https://github.com/dwtaber/Userscripts
+// @supportURL   https://github.com/dwtaber/Userscripts
 // @description  Triggers MyCharleston's resetTimeout function every 30 seconds.
 // @author       Dan Taber
 // @include      https://my.cofc.edu/*
