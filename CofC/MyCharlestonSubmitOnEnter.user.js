@@ -1,11 +1,14 @@
 // ==UserScript==
 // @name         MyCharleston Admin Submit on Enter
+// @version      2021.05.13.0
+// @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonSubmitOnEnter.user.js
+// @updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonSubmitOnEnter.user.js
 // @namespace    https://github.com/dwtaber/userscripts
-// @version      0.1.2
+// @supportURL   https://github.com/dwtaber/userscripts
 // @description  Enables submiting name/username searches with the Enter/Return key in the admin console.
 // @author       Dan Taber
-// @match        https://github.com/dwtaber/Userscripts/blob/master/CofC/MyCharlestonSubmitOnEnter.user.js
 // @include      https://my.cofc.edu/jsp/admin/manageUser.jsp
+// @grant        none
 // ==/UserScript==
 
 
