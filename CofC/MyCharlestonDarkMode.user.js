@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         MyCharleston Admin Dark Mode
-// @version      2021.05.13.1
+// @version      2021.05.18.0
 // @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonDarkMode.user.js
 // @updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonDarkMode.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
@@ -170,9 +170,16 @@ document.head.append(styleTag);
 
 // Clicking anywhere within a row opens that user record.
 const dataRowItems = document.getElementsByClassName("datarowitem-username")
-if (dataRowItems != null) {
+if (dataRowItems != null)
+{
     for (let item of dataRowItems) {
         let uri = item.firstChild.firstChild.href;
         item.parentNode.onclick = function(){window.location.href = uri}
     }
+}
+
+// Fix menu bar scrollbar.
+if (document.URL.includes("https://my.cofc.edu/jsp/admin/menu.jsp"))
+{
+    document.getElementById("folder_menu").removeAttribute("width");
 }
