@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         TDX Account Shortcuts
-// @version      2021.05.20.0
+// @version      2021.05.20.1
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxAccountShortcuts.user.js
 // @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxAccountShortcuts.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
 // @supportURL   https://github.com/dwtaber/Userscripts
 // @description  Creates shortcut buttons for selecting common account/department values for new users.
 // @author       Dan Taber
+// @match        https://cofc.teamdynamix.com/TDNext/Apps/People/PersonNew
 // @match        https://cofc.teamdynamix.com/SBTDNext/Apps/People/PersonNew
 // @grant        none
 // ==/UserScript==
@@ -60,6 +61,6 @@ document.getElementById("txtOrganization").value = "College of Charleston";
 document.head.appendChild(quickButtonStyle);
 
 // Inject the buttons and their container between the label and the input box.
-document.getElementById(divAccount)
+document.getElementById("divAccount")
         .firstElementChild
         .after(buttonContainer);
