@@ -1,0 +1,4957 @@
+/* Font includes *//*#region*/
+@font-face {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(//themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff')
+}
+
+@font-face {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(//themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format('woff')
+}
+
+@font-face {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(//themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff')
+}
+
+@font-face {
+    font-family: Open Sans;
+    font-style: italic;
+    font-weight: 400;
+    src: local('Open Sans Italic'), local('OpenSans-Italic'), url(//themes.googleusercontent.com/static/fonts/opensans/v6/xjAJXh38I15wypJXxuGMBobN6UDyHWBl620a-IRfuBk.woff) format('woff')
+}
+/*#endregion*/
+
+/* LESS Variables *//*#region*/
+.form:focus {
+    border-color: #3F9AE4;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6)
+}
+
+.btn-danger,
+.btn-default,
+.btn-primary {
+    border: 0px;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    /*font-size: 12px;*/
+    -webkit-appearance: none
+}
+
+.input-group-btn .btn-default {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #333;
+    background-color: #fff;
+    margin-left: 0px;
+    margin-right: 0px
+}
+
+.input-group-btn:last-child>.btn {
+    margin-right: -1px
+}
+
+.frmFldLbl {
+    text-align: right
+}
+
+.frmFldLbl,
+.stacked .frmFldLbl {
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: #424242;
+    font-size: 14px
+}
+
+.stacked .frmFldLbl {
+    text-align: left;
+    margin-top: 15px
+}
+
+tr.TDGridHeader {
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd
+}
+
+table>thead>tr.TDGridHeader>th,
+tr.TDGridHeader td {
+    line-height: 20px;
+    font-weight: 700;
+    color: #646464;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc
+}
+
+.TDGroupingRow {
+    font-weight: 700;
+    color: #336699;
+    background-color: #f5f5f5;
+    height: 23px;
+    text-align: left
+}
+
+.TDGroupingRow select {
+    display: inline;
+    width: 200px
+}
+
+.grouping-row {
+    padding: 8px;
+    background-color: #f5f5f5;
+    font-weight: 700
+}
+
+.TDAlternatingRow {
+    background-color: #f9f9f9
+}
+
+.TDFooterRow {
+    background-color: #f5f5f5
+}
+
+.TDPagerRow>td {
+    padding: 12px 8px;
+    border-top: 1px solid #dcdcdc;
+    font-size: 12px !important
+}
+
+.TDPagerRow>td>a {
+    margin-right: 8px
+}
+
+.TDPagerRow>td>span {
+    margin-right: 8px;
+    padding: 1px 6px;
+    background-color: #f5f5f5;
+    border: 1px solid #dcdcdc;
+    border-radius: 9px;
+    font-weight: 700
+}
+
+.TDPagerRow>div {
+    padding: 10px 10px 0px 8px;
+    font-size: 12px !important
+}
+
+td.SortColumn a,
+th.SortColumn a {
+    font-weight: bolder;
+    color: #bf3935
+}
+
+td.CheckColumn,
+th.CheckColumn {
+    width: 50px;
+    text-align: center
+}
+
+select.TDSelect {
+    height: 34px
+}
+
+select.TDSelect,
+select[multiple].TDSelect {
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+}
+
+select[multiple].TDSelect {
+    height: 34px;
+    height: 60px
+}
+
+select[multiple][size].TDSelect {
+    height: auto
+}
+
+input.TDTextBox,
+textarea.TDTextArea {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border: 1px solid #cdcdcd
+}
+
+input.TDTextBox {
+    min-width: 40px
+}
+
+.gutter-none {
+    margin: 0
+}
+
+.gutter {
+    margin: 15px
+}
+
+.gutter-xs {
+    margin: 4px
+}
+
+.gutter-sm {
+    margin: 8px
+}
+
+.gutter-lg {
+    margin: 30px
+}
+
+.gutter-xl {
+    margin: 45px
+}
+
+.gutter-top-none {
+    margin-top: 0
+}
+
+.gutter-top {
+    margin-top: 15px
+}
+
+.gutter-top-xs {
+    margin-top: 4px
+}
+
+.gutter-top-sm {
+    margin-top: 8px
+}
+
+.gutter-top-lg {
+    margin-top: 30px
+}
+
+.gutter-top-xl {
+    margin-top: 45px
+}
+
+.gutter-bottom-none {
+    margin-bottom: 0
+}
+
+.gutter-bottom {
+    margin-bottom: 15px
+}
+
+.gutter-bottom-xs {
+    margin-bottom: 4px
+}
+
+.gutter-bottom-sm {
+    margin-bottom: 8px
+}
+
+.gutter-bottom-lg {
+    margin-bottom: 30px
+}
+
+.gutter-bottom-xl {
+    margin-bottom: 45px
+}
+
+.gutter-left-none {
+    margin-left: 0
+}
+
+.gutter-left {
+    margin-left: 15px
+}
+
+.gutter-left-xs {
+    margin-left: 4px
+}
+
+.gutter-left-sm {
+    margin-left: 8px
+}
+
+.gutter-left-lg {
+    margin-left: 30px
+}
+
+.gutter-left-xl {
+    margin-left: 45px
+}
+
+.gutter-right-none {
+    margin-right: 0
+}
+
+.gutter-right {
+    margin-right: 15px
+}
+
+.gutter-right-xs {
+    margin-right: 4px
+}
+
+.gutter-right-sm {
+    margin-right: 8px
+}
+
+.gutter-right-lg {
+    margin-right: 30px
+}
+
+.gutter-right-xl {
+    margin-right: 45px
+}
+
+.padding-none {
+    padding: 0
+}
+
+.padding {
+    padding: 15px
+}
+
+.padding-xs {
+    padding: 4px
+}
+
+.padding-sm {
+    padding: 8px
+}
+
+.padding-lg {
+    padding: 30px
+}
+
+.padding-xl {
+    padding: 45px
+}
+
+.padding-top-none {
+    padding-top: 0
+}
+
+.padding-top {
+    padding-top: 15px
+}
+
+.padding-top-xs {
+    padding-top: 4px
+}
+
+.padding-top-sm {
+    padding-top: 8px
+}
+
+.padding-top-lg {
+    padding-top: 30px
+}
+
+.padding-top-xl {
+    padding-top: 45px
+}
+
+.padding-bottom-none {
+    padding-bottom: 0
+}
+
+.padding-bottom {
+    padding-bottom: 15px
+}
+
+.padding-bottom-xs {
+    padding-bottom: 4px
+}
+
+.padding-bottom-sm {
+    padding-bottom: 8px
+}
+
+.padding-bottom-lg {
+    padding-bottom: 30px
+}
+
+.padding-bottom-xl {
+    padding-bottom: 45px
+}
+
+.padding-left-none {
+    padding-left: 0
+}
+
+.padding-left {
+    padding-left: 15px
+}
+
+.padding-left-xs {
+    padding-left: 4px
+}
+
+.padding-left-sm {
+    padding-left: 8px
+}
+
+.padding-left-lg {
+    padding-left: 30px
+}
+
+.padding-left-xl {
+    padding-left: 45px
+}
+
+.padding-right-none {
+    padding-right: 0
+}
+
+.padding-right {
+    padding-right: 15px
+}
+
+.padding-right-xs {
+    padding-right: 4px
+}
+
+.padding-right-sm {
+    padding-right: 8px
+}
+
+.padding-right-lg {
+    padding-right: 30px
+}
+
+.padding-right-xl {
+    padding-right: 45px
+}
+
+.font-xs {
+    font-size: 0.3em
+}
+
+.font-sm {
+    font-size: 0.7em
+}
+
+.font-base {
+    font-size: 1em
+}
+
+.font-md {
+    font-size: 1.3em
+}
+
+.font-lg {
+    font-size: 1.7em
+}
+
+.font-xl {
+    font-size: 2.5em
+}
+
+.font-xxl {
+    font-size: 3em
+}
+
+.border {
+    border: 1px solid #ddd
+}
+
+.border-top {
+    border-top: 1px solid #ddd
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ddd
+}
+
+.border-right {
+    border-right: 1px solid #ddd
+}
+
+.border-left {
+    border-left: 1px solid #ddd
+}
+
+.soft-border {
+    border: 1px solid #dcdcdc
+}
+
+.soft-border-top {
+    border-top: 1px solid #dcdcdc
+}
+
+.soft-border-bottom {
+    border-bottom: 1px solid #dcdcdc
+}
+
+.soft-border-right {
+    border-right: 1px solid #dcdcdc
+}
+
+.soft-border-left {
+    border-left: 1px solid #dcdcdc
+}
+
+.text-left {
+    text-align: left
+}
+
+.text-right {
+    text-align: right
+}
+
+.text-center {
+    text-align: center
+}
+
+.vert-middle {
+    vertical-align: middle
+}
+
+.vert-75 {
+    position: relative;
+    top: 75%;
+    transform: perspective(1px) translateY(-75%)
+}
+
+.vert-50 {
+    position: relative;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%)
+}
+
+.vert-25 {
+    position: relative;
+    top: 25%;
+    transform: perspective(1px) translateY(-25%)
+}
+
+.pull-right {
+    float: right
+}
+
+.pull-left {
+    float: left
+}
+/*#endregion*/
+
+/* Width utility classes *//*#region*/
+.w-25 {
+    width: 25%
+}
+
+.w-50 {
+    width: 50%
+}
+
+.w-75 {
+    width: 75%
+}
+
+.w-100 {
+    width: 100%
+}
+/*#endregion*/
+
+/* End width utility classes *//*#region*/
+.red,
+.red-hover:hover {
+    color: #bf3935 !important
+}
+
+.red-bg,
+.red-hover-bg:hover {
+    background-color: #bf3935 !important
+}
+
+.red-border {
+    border: 1px solid #bf3935
+}
+
+.red-border-top {
+    border-top: 1px solid #bf3935
+}
+
+.red-border-right {
+    border-right: 1px solid #bf3935
+}
+
+.red-border-bottom {
+    border-bottom: 1px solid #bf3935
+}
+
+.red-border-left {
+    border-left: 1px solid #bf3935
+}
+
+.dark-red,
+.dark-red-hover:hover {
+    color: #ac3330 !important
+}
+
+.dark-red-bg,
+.dark-red-hover-bg:hover {
+    background-color: #ac3330 !important
+}
+
+.dark-red-border {
+    border: 1px solid #ac3330
+}
+
+.dark-red-border-top {
+    border-top: 1px solid #ac3330
+}
+
+.dark-red-border-right {
+    border-right: 1px solid #ac3330
+}
+
+.dark-red-border-bottom {
+    border-bottom: 1px solid #ac3330
+}
+
+.dark-red-border-left {
+    border-left: 1px solid #ac3330
+}
+
+.light-red,
+.light-red-hover:hover {
+    color: #f5e1e1 !important
+}
+
+.light-red-bg,
+.light-red-hover-bg:hover {
+    background-color: #f5e1e1 !important
+}
+
+.light-red-border {
+    border: 1px solid #f5e1e1
+}
+
+.light-red-border-top {
+    border-top: 1px solid #f5e1e1
+}
+
+.light-red-border-right {
+    border-right: 1px solid #f5e1e1
+}
+
+.light-red-border-bottom {
+    border-bottom: 1px solid #f5e1e1
+}
+
+.light-red-border-left {
+    border-left: 1px solid #f5e1e1
+}
+
+.green,
+.green-hover:hover {
+    color: #298529 !important
+}
+
+.green-bg,
+.green-hover-bg:hover {
+    background-color: #298529 !important
+}
+
+.green-border {
+    border: 1px solid #298529
+}
+
+.green-border-top {
+    border-top: 1px solid #298529
+}
+
+.green-border-right {
+    border-right: 1px solid #298529
+}
+
+.green-border-bottom {
+    border-bottom: 1px solid #298529
+}
+
+.green-border-left {
+    border-left: 1px solid #298529
+}
+
+.dark-green,
+.dark-green-hover:hover {
+    color: #257825 !important
+}
+
+.dark-green-bg,
+.dark-green-hover-bg:hover {
+    background-color: #257825 !important
+}
+
+.dark-green-border {
+    border: 1px solid #257825
+}
+
+.dark-green-border-top {
+    border-top: 1px solid #257825
+}
+
+.dark-green-border-right {
+    border-right: 1px solid #257825
+}
+
+.dark-green-border-bottom {
+    border-bottom: 1px solid #257825
+}
+
+.dark-green-border-left {
+    border-left: 1px solid #257825
+}
+
+.light-green,
+.light-green-hover:hover {
+    color: #dfeddf !important
+}
+
+.light-green-bg,
+.light-green-hover-bg:hover {
+    background-color: #dfeddf !important
+}
+
+.light-green-border {
+    border: 1px solid #dfeddf
+}
+
+.light-green-border-top {
+    border-top: 1px solid #dfeddf
+}
+
+.light-green-border-right {
+    border-right: 1px solid #dfeddf
+}
+
+.light-green-border-bottom {
+    border-bottom: 1px solid #dfeddf
+}
+
+.light-green-border-left {
+    border-left: 1px solid #dfeddf
+}
+
+.yellow,
+.yellow-hover:hover {
+    color: #8e6a00 !important
+}
+
+.yellow-bg,
+.yellow-hover-bg:hover {
+    background-color: #8e6a00 !important
+}
+
+.yellow-border {
+    border: 1px solid #8e6a00
+}
+
+.yellow-border-top {
+    border-top: 1px solid #8e6a00
+}
+
+.yellow-border-right {
+    border-right: 1px solid #8e6a00
+}
+
+.yellow-border-bottom {
+    border-bottom: 1px solid #8e6a00
+}
+
+.yellow-border-left {
+    border-left: 1px solid #8e6a00
+}
+
+.dark-yellow,
+.dark-yellow-hover:hover {
+    color: #805f00 !important
+}
+
+.dark-yellow-bg,
+.dark-yellow-hover-bg:hover {
+    background-color: #805f00 !important
+}
+
+.dark-yellow-border {
+    border: 1px solid #805f00
+}
+
+.dark-yellow-border-top {
+    border-top: 1px solid #805f00
+}
+
+.dark-yellow-border-right {
+    border-right: 1px solid #805f00
+}
+
+.dark-yellow-border-bottom {
+    border-bottom: 1px solid #805f00
+}
+
+.dark-yellow-border-left {
+    border-left: 1px solid #805f00
+}
+
+.light-yellow,
+.light-yellow-hover:hover {
+    color: #eee9d9 !important
+}
+
+.light-yellow-bg,
+.light-yellow-hover-bg:hover {
+    background-color: #eee9d9 !important
+}
+
+.light-yellow-border {
+    border: 1px solid #eee9d9
+}
+
+.light-yellow-border-top {
+    border-top: 1px solid #eee9d9
+}
+
+.light-yellow-border-right {
+    border-right: 1px solid #eee9d9
+}
+
+.light-yellow-border-bottom {
+    border-bottom: 1px solid #eee9d9
+}
+
+.light-yellow-border-left {
+    border-left: 1px solid #eee9d9
+}
+
+.blue,
+.blue-hover:hover {
+    color: #2e75b2 !important
+}
+
+.blue-bg,
+.blue-hover-bg:hover {
+    background-color: #2e75b2 !important
+}
+
+.blue-border {
+    border: 1px solid #2e75b2
+}
+
+.blue-border-top {
+    border-top: 1px solid #2e75b2
+}
+
+.blue-border-right {
+    border-right: 1px solid #2e75b2
+}
+
+.blue-border-bottom {
+    border-bottom: 1px solid #2e75b2
+}
+
+.blue-border-left {
+    border-left: 1px solid #2e75b2
+}
+
+.dark-blue,
+.dark-blue-hover:hover {
+    color: #2969a0 !important
+}
+
+.dark-blue-bg,
+.dark-blue-hover-bg:hover {
+    background-color: #2969a0 !important
+}
+
+.dark-blue-border {
+    border: 1px solid #2969a0
+}
+
+.dark-blue-border-top {
+    border-top: 1px solid #2969a0
+}
+
+.dark-blue-border-right {
+    border-right: 1px solid #2969a0
+}
+
+.dark-blue-border-bottom {
+    border-bottom: 1px solid #2969a0
+}
+
+.dark-blue-border-left {
+    border-left: 1px solid #2969a0
+}
+
+.light-blue,
+.light-blue-hover:hover {
+    color: #e0eaf3 !important
+}
+
+.light-blue-bg,
+.light-blue-hover-bg:hover {
+    background-color: #e0eaf3 !important
+}
+
+.light-blue-border {
+    border: 1px solid #e0eaf3
+}
+
+.light-blue-border-top {
+    border-top: 1px solid #e0eaf3
+}
+
+.light-blue-border-right {
+    border-right: 1px solid #e0eaf3
+}
+
+.light-blue-border-bottom {
+    border-bottom: 1px solid #e0eaf3
+}
+
+.light-blue-border-left {
+    border-left: 1px solid #e0eaf3
+}
+
+.orange,
+.orange-hover:hover {
+    color: #a7521b !important
+}
+
+.orange-bg,
+.orange-hover-bg:hover {
+    background-color: #a7521b !important
+}
+
+.orange-border {
+    border: 1px solid #a7521b
+}
+
+.orange-border-top {
+    border-top: 1px solid #a7521b
+}
+
+.orange-border-right {
+    border-right: 1px solid #a7521b
+}
+
+.orange-border-bottom {
+    border-bottom: 1px solid #a7521b
+}
+
+.orange-border-left {
+    border-left: 1px solid #a7521b
+}
+
+.dark-orange,
+.dark-orange-hover:hover {
+    color: #964918 !important
+}
+
+.dark-orange-bg,
+.dark-orange-hover-bg:hover {
+    background-color: #964918 !important
+}
+
+.dark-orange-border {
+    border: 1px solid #964918
+}
+
+.dark-orange-border-top {
+    border-top: 1px solid #964918
+}
+
+.dark-orange-border-right {
+    border-right: 1px solid #964918
+}
+
+.dark-orange-border-bottom {
+    border-bottom: 1px solid #964918
+}
+
+.dark-orange-border-left {
+    border-left: 1px solid #964918
+}
+
+.light-orange,
+.light-orange-hover:hover {
+    color: #f2e5dd !important
+}
+
+.light-orange-bg,
+.light-orange-hover-bg:hover {
+    background-color: #f2e5dd !important
+}
+
+.light-orange-border {
+    border: 1px solid #f2e5dd
+}
+
+.light-orange-border-top {
+    border-top: 1px solid #f2e5dd
+}
+
+.light-orange-border-right {
+    border-right: 1px solid #f2e5dd
+}
+
+.light-orange-border-bottom {
+    border-bottom: 1px solid #f2e5dd
+}
+
+.light-orange-border-left {
+    border-left: 1px solid #f2e5dd
+}
+
+.purple,
+.purple-hover:hover {
+    color: #775774 !important
+}
+
+.purple-bg,
+.purple-hover-bg:hover {
+    background-color: #775774 !important
+}
+
+.purple-border {
+    border: 1px solid #775774
+}
+
+.purple-border-top {
+    border-top: 1px solid #775774
+}
+
+.purple-border-right {
+    border-right: 1px solid #775774
+}
+
+.purple-border-bottom {
+    border-bottom: 1px solid #775774
+}
+
+.purple-border-left {
+    border-left: 1px solid #775774
+}
+
+.dark-purple,
+.dark-purple-hover:hover {
+    color: #6b4e68 !important
+}
+
+.dark-purple-bg,
+.dark-purple-hover-bg:hover {
+    background-color: #6b4e68 !important
+}
+
+.dark-purple-border {
+    border: 1px solid #6b4e68
+}
+
+.dark-purple-border-top {
+    border-top: 1px solid #6b4e68
+}
+
+.dark-purple-border-right {
+    border-right: 1px solid #6b4e68
+}
+
+.dark-purple-border-bottom {
+    border-bottom: 1px solid #6b4e68
+}
+
+.dark-purple-border-left {
+    border-left: 1px solid #6b4e68
+}
+
+.light-purple,
+.light-purple-hover:hover {
+    color: #ebe6ea !important
+}
+
+.light-purple-bg,
+.light-purple-hover-bg:hover {
+    background-color: #ebe6ea !important
+}
+
+.light-purple-border {
+    border: 1px solid #ebe6ea
+}
+
+.light-purple-border-top {
+    border-top: 1px solid #ebe6ea
+}
+
+.light-purple-border-right {
+    border-right: 1px solid #ebe6ea
+}
+
+.light-purple-border-bottom {
+    border-bottom: 1px solid #ebe6ea
+}
+
+.light-purple-border-left {
+    border-left: 1px solid #ebe6ea
+}
+
+.yellow-green,
+.yellow-green-hover:hover {
+    color: #5c7815 !important
+}
+
+.yellow-green-bg,
+.yellow-green-hover-bg:hover {
+    background-color: #5c7815 !important
+}
+
+.yellow-green-border {
+    border: 1px solid #5c7815
+}
+
+.yellow-green-border-top {
+    border-top: 1px solid #5c7815
+}
+
+.yellow-green-border-right {
+    border-right: 1px solid #5c7815
+}
+
+.yellow-green-border-bottom {
+    border-bottom: 1px solid #5c7815
+}
+
+.yellow-green-border-left {
+    border-left: 1px solid #5c7815
+}
+
+.dark-yellow-green,
+.dark-yellow-green-hover:hover {
+    color: #526c12 !important
+}
+
+.dark-yellow-green-bg,
+.dark-yellow-green-hover-bg:hover {
+    background-color: #526c12 !important
+}
+
+.dark-yellow-green-border {
+    border: 1px solid #526c12
+}
+
+.dark-yellow-green-border-top {
+    border-top: 1px solid #526c12
+}
+
+.dark-yellow-green-border-right {
+    border-right: 1px solid #526c12
+}
+
+.dark-yellow-green-border-bottom {
+    border-bottom: 1px solid #526c12
+}
+
+.dark-yellow-green-border-left {
+    border-left: 1px solid #526c12
+}
+
+.light-yellow-green,
+.light-yellow-green-hover:hover {
+    color: #e6ebdc !important
+}
+
+.light-yellow-green-bg,
+.light-yellow-green-hover-bg:hover {
+    background-color: #e6ebdc !important
+}
+
+.light-yellow-green-border {
+    border: 1px solid #e6ebdc
+}
+
+.light-yellow-green-border-top {
+    border-top: 1px solid #e6ebdc
+}
+
+.light-yellow-green-border-right {
+    border-right: 1px solid #e6ebdc
+}
+
+.light-yellow-green-border-bottom {
+    border-bottom: 1px solid #e6ebdc
+}
+
+.light-yellow-green-border-left {
+    border-left: 1px solid #e6ebdc
+}
+
+.gray,
+.gray-hover:hover {
+    color: #5e5e5e !important
+}
+
+.gray-bg,
+.gray-hover-bg:hover {
+    background-color: #5e5e5e !important
+}
+
+.gray-border {
+    border: 1px solid #5e5e5e
+}
+
+.gray-border-top {
+    border-top: 1px solid #5e5e5e
+}
+
+.gray-border-right {
+    border-right: 1px solid #5e5e5e
+}
+
+.gray-border-bottom {
+    border-bottom: 1px solid #5e5e5e
+}
+
+.gray-border-left {
+    border-left: 1px solid #5e5e5e
+}
+
+.dark-gray,
+.dark-gray-hover:hover {
+    color: #555555 !important
+}
+
+.dark-gray-bg,
+.dark-gray-hover-bg:hover {
+    background-color: #555555 !important
+}
+
+.dark-gray-border {
+    border: 1px solid #555555
+}
+
+.dark-gray-border-top {
+    border-top: 1px solid #555555
+}
+
+.dark-gray-border-right {
+    border-right: 1px solid #555555
+}
+
+.dark-gray-border-bottom {
+    border-bottom: 1px solid #555555
+}
+
+.dark-gray-border-left {
+    border-left: 1px solid #555555
+}
+
+.light-gray,
+.light-gray-hover:hover {
+    color: #f5f5f5 !important
+}
+
+.light-gray-bg,
+.light-gray-hover-bg:hover {
+    background-color: #f5f5f5 !important
+}
+
+.light-gray-border {
+    border: 1px solid #f5f5f5
+}
+
+.light-gray-border-top {
+    border-top: 1px solid #f5f5f5
+}
+
+.light-gray-border-right {
+    border-right: 1px solid #f5f5f5
+}
+
+.light-gray-border-bottom {
+    border-bottom: 1px solid #f5f5f5
+}
+
+.light-gray-border-left {
+    border-left: 1px solid #f5f5f5
+}
+
+.black,
+.black-hover:hover {
+    color: #000000 !important
+}
+
+.black-bg,
+.black-hover-bg:hover {
+    background-color: #000000 !important
+}
+
+.black-border {
+    border: 1px solid #000000
+}
+
+.black-border-top {
+    border-top: 1px solid #000000
+}
+
+.black-border-right {
+    border-right: 1px solid #000000
+}
+
+.black-border-bottom {
+    border-bottom: 1px solid #000000
+}
+
+.black-border-left {
+    border-left: 1px solid #000000
+}
+
+.white,
+.white-hover:hover {
+    color: #ffffff !important
+}
+
+.white-bg,
+.white-hover-bg:hover {
+    background-color: #ffffff !important
+}
+
+.white-border {
+    border: 1px solid #ffffff
+}
+
+.white-border-top {
+    border-top: 1px solid #ffffff
+}
+
+.white-border-right {
+    border-right: 1px solid #ffffff
+}
+
+.white-border-bottom {
+    border-bottom: 1px solid #ffffff
+}
+
+.white-border-left {
+    border-left: 1px solid #ffffff
+}
+
+.truncate {
+    width: 100%
+}
+
+.truncate,
+.truncate-inline {
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis
+}
+
+.truncate-inline {
+    max-width: 100%
+}
+
+.ms-drop ul>li label,
+.wrap-text {
+    word-break: break-word;
+    word-wrap: break-word;
+    overflow-wrap: break-word
+}
+
+.rotate-45 {
+    transform: rotate(45deg)
+}
+
+.cursor-pointer {
+    cursor: pointer
+}
+
+.void-bootstrap-padding {
+    padding-right: 0 !important
+}
+
+.no-fade {
+    transition: none
+}
+
+.text-noverflow {
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto
+}
+/*#endregion*/
+
+/* BOOTSTRAP OVERRIDES *//*#region*/
+.btn,
+.form-control,
+.well {
+    border-radius: 3px
+}
+
+.panel-heading i.fa {
+    margin-left: 5px
+}
+
+.media {
+    padding: 10px 15px 10px 0px
+}
+
+.form-group {
+    margin-bottom: 20px
+}
+
+.well {
+    padding: 15px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word
+}
+
+.well>.table {
+    margin-bottom: 0px
+}
+
+.btn-row .btn {
+    margin-bottom: 5px
+}
+
+.navbar {
+    min-height: 40px
+}
+
+.navbar-btn {
+    margin-top: 0px;
+    margin-bottom: 0px
+}
+
+.navbar-nav .btn-group>.btn+.dropdown-toggle {
+    padding-left: 2px;
+    color: #ffffff
+}
+
+.navbar-nav .btn-group>.btn {
+    padding-right: 2px;
+    color: #ffffff
+}
+
+.navbar-nav .btn-group>.btn-link {
+    font-size: 15px
+}
+
+.navbar-default .btn-link {
+    color: #ffffff;
+    border-radius: 0px;
+    padding-top: 10px
+}
+
+.navbar-default .btn-link.dropdown-toggle {
+    color: #ffffff;
+    border-radius: 0px;
+    height: 46px;
+    padding-top: 5px
+}
+
+.navbar-default .btn-link:focus,
+.navbar-default .btn-link:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #2969a0
+}
+
+.nav .open>a,
+.nav .open>a:hover {
+    background-color: transparent
+}
+
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+/*#endregion*/
+
+/* This  is a hack to prevent against a known issue in Bootstrap in which the body content shifts when a modal is opened or closed *//*#region*/
+/* https://github.com/twbs/bootstrap/issues/15229 */
+body.modal-open-noscroll {
+    margin-right: 0 !important;
+    overflow: hidden
+}
+
+.modal-open-noscroll .navbar-default,
+.modal-open-noscroll .navbar-fixed-top,
+.modal-open .navbar-default,
+.modal-open .navbar-fixed-bottom {
+    margin-right: 0 !important
+}
+
+.form-group {
+    margin-bottom: 18px;
+    font-size: 14px
+}
+
+.control-label,
+label {
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: #424242;
+    font-size: 14px
+}
+
+.table-borderless tbody>tr>td,
+.table-borderless tbody>tr>th {
+    border: none
+}
+
+.disp-group {
+    margin-bottom: 20px;
+    font-size: 14px
+}
+
+.disp-group label {
+    margin-bottom: 2px;
+    font-size: 14px
+}
+/*#endregion*/
+
+/* We're overriding the Bootstrap default z-index for these two classes - as they often interfere with other form elements (ie. date pickers) */
+/* when the z-index is set to the Bootstrap standard. *//*#region*/
+.input-group .form-control {
+    z-index: 0
+        /* Bootstrap 3.3.7 (or possibly 3.3.6) added a z-index to the focus styles which messes up datepickers. (Incident #3433001) */
+}
+
+.input-group .form-control:focus {
+    z-index: 0
+}
+
+.input-group-btn:last-child>.btn,
+.input-group-btn:last-child>.btn-group {
+    z-index: 0;
+    margin-left: -1px
+}
+
+.panel-heading>.h4,
+.panel-heading h4 {
+    font-weight: 500;
+    padding: 0px
+}
+
+label {
+    font-weight: 400
+}
+
+.btn {
+    border: 0px;
+    padding: 4px 17px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    font-size: 14px
+}
+
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #137F00;
+    border-color: #137F00
+}
+
+.btn-primary.active,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
+    color: #ffffff;
+    background-color: #298529;
+    border-color: #298529
+}
+
+.btn:focus,
+.btn:focus>.fa-filter {
+    text-decoration: underline
+}
+
+.btn:focus>.sr-only,
+.btn>.fa-bars {
+    text-decoration: none
+}
+
+.nav-pills>li.active>a:focus {
+    text-decoration: underline
+}
+
+.btn-default {
+    border: 1px solid #ccc
+}
+
+.btn-default.active,
+.btn-default.focus,
+.btn-default:active,
+.btn-default:focus,
+.btn-default:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad
+}
+
+.table>tbody+tbody {
+    border-top: none
+}
+
+.dropdown-menu>span>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap
+}
+
+.dropdown-menu>span>li:focus,
+.dropdown-menu>span>li:hover,
+.dropdown-menu>span>li>a:focus,
+.dropdown-menu>span>li>a:hover {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+    cursor: pointer
+}
+
+.dropdown-menu>li.dropdown-header {
+    color: #5e5e5e;
+    border: none;
+    border-bottom: 1px solid #dcdcdc;
+    outline: none;
+    cursor: default;
+    padding-left: 8px;
+    font-size: 1.1em
+}
+
+.dropdown-menu>li+li.dropdown-header {
+    margin-top: 8px
+}
+
+.dsktpMoveBtn:focus,
+.navbar .nav-pills .dropdown-toggle:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.5em
+}
+
+ul.nav-sidebar>li.active>a {
+    text-decoration: none;
+    background-color: #e7e7e7;
+    font-weight: 600;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc
+}
+
+.form-control:not(.talu_holder) {
+    padding: 5px 12px !important
+}
+
+div.select2-container.form-control {
+    padding: 0px !important
+}
+
+div.select2-container.form-control .select2-choice {
+    height: inherit;
+    font-size: inherit
+}
+
+.input-lg {
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px
+}
+
+.nav>li>a:focus {
+    background-color: transparent
+}
+
+h4.modal-title {
+    padding: 0px
+}
+
+.modal-header {
+    cursor: move
+}
+
+.dropdown .btn-link {
+    text-decoration: none
+}
+
+.dropdown-menu-scrollable {
+    overflow: auto;
+    max-height: 300px
+}
+
+.column-filter {
+    min-width: 200px
+}
+
+.column-filter>li {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333
+}
+
+.modal-clear {
+    background-color: transparent;
+    display: block
+}
+
+.modal-clear .modal-content {
+    background-color: transparent;
+    box-shadow: none;
+    border: none
+}
+
+.dropdown-submenu {
+    position: relative
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    border-radius: 6px
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff
+}
+
+.dropdown-submenu.pull-left {
+    float: none
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    border-radius: 6px
+}
+
+.input-group .input-group-btn .btn-primary {
+    padding: 7px 12px;
+    line-height: 1.42857143
+}
+/*#endregion*/
+
+/* Ensure that no negative margin gets applied when a radio/checkbox follows a *hidden* radio/checkbox *//*#region*/
+.checkbox.hidden+.checkbox,
+.radio.hidden+.radio {
+    margin-top: 10px
+}
+/*#endregion*/
+
+/* However, preserve this negative margin if the radio/checkbox follows something that's still visible *//*#region*/
+.checkbox:not(.hidden)~.checkbox,
+.radio:not(.hidden)~.radio {
+    margin-top: -5px
+}
+/*#endregion*/
+
+/* Ignore this if the radio/checkbox is preceded by a non-radio *//*#region*/
+:not(.checkbox)+.checkbox,
+:not(.radio)+.radio {
+    margin-top: 10px
+}
+
+.modal-dialog {
+    z-index: 1050 !important
+}/*#endregion*/
+
+/*.btn.btn-danger {
+  color: #cc4642;
+  border: 1px solid #cc4642;
+  border-color: #cc4642;
+  background-color: transparent;
+
+  &:hover {
+    background-color: #cc4642;
+    color: #ffffff;
+  }
+}*/
+
+/* Prevent select2's within input-groups from extending past the container width
+ when the selected value is wider than the input. *//*#region*/
+.input-group {
+}
+
+.input-group .select2-container {
+    position: relative !important;
+    float: left !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+    display: table !important;
+    table-layout: fixed !important
+}
+
+.input-group .select2-choice {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important
+}
+
+.input-group .input-group-btn .btn-default:not(:last-child) {
+    border-radius: 0
+}
+
+.input-group .input-group-btn .btn-default:last-child {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0
+}
+
+.close {
+    opacity: .5
+}
+/*#endregion*/
+
+/* Print Styles *//*#region*/
+@media print {
+    body {
+        font-family: Segoe UI, Open Sans, Arial, Sans-Serif
+    }
+
+    a,
+    body {
+        font-size: 7pt;
+        color: black
+    }
+
+    a {
+        text-decoration: none
+    }
+
+    table {
+        font-size: 7pt;
+        color: black
+    }
+
+    thead {
+        display: table-header-group
+    }
+
+    tbody {
+        display: table-row-group
+    }
+
+    th {
+        text-align: left
+    }
+
+    .NoPrint,
+    td.ButtonCellTop {
+        display: none
+    }
+
+    .PrintOnly {
+        display: inline !important
+    }
+
+    .ui-layout-west,
+    div.shim-spacer {
+        display: none
+    }
+
+    .fixed {
+        position: absolute !important
+    }
+
+    *,
+    :after,
+    :before {
+        color: inherit !important;
+        text-shadow: none !important;
+        background: 0 0 !important;
+        box-shadow: none !important
+    }
+
+    .green-health-print {
+        color: #5cb85c !important
+    }
+
+    .yellow-health-print {
+        color: #f0ad4e !important
+    }
+
+    .red-health-print {
+        color: #d9534f !important
+    }
+
+    .on-hold-health-print {
+        color: #666666 !important
+    }
+
+    .no-health-print {
+        color: #337ab7 !important
+    }
+
+    .other-health-print {
+        color: #009DDB !important
+    }
+}
+
+.print-dialog {
+    display: none;
+    position: fixed;
+    top: 33px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1000;
+    overflow: auto
+}
+/*#endregion*/
+
+/* End Print Styles *//*#region*/
+nav#divTabHeader,
+nav.tab-header {
+    background-color: #f5f5f5
+}
+
+.sidebar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 40px;
+    overflow: visible;
+    height: 100%;
+    z-index: 20
+}
+
+.sidebar .sidebar-wrapper {
+    background-color: #f5f5f5;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-bottom: 40px;
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    border-right: 1px solid #dcdcdc;
+    box-shadow: 1px 0 12px -3px #000000
+}
+
+.sidebar .sidebar-wrapper:hover {
+    overflow-y: auto
+}
+
+.sidebar .sidebar-wrapper::-webkit-scrollbar {
+    background: transparent;
+    width: 8px
+}
+
+.sidebar .sidebar-wrapper::-webkit-scrollbar-thumb {
+    background: #bdbdbd
+}
+
+.sidebar.is-flush {
+    top: 0
+}
+
+.sidebar.is-flush .sidebar-wrapper {
+    margin-bottom: 0
+}
+
+.sidebar .nav-sidebar {
+    margin-top: 0;
+    position: relative
+}
+
+.sidebar .nav-sidebar .sidebar-brand {
+    font-weight: 700 !important
+}
+
+.sidebar .nav-sidebar .sidebar-brand span.fa {
+    font-size: 19px;
+    font-weight: 800
+}
+
+.sidebar .nav-sidebar li.active>a {
+    text-decoration: none;
+    background-color: #e7e7e7;
+    font-weight: 600;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc
+}
+
+.sidebar .nav-sidebar li>a:hover {
+    outline: none
+}
+
+.sidebar .nav-sidebar li>a:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: 2px
+}
+
+.sidebar .nav-sidebar li>a:not(.sidebar-brand) {
+    color: #306090;
+    display: block;
+    width: 100%;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.sidebar .nav-sidebar li>a:not(.sidebar-brand) .badge,
+.sidebar .nav-sidebar li>a:not(.sidebar-brand)>i {
+    position: absolute;
+    right: 10px
+}
+
+.sidebar-sm .sidebar-wrapper {
+    width: 175px
+}
+
+.sidebar-md .sidebar-wrapper {
+    width: 225px
+}
+
+.sidebar-lg .sidebar-wrapper {
+    width: 275px
+}
+
+.wrapper {
+    padding-left: 0;
+    transition: padding-left 150ms ease;
+    min-height: 90vh;
+    padding-top: 41px
+}
+
+.wrapper .ButtonCell,
+.wrapper .ButtonCellTop {
+    position: fixed;
+    width: 100%;
+    padding-right: 0;
+    /* Since the .fixed header on every page sits at a z-index of 45, we set this to sit right below */
+    z-index: 39;
+    /*padding: 0;*/
+    height: 40px
+}
+
+.wrapper .ButtonCellTop {
+    top: 41px
+}
+
+.wrapper.no-shim .ButtonCell,
+.wrapper.no-shim .ButtonCellTop {
+    top: 0
+}
+
+.nav-shim {
+    padding-top: 35px
+}
+
+@media (min-width:768px) {
+    .sidebar {
+        display: block
+            /*padding-top: 3px;*/
+    }
+
+    .sidebar .sidebar-wrapper {
+        box-shadow: none
+    }
+
+    .wrapper-sm {
+        padding-left: 175px
+    }
+
+    .wrapper-sm .ButtonCellTop {
+        padding-right: 175px
+    }
+
+    .wrapper-md {
+        padding-left: 225px
+    }
+
+    .wrapper-md .ButtonCellTop {
+        padding-right: 225px
+    }
+
+    .wrapper-lg {
+        padding-left: 275px
+    }
+
+    .wrapper-lg .ButtonCellTop {
+        padding-right: 275px
+    }
+
+    .wrapper.closed .ButtonCellTop {
+        padding-right: 0
+    }
+}
+
+@media (max-width:767px) {
+    .sidebar-wrapper {
+        overflow: auto
+    }
+}
+
+#wrapper {
+    padding-left: 250px;
+    transition: all 0.2s ease;
+    height: 100vh;
+    overflow: hidden
+}
+
+#wrapper #divHeaderControl {
+    position: fixed;
+    top: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 1000;
+    padding-right: 250px;
+    background-color: white;
+    transition: all 0.2s ease
+}
+
+#wrapper.toggled {
+    padding-left: 0
+}
+
+#wrapper.toggled #divHeaderControl {
+    padding-right: 0px
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    margin-left: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+    border-right: 1px solid #e1e1e1;
+    transition: all 0.2s ease
+}
+
+#sidebar-wrapper:hover {
+    overflow-y: auto
+}
+
+#sidebar-wrapper::-webkit-scrollbar {
+    background: transparent;
+    width: 8px
+}
+
+#sidebar-wrapper::-webkit-scrollbar-thumb {
+    background: #bdbdbd
+}
+
+#sidebar-wrapper .list-group-item {
+    border-color: transparent;
+    background-color: transparent;
+    color: #306090
+}
+
+#sidebar-wrapper .list-group-item.active {
+    background-color: #e7e7e7;
+    font-weight: 700;
+    border-color: #dcdcdc
+}
+
+#sidebar-wrapper .list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0
+}
+
+#sidebar-wrapper .list-group-item:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+#sidebar-wrapper .list-group-item:hover {
+    background-color: #e8e8e8;
+    border-color: #dcdcdc
+}
+
+#sidebar-wrapper .list-group-subitem {
+    display: block;
+    text-align: left
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 0
+}
+
+#page-content-wrapper {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 40px;
+    height: 100%
+}
+
+#page-content-wrapper .ButtonCellTop {
+    top: 0
+}
+
+#page-content-wrapper .ButtonCell,
+#page-content-wrapper .ButtonCellTop {
+    position: fixed;
+    left: 250px;
+    padding: 0;
+    height: 40px;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f5f5f5;
+    padding-top: 5px;
+    padding-right: 265px;
+    transition: all 0.2s ease
+}
+
+#wrapper.toggled #page-content-wrapper {
+    margin-right: -250px;
+    padding-left: 0
+}
+
+#wrapper.toggled #page-content-wrapper .ButtonCell,
+#wrapper.toggled #page-content-wrapper .ButtonCellTop {
+    left: 0;
+    padding-right: 15px
+}
+
+#wrapper.toggled #page-content-wrapper .ButtonCell button:first-child,
+#wrapper.toggled #page-content-wrapper .ButtonCell input:first-child {
+    margin-left: 0px
+}
+
+#page-content-wrapper .project-section-container {
+    height: 100%;
+    overflow: auto
+}
+
+#page-content-wrapper .project-section-container-fixed {
+    overflow: auto;
+    position: fixed;
+    width: -moz-available
+}
+/*#endregion*/
+
+/* Sidebar Styles *//*#region*/
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px
+}
+
+.sidebar-nav a:hover {
+    cursor: pointer
+}
+
+@media (min-width:768px) {
+    #wrapper {
+        padding-left: 250px
+    }
+
+    #wrapper.toggled {
+        padding-left: 0
+    }
+
+    #sidebar-wrapper {
+        width: 250px
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0
+    }
+
+    #page-content-wrapper {
+        padding-left: 0
+    }
+
+    #page-content-wrapper .ButtonCell,
+    #page-content-wrapper .ButtonCellTop {
+        left: 250px
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        margin-right: 0
+    }
+
+    #wrapper.toggled #page-content-wrapper .ButtonCell,
+    #wrapper.toggled #page-content-wrapper .ButtonCellTop {
+        left: 0
+    }
+}
+
+@media print {
+    #sidebar-wrapper {
+        display: none
+    }
+
+    #page-content-wrapper {
+        padding-left: 0;
+        padding-top: 0px !important;
+        height: auto
+    }
+
+    #wrapper {
+        padding-left: 0;
+        height: auto;
+        overflow: visible
+    }
+
+    #wrapper #divHeaderControl {
+        position: static !important;
+        padding-right: 0px;
+        padding-left: 0px;
+        width: 100%;
+        height: auto
+    }
+
+    #page-content-wrapper .project-section-container {
+        padding-top: 0px;
+        overflow: initial
+    }
+}
+
+.modal.modal-left .modal-dialog,
+.modal.modal-right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 400px;
+    height: 100%;
+    transform: translate3d(0%, 0, 0)
+}
+
+.modal.modal-left .modal-content,
+.modal.modal-right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+    border-radius: 0;
+    border: none
+}
+
+.modal.modal-left .modal-content .modal-header,
+.modal.modal-right .modal-content .modal-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: auto
+}
+
+.modal.modal-left .modal-body,
+.modal.modal-right .modal-body {
+    padding: 15px 15px 25px
+}
+/*#endregion*/
+
+/*Left*//*#region*/
+.modal.modal-left.fade .modal-dialog {
+    left: -400px;
+    transition: opacity 0.3s linear, left 0.3s ease-out
+}
+
+.modal.modal-left.fade.in .modal-dialog {
+    left: 0
+}
+/*#endregion*/
+
+/*Right*//*#region*/
+.modal.modal-right.fade .modal-dialog {
+    right: -400px;
+    transition: opacity 0.3s linear, right 0.3s ease-out
+}
+
+.modal.modal-right.fade.in .modal-dialog {
+    right: 0
+}
+
+div.filter-section {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 15px -15px;
+    padding: 8px 5px 8px 15px;
+    background-color: #F3F3F3;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc
+}
+
+div.grid>.row {
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+    padding-top: 0;
+    padding-bottom: 0
+}
+
+div.grid>.row>div {
+    padding: 8px
+}
+
+div.grid-hover>div.row:hover {
+    background-color: #F5F5F5
+}
+
+.grid-striped>div.row:nth-of-type(odd) {
+    background-color: #F9F9F9
+}
+
+div.grid>div.row-hdr {
+    border-bottom: 2px solid #ddd;
+    font-weight: 700
+}
+
+div.grid>div.row-grp {
+    background-color: #F9F9F9;
+    font-weight: 700
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box
+}
+
+html {
+    -webkit-font-smoothing: antialiased
+}
+
+body {
+    font-family: Segoe UI, Open Sans, Arial, Sans-Serif;
+    font-size: 13px;
+    margin: 0px;
+    text-rendering: optimizeLegibility
+}
+/*#endregion*/
+
+/* Styles for code regions (esp. used in KB articles, so there might not be a specific reference to this within the */
+/* code, but it is used in our internal KB articles content. *//*#region*/
+.code,
+code,
+pre {
+    font-family: Consolas, Courier New, monospace;
+    background-color: #eee;
+    padding: 1px
+}
+/*#endregion*/
+
+/* To better distinguish from read-only form-control fields (which use #EEE), */
+/* make form-control inputs with the code class use a slightly different color *//*#region*/
+.code.form-control {
+    background-color: #F9F2F4;
+    color: black
+}
+
+span {
+    font-size: inherit
+}
+/*#endregion*/
+
+/* Element-level *//*#region*/
+a,
+a.noHover {
+    color: #306090
+}
+
+a,
+a.noHover,
+a:hover {
+    text-decoration: none
+}
+
+a:hover {
+    color: #c5400d
+        /* orangered */
+}
+
+a.disabledLink,
+a.noHover:hover {
+    text-decoration: none
+}
+
+a.disabledLink {
+    color: black;
+    cursor: text
+}
+
+a.disabledLink:hover {
+    color: black
+}
+
+img {
+    border-width: 0px
+}
+
+th {
+    text-align: left
+}
+
+.ckeShim th[scope=col] {
+    text-align: center
+}
+
+hr {
+    border: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    size: 1px
+}
+
+textarea.form-control {
+    height: 130px
+}
+
+.h1,
+h1 {
+    font-size: 28px
+}
+
+.h1,
+.h2,
+h1,
+h2 {
+    font-family: Segoe UI, Open Sans, Arial, Sans-Serif;
+    font-weight: 400;
+    margin: 0px;
+    color: #424242
+}
+
+.h2,
+h2 {
+    font-size: 22px;
+    padding: 10px 0px 5px;
+    border-bottom: 1px solid #dcdcdc
+}
+
+h2.h1,
+h2.h3,
+h2.h4,
+h2.h5,
+h2.h6 {
+    /* Turn off custom h2 styles if this isn't really an h2. */
+    padding: 0px;
+    border-bottom: 0 solid
+}
+
+h2 input {
+    float: right;
+    margin-top: -5px;
+    margin-left: 5px
+}
+
+.h3,
+h3 {
+    font-weight: 400;
+    margin: 0px;
+    color: #424242
+}
+
+.h3,
+.h4,
+h3,
+h4 {
+    font-size: 15px
+}
+
+.h4,
+h4 {
+    font-family: Segoe UI, Open Sans, Arial, Sans-Serif;
+    font-weight: 700;
+    color: #646464;
+    text-decoration: none
+}
+
+h4 span {
+    float: right;
+    margin: 2px
+}
+
+.fa {
+    margin-right: 4px
+}
+
+.fa.fa-nopad {
+    margin-right: 0px
+}
+
+.fa+.padding-left-xs {
+    padding-left: 0
+}
+
+.fa.fa-nopad+.padding-left-xs {
+    padding-left: 4px
+}
+
+a.btn .fa-times:hover,
+a[role=button] .fa-times:hover,
+button .fa-times:hover {
+    color: #bf3935
+}
+
+img.fa-google-drive {
+    width: 16px
+}
+
+img.fa-box {
+    width: 18px
+}
+
+img.fa-dropbox,
+img.fa-onedrive,
+img.fa-onedrivebiz {
+    width: 22px
+}
+
+.fa-lg.img.fa-box {
+    width: 20px
+}
+
+.fa-lg.img.fa-onedrive,
+.fa-lg.img.fa-onedrivebiz {
+    width: 22px
+}
+
+.fa-lg.img.fa-dropbox {
+    width: 24px
+}
+
+img.fa-dropbox,
+img.fa-google-drive,
+img.fa-onedrive,
+img.fa-onedrivebiz {
+    right: 2px;
+    position: relative
+}
+
+input[type=checkbox],
+input[type=radio] {
+    margin-right: 3px
+}
+/*#endregion*/
+
+/* File Upload control classes *//*#region*/
+.btn-file {
+    position: relative;
+    overflow: hidden
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block
+}
+/*#endregion*/
+
+/* Classes *//*#region*/
+td.button {
+    width: 20px;
+    cursor: pointer;
+    height: 15px;
+    text-align: center
+}
+
+td.ButtonCellBottom {
+    border-top: 1px solid #dcdcdc;
+    background-color: #f5f5f5;
+    padding: 5px;
+    vertical-align: middle
+}
+
+.ButtonCell,
+.ButtonCellTop {
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #f5f5f5;
+    padding: 5px 5px 5px 10px;
+    vertical-align: middle
+}
+
+.ButtonCell {
+    border-top: 1px solid #dcdcdc;
+    min-height: 40px
+}
+
+.category-desc {
+    color: #515A61;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 3px
+}
+
+.category-desc-focus {
+    background-color: #f5f5f5;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 13px
+}
+
+.category-footer {
+    border-top: 1px solid #dcdcdc;
+    margin: 0px 0px 15px;
+    padding: 15px
+}
+
+.user-link {
+    font-size: 16px;
+    color: #336699;
+    font-weight: bolder;
+    vertical-align: top;
+    text-decoration: none
+}
+
+.hilite,
+.hilite .btn-link,
+.hilite a,
+.hilite td,
+.table>tbody>tr.hilite.active,
+.table>tbody>tr.hilite.danger,
+.table>tbody>tr.hilite.info,
+.table>tbody>tr.hilite.success,
+.table>tbody>tr.hilite.warning,
+.table>tbody>tr.hilite>td.active,
+.table>tbody>tr.hilite>td.danger,
+.table>tbody>tr.hilite>td.info,
+.table>tbody>tr.hilite>td.success,
+.table>tbody>tr.hilite>td.warning {
+    color: white;
+    background-color: #0072C6
+}
+
+.table>tbody>tr.hilite-2.active,
+.table>tbody>tr.hilite-2.danger,
+.table>tbody>tr.hilite-2.info,
+.table>tbody>tr.hilite-2.success,
+.table>tbody>tr.hilite-2.warning,
+.table>tbody>tr.hilite-2>td.active,
+.table>tbody>tr.hilite-2>td.danger,
+.table>tbody>tr.hilite-2>td.info,
+.table>tbody>tr.hilite-2>td.success,
+.table>tbody>tr.hilite-2>td.warning,
+tr.hilite-2,
+tr.hilite-2 .btn-link,
+tr.hilite-2 a,
+tr.hilite-2 td {
+    color: #006100;
+    background-color: #C6EFCE
+}
+
+.PrintOnly {
+    display: none
+}
+
+.copyButton {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /*rgba for transparency*/
+    background-color: white
+}
+
+.copyButton:hover {
+    background-color: #f6f6f6
+}
+
+.ReqFld {
+    color: #bf3935
+}
+
+.form-group.required .control-label:after {
+    content: " *";
+    color: #bf3935
+}
+
+.field-validation-error {
+    color: #bf3935
+}
+
+div.WhiteOut {
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: white;
+    filter: alpha(opacity=65);
+    opacity: .65;
+    display: none;
+    text-align: center
+}
+/*#endregion*/
+
+/* CSS Compliant Table Styles *//*#region*/
+table.TDGrid_AllGridlines {
+    width: 100%;
+    border-collapse: collapse
+}
+
+table.TDGrid_AllGridlines tbody,
+table.TDGrid_AllGridlines td,
+table.TDGrid_AllGridlines th,
+table.TDGrid_AllGridlines thead {
+    border: 1px solid #dcdcdc
+}
+
+table.TDGrid_VertGridlines td,
+table.TDGrid_VertGridlines th {
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc
+}
+
+table.TDGrid_HorizGridlines {
+    border-collapse: collapse;
+    border-top: 1px solid #dcdcdc;
+    width: 100%
+}
+
+table.TDGrid_HorizGridlines td,
+table.TDGrid_HorizGridlines th {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc
+}
+
+table.TDGrid_NoGridlines {
+    border-top: 1px solid #dcdcdc
+}
+
+table.TDGrid_NoGridlines td {
+    border: 0
+}
+
+.TDTable_AllGridlines tbody,
+.TDTable_AllGridlines td,
+.TDTable_AllGridlines th,
+.TDTable_AllGridlines thead,
+.TDTable_AllGridlines tr {
+    border-style: inherit;
+    border-width: inherit;
+    border-color: inherit
+}
+
+.TDTable_VertGridlines td,
+.TDTable_VertGridlines th {
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc
+}
+
+.fixedtable,
+table.fixed-table {
+    table-layout: fixed
+}
+/* End CSS Compliant Table Styles */
+/*#endregion*/
+
+/* Accessibility Styling *//*#region*/
+.legend-no-underline,
+.legend-no-undies {
+    border-bottom: none;
+    border: none
+}
+/* End Accessibility Styling */
+/*#endregion*/
+
+/* Auto complete *//*#region*/
+.ac_menu {
+    border: 1px solid #999999;
+    background-color: #F6F6F6;
+    cursor: default;
+    overflow: hidden
+}
+
+.ac_menu,
+.ac_menuitem {
+    -moz-box-sizing: border-box
+}
+
+.ac_menuitem {
+    position: relative;
+    width: 100%;
+    color: #141414;
+    padding: 2px;
+    cursor: pointer;
+    -moz-user-select: none
+}
+
+.ac_menuitem_over {
+    background-color: #E6E6E6
+}
+
+.ac_menuitem_selected {
+    background-color: #D6DEEC
+}
+
+.comment-alt {
+    background-color: #f0f0f0
+}
+
+.comment,
+.comment-alt {
+    border-bottom: 1px solid #ddd;
+    width: 100%
+}
+
+.comment-timestamp {
+    color: #828074
+}
+
+.commment-name {
+    font-size: 14px;
+    color: #336699;
+    text-decoration: none;
+    font-weight: bolder
+}
+
+.TabButtonCell {
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #F8F9F9;
+    padding: 7px 7px 7px 13px
+}
+
+.TabButtonCell a:not(.btn) {
+    font-size: 13px
+}
+
+div.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 45
+        /* Designed to go below a white out div, but above other regular content. */
+}
+
+div.help {
+    padding: 8px;
+    background-color: #fefaef;
+    border: 1px solid #8e6a00;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    display: none
+}
+
+div.help.stacked {
+    margin-right: 6px
+}
+
+div.clear {
+    clear: both
+}
+
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both
+}
+
+.block-container {
+    padding: 8px 8px 8px 2px;
+    margin-bottom: 5px
+}
+
+.block-container>div {
+    padding-top: 3px;
+    padding-bottom: 2px
+}
+
+.block-info {
+    color: #454545;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 4px
+}
+
+.block-actions {
+    background-color: #f5f5f5;
+    padding: 8px !important;
+    line-height: 22px
+}
+
+.block-actions .btn.btn-link,
+.block-actions a {
+    margin: 0 11px 0 3px;
+    padding: 0;
+    line-height: 22px;
+    font-size: 14px
+}
+
+.block-actions .btn.btn-link {
+    display: inline;
+    color: #306090;
+    vertical-align: baseline
+}
+
+button.btn-link.btn-nav-style:hover {
+    background-color: #eee;
+    color: #c5400d;
+    text-decoration: none
+}
+
+ul.nav-pills li.dropdown button.dropdown-toggle {
+    position: relative;
+    display: block;
+    padding: 10px 15px
+}
+
+ul.nav-pills li.dropdown button.dropdown-toggle:hover {
+    background-color: #eee
+}
+
+div.RightSideNav {
+    padding: 0px 15px 15px;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    margin-bottom: 10px;
+    border: 1px solid #dcdcdc;
+    word-break: break-word;
+    -ms-word-break: break-word
+}
+
+div.RightSideNav div.block-container div.profile-pic {
+    width: 60px;
+    float: left
+}
+
+div.RightSideNav div.block-container div.user-info {
+    padding-left: 75px;
+    word-wrap: break-word
+}
+
+div.RightSideNav:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both
+}
+
+#divProjectNav {
+    padding: 12px 0px 15px
+}
+
+#divProjectNav a {
+    margin-right: 20px;
+    font-size: 16px;
+    padding: 0px 2px
+}
+
+.underlinable-anchor.selected,
+.underlinable-anchor:hover {
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #0072C6
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    background-color: #f8f8f8;
+    border: 1px solid #CDCDCD;
+    border-radius: 2px;
+    padding: 15px
+}
+
+.big-link {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 18px
+}
+
+.ListItemLbl {
+    color: #515A61;
+    font-weight: 700;
+    white-space: nowrap
+}
+
+.underlined-row {
+    border-bottom: 1px solid Gainsboro
+}
+
+.underline {
+    text-decoration: underline
+}
+/*#endregion*/
+
+/*stacked display help styles*//*#region*/
+.help-glyph {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding-left: 15px;
+    background: url(../Images/v_collapsed.png);
+    background-repeat: no-repeat;
+    background-position: 3px 8px;
+    cursor: pointer
+}
+
+.help-glyph:hover {
+    background-image: url(../Images/v_collapsed_hover.png)
+}
+
+.help-glyph.expanded {
+    background-image: url(../Images/v_expanded.png)
+}
+
+.help-glyph.expanded:hover {
+    background-image: url(../Images/v_expanded_hover.png)
+}
+/*#endregion*/
+
+/*Menu displayed when a user right clicks on an item (ie. briefcase folders)*//*#region*/
+.right-click-menu {
+    width: 200px
+        /* ensure that action menus appear above everything */
+}
+
+.right-click-menu,
+.save-search-div {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0px 1px 12px -3px black;
+    border-collapse: separate;
+    border: 1px solid #dcdcdc;
+    z-index: 10000
+}
+
+.save-search-div {
+    width: 300px
+        /* ensure that action menus appear above everything */
+}
+
+.save-search-div.scrollable {
+    overflow: auto;
+    max-height: 300px
+}
+
+div.nav-item {
+    padding-top: 4px;
+    padding-bottom: 3px;
+    white-space: nowrap;
+    margin-bottom: 2px;
+    border: 1px solid Transparent;
+    padding-left: 27px;
+    cursor: pointer;
+    color: Black;
+    font-size: 12px
+}
+
+div.nav-item:hover {
+    border: 1px solid #d0e4f9;
+    border-radius: 2px;
+    background-image: url(../Images/navitemfadeblue.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-color: #F8F9F9;
+    color: #c5400d
+}
+
+div.nav-item a {
+    font-size: 12px;
+    color: inherit
+}
+/*#endregion*/
+
+/* tab styles. *//*#region*/
+ul.tabs {
+    background-position: bottom;
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #dcdcdc;
+    margin: 8px 0 0;
+    padding: 0;
+    padding-left: 8px
+}
+/*#endregion*/
+
+/* this is a css hack stolen from the jquery ui css. this seems to make the border on the ul show up correctly. *//*#region*/
+ul.tabs:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden
+}
+
+ul.tabs>li {
+    color: #336699;
+    display: block;
+    float: left;
+    font-size: 1.2em;
+    list-style-type: none;
+    padding: 5px 20px;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 0;
+    /* position: relative and top: 1px combine to let this tab override the bottom border on the parent ul element */
+    position: relative;
+    top: 1px
+}
+
+ul.tabs>li:hover {
+    cursor: pointer;
+    color: #114477
+}
+
+ul.tabs>li.selected {
+    background-color: #F8F9F9;
+    border: 1px solid #dcdcdc;
+    border-top: 2px solid #f5f5f5;
+    border-bottom: 0 none;
+    font-weight: 700
+}
+
+img.person {
+    /*-moz-box-shadow: 0px 1px 12px -3px black;
+  -webkit-box-shadow: 0px 1px 12px -3px black;
+  box-shadow: 0px 1px 12px -3px black;
+  border-collapse: separate;*/
+}
+
+.modal-target,
+.shadow-box {
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0px 1px 12px -3px black;
+    border-collapse: separate;
+    border: 1px solid #dcdcdc
+}
+
+.shadow-box.js-hide-mouseleave {
+    /* make sure "actions" menus are shown above the fixed header */
+    z-index: 10000
+}
+
+.shadow {
+    box-shadow: 0px 1px 12px -3px black
+}
+/*#endregion*/
+
+/* Nav images - now typically used solely by the Lookup/TypeAheadLookup *//*#region*/
+.close-nav {
+    padding-left: 16px;
+    background: url(../Images/x.png) no-repeat 0px 0px
+}
+
+.close-nav.accent:hover,
+.close-nav:hover {
+    background: url(../Images/x_hover.png) no-repeat 0px 0px
+}
+
+.close-nav.accent {
+    background: url(../Images/x_accent.png) no-repeat 0px 0px
+}
+
+.search-nav {
+    padding-left: 18px;
+    background: url(../Images/search.png) no-repeat 0px 0px
+}
+
+.search-nav:hover {
+    background: url(../Images/search_hover.png) no-repeat 0px 0px
+}
+/*#endregion*/
+
+/* Lookup Image Styles *//*#region*/
+.lu_lookupimage {
+    display: inline-block;
+    height: 19px;
+    width: 16px;
+    padding-left: 0px;
+    vertical-align: middle;
+    cursor: pointer
+}
+
+.lu_lookupimage,
+.lu_lookupimage:hover {
+    background-position: 0px 3px
+}
+
+.search-nav.lu_lookupimage {
+    margin-left: 3px
+}
+
+.close-nav.lu_lookupimage {
+    background-image: url(../Images/x_accent.png)
+}
+
+.close-nav.lu_lookupimage:hover {
+    background-image: url(../Images/x_hover.png)
+}
+
+input.lu_lookupbox,
+input.lu_lookupbox:hover,
+input.TDTextBox.lu_lookupbox {
+    cursor: default;
+    border-color: #cdcdcd
+}
+/*#endregion*/
+
+/* Time Styles *//*#region*/
+.time-cell-submitted {
+    background-color: #d9edf7;
+    color: #333
+}
+
+.time-cell-approved {
+    background-color: #dff0d8;
+    color: #3c763d
+}
+
+.time-cell-rejected {
+    background-color: #f2dede;
+    color: #a94442
+}
+
+div.time-labeldiv-approved,
+div.time-labeldiv-notsubmitted,
+div.time-labeldiv-rejected,
+div.time-labeldiv-submitted {
+    font-size: 15px;
+    display: inline;
+    vertical-align: middle;
+    margin-top: 3px;
+    padding: 1px 5px
+}
+
+div.time-labeldiv-notsubmitted {
+    color: #454545
+}
+
+div.time-labeldiv-submitted {
+    color: #336699;
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1
+}
+
+div.time-labeldiv-approved {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6
+}
+
+div.time-labeldiv-rejected {
+    color: #9C0006;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1
+}
+
+div.time-div-approved,
+div.time-div-notsubmitted,
+div.time-div-rejected,
+div.time-div-submitted {
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    padding: 3px
+}
+
+div.time-div-notsubmitted {
+    background-color: #F9F9F9
+}
+
+div.time-div-submitted {
+    background-color: #AAE0FF
+}
+
+div.time-div-approved {
+    background-color: #C6EFCE
+}
+
+div.time-div-rejected {
+    background-color: #FFCAD1
+}
+/* End Time Styles */
+/*#endregion*/
+
+/* Turn off cursor for disabled datepickers *//*#region*/
+/* Add some spacing, alignment, and custom cursor behavior to jQuery calendar icons */
+img.ui-datepicker-trigger {
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 3px
+}
+/*#endregion*/
+
+/* Add the ability to hide the year of datepickers with a certain class *//*#region*/
+.yearless-datepicker .ui-datepicker-year {
+    display: none
+}
+/*#endregion*/
+
+/* Add a border to slider elements *//*#region*/
+span.ui-slider-handle.ui-state-default {
+    border: 1px solid #747474
+}
+/*#endregion*/
+
+/* jQuery-Timepicker-Addon Styles *//*#region*/
+.ui-timepicker-div .ui-widget-header {
+    margin-bottom: 8px
+}
+
+.ui-timepicker-div dl {
+    text-align: left
+}
+
+.ui-timepicker-div dl dt {
+    height: 25px;
+    margin-bottom: -25px
+}
+
+.ui-timepicker-div dl dd {
+    margin: 0 10px 10px 65px
+}
+
+.ui-timepicker-div td {
+    font-size: 90%
+}
+
+.ui-tpicker-grid-label {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0
+}
+/* End jQuery-Timepicker-Addon Styles */
+/*#endregion*/
+
+/* Workflow Stage Status Styles *//*#region*/
+.stages {
+    /* Each stage icon div. They should be display: inline when display is not expanded. */
+    /* Styles to apply when the stages display has been expanded. */
+}
+
+.stages>div {
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 3px
+        /* The span contains the stage name. It should be hidden when the stages display is not expanded. */
+}
+
+.stages>div span.name {
+    display: none;
+    vertical-align: middle
+}
+
+.stages.expanded {
+    /* The stage icon divs should all be display: block to show each stage on a different line. */
+}
+
+.stages.expanded>div {
+    display: block;
+    overflow: inherit;
+    width: inherit
+        /* The name of the stage should be visible. */
+}
+
+.stages.expanded>div span.name {
+    display: inline;
+    vertical-align: middle;
+    margin-left: 3px
+}
+/*#endregion*/
+
+/*Use this for any status or percent completes in the header*//*#region*/
+.status {
+    font-family: Segoe UI Semibold, Segoe UI, Open Sans Semibold, Open Sans, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0px;
+    padding-right: 5px;
+    color: black;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: inline-block
+}
+
+div.comment {
+    display: none;
+    width: 100%;
+    background-color: #eef1f3;
+    border: 1px solid #CDCDCD;
+    margin-top: 5px;
+    position: relative
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 40
+        /* Designed to go below a white out div, but above other regular content. */
+}
+/*#endregion*/
+
+/* This reserves space for a position: fixed button row so content does not appear to be beneath it. *//*#region*/
+.button-row-shim {
+    padding-top: 41px
+}
+/*#endregion*/
+
+/* These classes are used to render a fixed button row beneath a fixed header *//*#region*/
+.fixed-button-row-header-offset {
+    top: 122px
+}
+
+.fixed-button-row-header-shim {
+    padding-top: 162px
+}
+/*#endregion*/
+
+/* tdbar styles *//*#region*/
+div.tdbar {
+    line-height: 33px;
+    position: fixed;
+    width: 100%;
+    font-size: 14px;
+    z-index: 100
+}
+
+div.tdbar-settings {
+    right: 0px;
+    margin-right: 10px;
+    width: auto
+}
+
+div.tdbar-settings i {
+    color: #454545;
+    padding-right: 5px
+}
+
+.tab-row {
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #F8F9F9
+}
+
+.btn-link:focus,
+.tab-row>div>.btn-link:hover,
+.tab-row>div>span>.btn-link:hover {
+    text-decoration: none
+}
+
+.tab-row>div>a {
+    font-size: 13px;
+    white-space: nowrap
+}
+
+.tdbar-sub {
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #f5f5f5;
+    line-height: 30px;
+    display: table;
+    width: 100%
+}
+
+.tdbar-sub a {
+    margin-left: 12px;
+    font-size: 13px
+}
+
+div.shim-spacer {
+    height: 34px
+}
+
+div.tdbar-anchored-button,
+div.tdbar-anchored-button a,
+div.tdbar-button {
+    float: left;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 35px;
+    cursor: pointer;
+    color: #343434
+}
+
+#divUserSettings .btn {
+    font-size: 14px
+}
+
+div.tdbar-anchored-button a {
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+div.tdbar-anchored-button:hover,
+div.tdbar-button:hover {
+    background-color: #fff
+}
+
+div.tdbar-anchored-button-sel,
+div.tdbar-anchored-button-sel a,
+div.tdbar-button-sel {
+    float: left;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700
+}
+
+div.tdbar-anchored-button-sel:hover,
+div.tdbar-button-sel:hover {
+    background-color: #005899
+}
+
+div.tdbar-button,
+div.tdbar-button-sel {
+    padding-left: 8px;
+    padding-right: 8px
+}
+
+div.tdbar-submenu {
+    position: fixed;
+    border: 1px solid #0072C6;
+    border-top: none;
+    display: none;
+    background-color: white;
+    z-index: 1000
+}
+
+div.tdbar-submenu-item {
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: #ffffff;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 14px;
+    color: black
+}
+
+div.tdbar-submenu-item:hover {
+    background-color: #f5f5f5
+}
+
+div.tdbar-submenu-item a {
+    color: black
+}
+
+div.tdbar-submenu-item.dynamictext {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+div.tdbar-briefcase-submenu-item {
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: #ffffff;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 14px;
+    color: black
+}
+
+div.tdbar-briefcase-submenu-item:hover {
+    background-color: #f5f5f5
+}
+
+div.tdbar-briefcase-submenu-item img {
+    padding: 0 2px 4px 0
+}
+/* end tdbar styles */
+/*#endregion*/
+
+/* Workflow Builder Styles *//*#region*/
+.rel-annotation {
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px
+}
+
+.step {
+    border: 1px solid #ddd;
+    width: 150px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 2px 2px 19px #aaa;
+    -o-box-shadow: 2px 2px 19px #aaa;
+    -webkit-box-shadow: 2px 2px 19px #aaa;
+    -moz-box-shadow: 2px 2px 19px #aaa
+}
+
+.current .step-name {
+    background-color: #c6efce
+}
+
+.step-name {
+    cursor: pointer;
+    line-height: 20px;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 10px;
+    background-color: #f0f0f0
+}
+
+.step-options>div {
+    padding: 5px;
+    border-top: 1px solid #eee
+}
+
+.drag-handle {
+    background-color: #bf3935;
+    cursor: grab;
+    cursor: -webkit-grab;
+    display: inline-block;
+    height: 15px;
+    margin-right: 10px;
+    width: 15px
+}
+
+.drag-handle:active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing
+}
+/* End: Workflow Builder Styles */
+/*#endregion*/
+
+/* Time entry CSS classes *//*#region*/
+.hours-cell {
+    text-align: center
+}
+
+.hours-cell input {
+    width: 53px;
+    text-align: right
+}
+
+.desc-cell {
+    display: none
+}
+
+.desc-cell textarea {
+    width: 370px;
+    height: 60px
+}
+
+.current-day {
+    font-weight: 400
+}
+
+.ellipsis,
+.nowrap {
+    white-space: nowrap
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.TRItemTitleCell .hot-add-btn {
+    padding: 0;
+    padding-right: 4px;
+    border: 0
+}
+
+table.time-report {
+    table-layout: fixed
+}
+
+table.time-report td,
+table.time-report th {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.time-approve-table table.time-report {
+    table-layout: fixed
+}
+
+.time-approve-table table.time-report th {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.time-approve-table table.time-report td {
+    overflow: auto;
+    white-space: normal
+}
+
+div.SearchBox>input[type=text] {
+    padding-right: 20px;
+    border-radius: 2px
+}
+
+div.SearchBox>a>i {
+    border: 0;
+    position: relative;
+    right: 20px
+}
+
+.divSection {
+    margin-bottom: 15px
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto
+}
+/*#endregion*/
+
+/* auto-complete *//*#region*/
+.form-inline .talu_holder {
+    /* This makes sure the typeahead lookup takes up a resonable amount of space when in an inline form. Otherwise, it
+  shrinks down real small. */
+    min-width: 300px
+}
+
+.talu_holder {
+    padding: 5px 12px 0 6px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    display: inline-block;
+    /* Need this to prevent IE7 from being weird */
+    border: 1px solid #cdcdcd;
+    float: left;
+    margin: 0;
+    overflow-x: hidden;
+    vertical-align: middle;
+    min-height: 34px;
+    max-height: 200px;
+    height: auto;
+    overflow-y: auto
+}
+
+.talu_holder li {
+    float: left;
+    list-style-type: none;
+    margin: 0 5px 4px 0;
+    white-space: nowrap
+}
+
+.talu_holder .bit-box {
+    color: #555;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: default;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 0 6px
+}
+
+.talu_holder .bit-box-focus {
+    background: #598BEC;
+    border-color: #598BEC;
+    color: #fff
+}
+
+.talu_holder .bit-input {
+    font-size: 12px;
+    padding: 0;
+    display: inline-block;
+    float: left
+}
+
+.talu_holder .bit-input input {
+    border: 0;
+    font-size: 14px;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    line-height: 18px;
+    /* Vertically align in holder */
+    /*padding-top: 3px;*/
+    display: inline-block
+}
+
+.talu_holder .bit-box a.closebutton {
+    background: url(../Images/ac_close.gif);
+    cursor: pointer;
+    display: inline-block;
+    height: 7px;
+    width: 7px;
+    margin: 0 0 0 5px
+}
+
+.talu_holder .bit-box a.closebutton:hover {
+    background-position: 7px
+}
+
+.talu_holder .bit-box-focus a.closebutton,
+.talu_holder .bit-box-focus a.closebutton:hover {
+    background-position: bottom
+}
+
+.talu_holder.no-selection {
+    border-color: #bf3935
+}
+/*#endregion*/
+
+/* "Start typing here..." CSS *//*#region*/
+.talu_holder .luac_default {
+    display: inline-block;
+    border-width: 0;
+    color: #5e5e5e;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 19px;
+    /* Vertically align in holder */
+    padding-left: 6px;
+    float: left
+}
+
+.talu_buttons {
+    vertical-align: top
+}
+
+.talu_holder.holder-focused {
+    outline: 2px solid #3F9AE4;
+    -webkit-outline: 5px solid -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+
+.talu_buttons a.btn-default.no-selection {
+    border-top-color: #bf3935;
+    border-bottom-color: #bf3935;
+    border-right-color: #bf3935
+}
+
+.talu_buttons a.btn-default.btn-typeahead-lookup.no-selection {
+    border-right-color: #ccc
+}
+/*#endregion*/
+
+/* Profile Views desktop module *//*#region*/
+.profile-views .profile-views-count {
+    font-size: 48px
+}
+
+.profile-views .profile-views-text {
+    font-size: 14px
+}
+/* End Profile Views desktop module */
+/*#endregion*/
+
+/* Profile Image Styles *//*#region*/
+div.profile-image {
+    height: 60px;
+    width: 60px
+}
+
+div.profile-image.clickable {
+    cursor: pointer
+}
+
+div.profile-image.picture>img {
+    border-radius: 3px
+}
+
+div.profile-image.initials {
+    line-height: 60px;
+    text-align: center;
+    font-size: 28px;
+    color: white;
+    border-radius: 3px
+}
+
+div.profile-image.initials.system {
+    font-size: 36px
+}
+
+div.profile-image.initials.system>.fa {
+    margin: 0
+}
+
+div.profile-image.initials.system>.fa:hover {
+    color: white;
+    cursor: default
+}
+
+div.profile-image.initials.anonymous {
+    font-size: 42px
+}
+/* End Profile Image Styles */
+/*#endregion*/
+
+/* Tile styles *//*#region*/
+div.secondary {
+    background-color: #2969a0
+}
+
+div.tertiary {
+    background-color: #388091
+}
+
+.tdTilebg {
+    border: 1px solid #dcdcdc;
+    height: 130px;
+    width: 140px;
+    background-color: #555555;
+    margin: 5px 10px 5px 0px;
+    float: left
+}
+
+.tdTilebg .num {
+    font-size: 45px;
+    text-align: center;
+    color: white;
+    padding: 0px;
+    margin: 0px
+}
+
+.tdTilebg .num a {
+    color: inherit
+}
+
+.tdTilebg .num.smalltext {
+    font-size: 40px;
+    padding-top: 2.5px;
+    line-height: 61.7857143px
+}
+
+.tdTilebg .txt {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: white
+}
+
+.tdTilebg .txt.smalltext {
+    font-size: 13px;
+    line-height: 22.85714286px
+}
+
+.tdTilebg.smalltext .num {
+    font-size: 40px;
+    padding-top: 2.5px;
+    line-height: 61.7857143px
+}
+
+.tdTilebg.smalltext .txt {
+    font-size: 13px;
+    line-height: 22.85714286px
+}
+
+.tdTilemd {
+    border: 1px solid #dcdcdc;
+    height: 105px;
+    width: 115px;
+    background-color: #555555;
+    margin: 5px 10px 5px 0px;
+    float: left
+}
+
+.tdTilemd .num {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    padding-top: 15px
+}
+
+.tdTilemd .num a {
+    color: inherit
+}
+
+.tdTilemd .num.smalltext {
+    font-size: 25px;
+    padding-top: 12.5px;
+    line-height: 49.64285716px
+}
+
+.tdTilemd .txt {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: white
+}
+
+.tdTilemd .txt.smalltext {
+    font-size: 12px;
+    line-height: 21.42857143px
+}
+
+.tdTilemd.smalltext .num {
+    font-size: 25px;
+    padding-top: 12.5px;
+    line-height: 49.64285716px
+}
+
+.tdTilemd.smalltext .txt {
+    font-size: 12px;
+    line-height: 21.42857143px
+}
+
+.tdTilesm {
+    border: 1px solid #dcdcdc;
+    height: 85px;
+    width: 95px;
+    background-color: #555555;
+    margin: 5px 10px 5px 0px;
+    float: left
+}
+
+.tdTilesm .num {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    padding: 0px;
+    margin: 0px
+}
+
+.tdTilesm .num a {
+    color: inherit
+}
+
+.tdTilesm .num.smalltext {
+    font-size: 25px;
+    padding-top: 7.5px;
+    line-height: 49.64285716px
+}
+
+.tdTilesm .txt {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: white
+}
+
+.tdTilesm .txt.smalltext {
+    font-size: 12px;
+    line-height: 21.42857143px
+}
+
+.tdTilesm.smalltext .num {
+    font-size: 25px;
+    padding-top: 7.5px;
+    line-height: 49.64285716px
+}
+
+.tdTilesm.smalltext .txt {
+    font-size: 12px;
+    line-height: 21.42857143px
+}
+
+.num.smalltext,
+.smalltext .num,
+.smalltext .txt,
+.txt.smalltext {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 2px;
+    padding-right: 2px
+}
+/*#endregion*/
+
+/* MEDIA QUERIES *//*#region*/
+/* Extra Small */
+/* END MEDIA QUERIES */
+/*#endregion*/
+
+/* [.form-signin styles] *//*#region*/
+.form-signin {
+    margin: 0 auto
+}
+
+.form-signin .checkbox,
+.form-signin .form-signin-heading {
+    margin-bottom: 10px
+}
+
+.form-signin .checkbox {
+    font-weight: 400
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px
+}
+
+.form-signin .form-control:focus {
+    z-index: 2
+}
+
+.form-signin input[placeholder=Username] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0
+}
+
+.form-signin input[type=password] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0
+}
+/*#endregion*/
+
+/* Styles for optional fields (see AssetUpdateMultiple.aspx) *//*#region*/
+div.selectable-field {
+    display: table;
+    width: 100%
+}
+
+div.selectable-field div.form-group-toggle {
+    padding-bottom: 18px
+}
+
+div.selectable-field>div:first-child {
+    width: 25px
+}
+
+div.selectable-field>div {
+    display: table-cell
+}
+/*#endregion*/
+
+/* These styles are used to make a horizontal asp:RadioButtonList appear as inline bootstrap radio buttons *//*#region*/
+/*
+  The following markup should be used for the RadioButtonList:
+  <asp:RadioButtonList ID="rblInterval" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" CssClass="radio">
+    <asp:ListItem Value="month" Text="Months" Selected="True" />
+    <asp:ListItem Value="week" Text="Weeks" />
+  </asp:RadioButtonList>
+*/
+
+span.radio {
+    padding: 0px
+}
+
+span.radio>input[type=radio] {
+    margin: 8px -5px 7px 0px
+}
+
+span.radio>label {
+    float: left;
+    margin-right: 15px;
+    padding: 3px 5px 0px 15px
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse !important;
+    max-width: 100%
+}
+
+table h4 {
+    padding: 0px
+}
+
+table>tbody>tr>td,
+table>tbody>tr>th,
+table>tfoot>tr>td,
+table>tfoot>tr>th,
+table>thead>tr>td,
+table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top
+}
+
+table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd
+}
+
+table>caption+thead>tr:first-child>td,
+table>caption+thead>tr:first-child>th,
+table>colgroup+thead>tr:first-child>td,
+table>colgroup+thead>tr:first-child>th,
+table>thead:first-child>tr:first-child>td,
+table>thead:first-child>tr:first-child>th {
+    border-top: 0
+}
+
+table>tbody+tbody {
+    border-top: 2px solid #ddd
+}
+
+.accessible-desktop .dropdown-menu {
+    min-width: initial;
+    position: relative
+}
+
+.accessible-desktop .dropdown-menu>li>a {
+    white-space: break-spaces;
+    word-wrap: normal;
+    padding-right: 10px;
+    padding-left: 10px
+}
+
+.btn-group.open .btn-link {
+    text-decoration: none
+}
+
+.btn-group>.btn-link:hover,
+.btn-link:active,
+.btn-link:focus {
+    text-decoration: none;
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+
+.ButtonCellTop>table>tbody>tr>td {
+    padding: 0px
+}
+
+.checkbox-list label,
+.HorizRadio label {
+    font-weight: 400;
+    padding-left: 3px;
+    padding-right: 15px
+}
+
+.dropdown-menu {
+    z-index: 9999
+}
+
+.dropdown-menu>li>a {
+    cursor: pointer
+}
+
+.form-horizontal span.radio {
+    padding-top: 4px
+}
+
+.HorizRadio td,
+.TDCheckBoxList td {
+    padding: 0
+}
+
+.schedule-input {
+    width: 80px
+}
+
+.TDCheckBoxList label {
+    font-weight: 400
+}
+/*#endregion*/
+
+/* Panel styles from http://startbootstrap.com/template-overviews/sb-admin/ *//*#region*/
+.panel-green {
+    border-color: #298529
+}
+
+.panel-green>.panel-body,
+.panel-green>.panel-heading {
+    border-color: #298529;
+    color: #ffffff;
+    background-color: #298529
+}
+
+.panel-green>a {
+    color: #298529
+}
+
+.panel-green>a:hover {
+    color: #257825
+}
+
+.panel-gray {
+    border-color: #5e5e5e
+}
+
+.panel-gray>.panel-heading {
+    border-color: #5e5e5e;
+    color: #ffffff;
+    background-color: #5e5e5e
+}
+
+.panel-gray>a {
+    color: #5e5e5e
+}
+
+.panel-gray>a:hover {
+    color: #555555
+}
+
+.panel-red {
+    border-color: #bf3935
+}
+
+.panel-red>.panel-heading {
+    border-color: #bf3935;
+    color: #ffffff;
+    background-color: #bf3935
+}
+
+.panel-red>a {
+    color: #bf3935
+}
+
+.panel-red>a:hover {
+    color: #ac3330
+}
+
+.panel-yellow {
+    border-color: #8e6a00
+}
+
+.panel-yellow>.panel-heading {
+    border-color: #8e6a00;
+    color: #ffffff;
+    background-color: #8e6a00
+}
+
+.panel-yellow>a {
+    color: #8e6a00
+}
+
+.panel-yellow>a:hover {
+    color: #805f00
+}
+
+p {
+    margin: 12px 0px
+}
+
+h2+.disp-group:first-of-type,
+h2+.form-group:first-of-type {
+    margin-top: 15px
+}
+/*#endregion*/
+
+/* Get rid of the auto-hiding scrollbar in IE *//*#region*/
+@-ms-viewport {
+    width: auto !important
+}
+
+.modal-title {
+    font-size: 24px !important;
+    font-weight: 500 !important
+}
+
+.modal-body textarea {
+    max-width: 100%
+}
+
+.modal-footer {
+    text-align: left
+}
+
+.modal-xl {
+    margin: 30px;
+    width: auto
+}
+
+.ModuleContent {
+    overflow-x: auto
+}
+/*#endregion*/
+
+/* This is used for the icons associated with desktop modules *//*#region*/
+.module-header {
+    cursor: move
+}
+
+.module-header i:hover,
+.module-header span:hover {
+    cursor: pointer
+}
+
+.module-header span {
+    color: #2b2b2b
+}
+/*#endregion*/
+
+/* This is used primarily to remove the borders from desktop modules *//*#region*/
+.no-border {
+    border: none !important
+}
+
+.no-top-border {
+    border-top: none !important
+}
+
+.no-right-border {
+    border-right: none !important
+}
+
+.no-bottom-border {
+    border-bottom: none !important
+}
+
+.no-left-border {
+    border-left: none !important
+}
+
+.inline {
+    display: inline
+}
+
+.inline-block {
+    display: inline-block
+}
+/*#endregion*/
+
+/* START jquery.multiple-select customizations *//*#region*/
+.ms-parent {
+    height: 34px;
+    border-radius: 3px !important
+}
+
+.ms-choice {
+    height: 34px !important;
+    line-height: 34px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 3px !important
+}
+
+@-moz-document url-prefix() {
+    .ms-choice:focus {
+        outline: 2px solid #3F9AE4;
+        outline-offset: -2px
+    }
+}
+
+.ms-drop {
+    border-radius: 0px 0px 3px 3px !important
+}
+
+.ms-choice>div {
+    height: 20px !important;
+    margin-top: 5px !important
+}
+
+.ms-drop ul>li label {
+    white-space: normal !important
+}
+
+.ms-drop input[type=checkbox] {
+    margin-top: -1px !important;
+    margin-right: 6px !important
+}
+/* END jquery.multiple-select customizations */
+/*#endregion*/
+
+/* Turn off cursor for disabled datepickers *//*#region*/
+.TDTextBox.TDDatePicker.disabled {
+    cursor: default
+}
+
+ul.nav-tabs>li a {
+    line-height: 1.0em
+}
+
+.nav-tabs>li.active a {
+    background-color: #F8F9F9;
+    border-bottom-color: #F8F9F9;
+    font-weight: 600;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px
+}
+
+.ie10-bootstrap-shim .form-control,
+.ie10-bootstrap-shim .TDTextBox {
+    border-radius: 0px
+}
+
+.user-profile-menu .profile-image {
+    margin: 15px auto
+}
+
+.tditemlist-sorting {
+    background-color: White;
+    border: 1px solid #dcdcdc;
+    border-bottom: none
+}
+
+.tditemlist-id,
+.tditemlist-pos {
+    display: none
+}
+/*#endregion*/
+
+/* Priority/Risk Styling *//*#region*/
+.pri {
+    width: 16px;
+    height: 16px;
+    margin: 2px 5px 2px 0;
+    border-radius: 1px;
+    float: left
+}
+
+.rsk-name {
+    font-size: 16px;
+    font-weight: 700
+}
+
+.rsk-status {
+    padding: 2px;
+    text-align: center;
+    width: 100px;
+    border: 1px solid #000000;
+    color: white
+}
+
+.pri-none {
+    background-color: #5e5e5e
+}
+
+.pri-low {
+    background-color: #298529
+}
+
+.pri-medlow {
+    background-color: #5c7815
+}
+
+.pri-nor {
+    background-color: #8e6a00
+}
+
+.pri-medhi {
+    background-color: #a7521b
+}
+
+.pri-hi {
+    background-color: #bf3935
+}
+
+.sortable-item {
+    padding: 15px 0px 11px;
+    border-bottom: 1px solid #dcdcdc
+}
+
+.js-td-select {
+    width: 100%
+}
+
+.input-group>.select2-container--bootstrap .select2-selection {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important
+}
+/*#endregion*/
+
+/* Autocompleter (i.e. popped-up list of items) *//*#region*/
+.talu_holder.form-control {
+    border-top-left-radius: 3px !important;
+    border-bottom-left-radius: 3px !important
+}
+
+.lu_tdac-auto {
+    position: relative;
+    z-index: 28;
+    top: 33px;
+    left: 0
+}
+
+.lu_tdac-auto,
+.lu_tdac-auto ul {
+    background: #fff !important;
+    display: none
+}
+
+.lu_tdac-auto ul {
+    border: 1px solid #dcdcdc;
+    width: 100% !important;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: auto;
+    padding: 0;
+    margin: 0 !important;
+    position: absolute
+}
+
+.lu_tdac-auto ul li {
+    /*background-color: #F6F6F6;*/
+    border-width: 0 1px 1px !important;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 16px;
+    list-style-type: none;
+    margin: 0;
+    padding: 6px 12px;
+    z-index: 29
+}
+
+.lu_tdac-auto ul li em {
+    font-weight: 700
+}
+
+.lu_tdac-auto ul li div.talu_caption em {
+    font-style: normal
+}
+
+.lu_tdac-auto ul li div.talu_subcaption {
+    font-style: italic;
+    font-size: 90%;
+    color: #555555
+}
+
+.lu_tdac-auto ul .auto-focus div.talu_subcaption {
+    color: #ffffff
+}
+
+.lu_tdac-auto ul .auto-focus {
+    background: #4173CC;
+    color: #fff
+}
+
+.lu_tdac-auto ul .auto-focus em {
+    background: none
+}
+
+.lu_deleted {
+    background-color: #4173CC !important;
+    color: #ffffff !important
+}
+
+.btn-typeahead-lookup {
+    border-top-right-radius: 3px !important;
+    border-bottom-right-radius: 3px !important
+}
+/* End auto-complete */
+/*#endregion*/
+
+/* override select2 styles for tags *//*#region*/
+div.js-tagformfield .select2-container-multi .select2-choices,
+div.js-tags-inlineedit .select2-container-multi .select2-choices {
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding-left: 8px
+}
+
+div.js-tagformfield .select2-container-multi.select2-container-active .select2-choices,
+div.js-tags-inlineedit .select2-container-multi.select2-container-active .select2-choices {
+    background-image: none;
+    border: 1px solid #5897fb
+}
+
+div.js-tagformfield .select2-container-multi .select2-choices .select2-search-choice,
+div.js-tags-inlineedit .select2-container-multi .select2-choices .select2-search-choice {
+    background: #dcdcdc;
+    border: 1px solid #cdcdcd;
+    display: inline-block;
+    border-radius: 1px;
+    padding: 0 5px;
+    line-height: 17px;
+    margin-right: 3px;
+    margin-top: 5px;
+    word-break: break-all
+}
+
+div.js-tagformfield .select2-container-multi .select2-choices .select2-search-choice>div,
+div.js-tags-inlineedit .select2-container-multi .select2-choices .select2-search-choice>div {
+    margin-right: 15px
+}
+
+div.js-tagformfield .select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close,
+div.js-tags-inlineedit .select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close {
+    left: auto;
+    right: 3px;
+    top: 50%
+}
+
+div.js-tagformfield .select2-container-multi .select2-choices .select2-search-field input {
+    border-width: 0;
+    color: #5e5e5e !important;
+    font-size: 14px;
+    font-style: italic;
+    font-family: Segoe UI, Open Sans, Arial, Sans-Serif;
+    line-height: 19px;
+    padding-left: 0
+}
+
+div.js-tagformfield .select2-container-multi .select2-choices .select2-search-field input:focus {
+    font-style: normal
+}
+/* end select2 override */
+/*#endregion*/
+
+/* Feed styles *//*#region*/
+.ilike.feed-comment,
+.ilike.feed-like {
+    color: #369 !important
+}
+
+.feed-comment:hover,
+.feed-like:hover {
+    cursor: pointer
+}
+
+.feed-deleted {
+    font-style: italic
+}
+/* End Feed styles */
+/*#endregion*/
+
+/* Person Card Panel styles *//*#region*/
+.panel.panel-default.panel-person-card {
+    min-height: 120px
+}
+/* End Person Card Panel styles */
+/*#endregion*/
+
+.textbox-sm {
+    display: inline-block;
+    width: 126px
+}
+
+.pagination-label {
+    vertical-align: 0%
+}
+
+.bootstrap-pagination-label,
+.pagination-label {
+    display: inline;
+    font-size: inherit;
+    line-height: initial
+}
+
+.bootstrap-pagination-label {
+    vertical-align: 75%
+}
+
+.btn-text {
+    background-color: transparent;
+    border: none;
+    padding: 0px
+}
+
+.modal-grid-wrapper {
+    display: block;
+    max-height: 400px;
+    overflow-y: auto
+}
+
+.report-module-not-loaded {
+    text-align: center;
+    padding: 10px;
+    height: 600px
+}
+
+.focus-no-underline:focus {
+    text-decoration: none
+}
+
+.font-weight-bold {
+    font-weight: 700
+}
+
+a.disabled {
+    pointer-events: none
+}
+
+.sort-attachments {
+    margin-right: 10px;
+    font-size: 14px
+}

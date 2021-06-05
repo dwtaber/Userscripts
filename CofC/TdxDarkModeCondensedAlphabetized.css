@@ -57,6 +57,9 @@
 	--sidebar-section-header-border-color: #cccccc33;
 }
 
+/* Very top of page of TDNext home, behind help.cofc.edu link, to-do, and username. */
+/* On ticket and asset pages, everything above the edit/refresh/etc buttons, besides the current tab and */
+/* and the ticket/asset ID boxes. */
 #divHeader
 {
 	background-color: #252526 !important;
