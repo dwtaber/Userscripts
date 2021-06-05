@@ -1,0 +1,1743 @@
+/* Removing everything but color declarations. */
+/* LESS Variables *//*#region*/
+.form:focus
+{
+    border-color: #3F9AE4;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6)
+}
+
+.input-group-btn .btn-default
+{
+    border: 1px solid #ccc;
+    color: #333;
+    background-color: #fff;
+}
+
+.frmFldLbl,
+.stacked .frmFldLbl
+{
+    color: #424242;
+}
+
+tr.TDGridHeader
+{
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd
+}
+
+table>thead>tr.TDGridHeader>th,
+tr.TDGridHeader td
+{
+    color: #646464;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc
+}
+
+.TDGroupingRow
+{
+    color: #336699;
+    background-color: #f5f5f5;
+}
+
+.grouping-row
+{
+    background-color: #f5f5f5;
+}
+
+.TDAlternatingRow
+{
+    background-color: #f9f9f9
+}
+
+.TDFooterRow
+{
+    background-color: #f5f5f5
+}
+
+.TDPagerRow>td
+{
+    border-top: 1px solid #dcdcdc;
+}
+
+.TDPagerRow>td>span
+{
+    background-color: #f5f5f5;
+    border: 1px solid #dcdcdc;
+}
+
+td.SortColumn a,
+th.SortColumn a
+{
+    color: #bf3935
+}
+
+select.TDSelect,
+select[multiple].TDSelect
+{
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+input.TDTextBox,
+textarea.TDTextArea
+{
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    border: 1px solid #cdcdcd
+}
+
+.border,
+.border-top,
+.border-bottom,
+.border-right,
+.border-left
+{
+    border-left: 1px solid #ddd
+}
+
+.soft-border,
+.soft-border-top,
+.soft-border-bottom,
+.soft-border-right,
+.soft-border-left
+{
+    border-left: 1px solid #dcdcdc
+}
+
+/*#endregion*/
+
+/* Color utility classes *//*#region*/
+.red,
+.red-bg,
+.red-hover:hover,
+.red-hover-bg:hover
+{
+    color: #bf3935 !important
+}
+
+.red-border,
+.red-border-bottom,
+.red-border-left
+.red-border-right,
+.red-border-top
+{
+    border: 1px solid #bf3935
+}
+
+.dark-red,
+.dark-red-bg,
+.dark-red-hover:hover,
+.dark-red-hover-bg:hover
+{
+    color: #ac3330 !important
+}
+
+.dark-red-border,
+.dark-red-border-bottom,
+.dark-red-border-left,
+.dark-red-border-right,
+.dark-red-border-top
+{
+    border-left: 1px solid #ac3330
+}
+
+.light-red,
+.light-red-bg,
+.light-red-hover:hover,
+.light-red-hover-bg:hover
+{
+    background-color: #f5e1e1 !important
+}
+
+.light-red-border,
+.light-red-border-bottom,
+.light-red-border-left,
+.light-red-border-right,
+.light-red-border-top
+{
+    border-left: 1px solid #f5e1e1
+}
+
+.green,
+.green-bg,
+.green-hover:hover,
+.green-hover-bg:hover
+{
+    color: #298529 !important
+}
+
+.green-border,
+.green-border-bottom,
+.green-border-left,
+.green-border-right,
+.green-border-top
+{
+    border-left: 1px solid #298529
+}
+
+.dark-green,
+.dark-green-bg,
+.dark-green-hover:hover,
+.dark-green-hover-bg:hover
+{
+    background-color: #257825 !important
+}
+
+.dark-green-border,
+.dark-green-border-bottom,
+.dark-green-border-left,
+.dark-green-border-right,
+.dark-green-border-top
+{
+    border-left: 1px solid #257825
+}
+
+.light-green,
+.light-green-bg,
+.light-green-hover:hover,
+.light-green-hover-bg:hover
+{
+    background-color: #dfeddf !important
+}
+
+.light-green-border,
+.light-green-border-bottom,
+.light-green-border-left,
+.light-green-border-right,
+.light-green-border-top
+{
+    border-left: 1px solid #dfeddf
+}
+
+.yellow,
+.yellow-bg,
+.yellow-hover:hover,
+.yellow-hover-bg:hover
+{
+    background-color: #8e6a00 !important
+}
+
+.yellow-border,
+.yellow-border-bottom,
+.yellow-border-right,
+.yellow-border-left,
+.yellow-border-top
+{
+    border-left: 1px solid #8e6a00
+}
+
+.dark-yellow,
+.dark-yellow-bg,
+.dark-yellow-hover:hover,
+.dark-yellow-hover-bg:hover
+{
+    background-color: #805f00 !important
+}
+
+.dark-yellow-border,
+.dark-yellow-border-bottom,
+.dark-yellow-border-left,
+.dark-yellow-border-right,
+.dark-yellow-border-top
+{
+    border-left: 1px solid #805f00
+}
+
+.light-yellow,
+.light-yellow-bg,
+.light-yellow-hover:hover,
+.light-yellow-hover-bg:hover
+{
+    background-color: #eee9d9 !important
+}
+
+.light-yellow-border,
+.light-yellow-border-bottom,
+.light-yellow-border-left,
+.light-yellow-border-right,
+.light-yellow-border-top
+{
+    border-left: 1px solid #eee9d9
+}
+
+.blue,
+.blue-bg,
+.blue-hover:hover,
+.blue-hover-bg:hover
+{
+    background-color: #2e75b2 !important
+}
+
+.blue-border,
+.blue-border-bottom,
+.blue-border-left,
+.blue-border-right,
+.blue-border-top
+{
+    border-left: 1px solid #2e75b2
+}
+
+.dark-blue,
+.dark-blue-bg,
+.dark-blue-hover:hover,
+.dark-blue-hover-bg:hover
+{
+    background-color: #2969a0 !important
+}
+
+.dark-blue-border,
+.dark-blue-border-top,
+.dark-blue-border-right,
+.dark-blue-border-bottom,
+.dark-blue-border-left
+{
+    border-left: 1px solid #2969a0
+}
+
+.light-blue,
+.light-blue-hover:hover,
+.light-blue-bg,
+.light-blue-hover-bg:hover
+{
+    background-color: #e0eaf3 !important
+}
+
+.light-blue-border,
+.light-blue-border-top,
+.light-blue-border-right,
+.light-blue-border-bottom,
+.light-blue-border-left
+{
+    border-left: 1px solid #e0eaf3
+}
+
+.orange,
+.orange-hover:hover,
+.orange-bg,
+.orange-hover-bg:hover
+{
+    background-color: #a7521b !important
+}
+
+.orange-border,
+.orange-border-top,
+.orange-border-right,
+.orange-border-bottom,
+.orange-border-left
+{
+    border-left: 1px solid #a7521b
+}
+
+.dark-orange,
+.dark-orange-hover:hover,
+.dark-orange-bg,
+.dark-orange-hover-bg:hover
+{
+    background-color: #964918 !important
+}
+
+.dark-orange-border,
+.dark-orange-border-top,
+.dark-orange-border-right,
+.dark-orange-border-bottom,
+.dark-orange-border-left
+{
+    border-left: 1px solid #964918
+}
+
+.light-orange,
+.light-orange-hover:hover,
+.light-orange-bg,
+.light-orange-hover-bg:hover
+{
+    background-color: #f2e5dd !important
+}
+
+.light-orange-border,
+.light-orange-border-top,
+.light-orange-border-right,
+.light-orange-border-bottom,
+.light-orange-border-left
+{
+    border-left: 1px solid #f2e5dd
+}
+
+.purple,
+.purple-hover:hover,
+.purple-bg,
+.purple-hover-bg:hover
+{
+    background-color: #775774 !important
+}
+
+.purple-border,
+.purple-border-top,
+.purple-border-right,
+.purple-border-bottom,
+.purple-border-left
+{
+    border-left: 1px solid #775774
+}
+
+.dark-purple,
+.dark-purple-hover:hover,
+.dark-purple-bg,
+.dark-purple-hover-bg:hover
+{
+    background-color: #6b4e68 !important
+}
+
+.dark-purple-border,
+.dark-purple-border-top,
+.dark-purple-border-right,
+.dark-purple-border-bottom,
+.dark-purple-border-left
+{
+    border-left: 1px solid #6b4e68
+}
+
+.light-purple,
+.light-purple-hover:hover,
+.light-purple-bg,
+.light-purple-hover-bg:hover
+{
+    background-color: #ebe6ea !important
+}
+
+.light-purple-border,
+.light-purple-border-top,
+.light-purple-border-right,
+.light-purple-border-bottom,
+.light-purple-border-left
+{
+    border-left: 1px solid #ebe6ea
+}
+
+.yellow-green,
+.yellow-green-hover:hover,
+.yellow-green-bg,
+.yellow-green-hover-bg:hover
+{
+    background-color: #5c7815 !important
+}
+
+.yellow-green-border,
+.yellow-green-border-top,
+.yellow-green-border-right,
+.yellow-green-border-bottom,
+.yellow-green-border-left
+{
+    border-left: 1px solid #5c7815
+}
+
+.dark-yellow-green,
+.dark-yellow-green-hover:hover,
+.dark-yellow-green-bg,
+.dark-yellow-green-hover-bg:hover
+{
+    background-color: #526c12 !important
+}
+
+.dark-yellow-green-border,
+.dark-yellow-green-border-top,
+.dark-yellow-green-border-right,
+.dark-yellow-green-border-bottom,
+.dark-yellow-green-border-left
+{
+    border-left: 1px solid #526c12
+}
+
+.light-yellow-green,
+.light-yellow-green-hover:hover,
+.light-yellow-green-bg,
+.light-yellow-green-hover-bg:hover
+{
+    background-color: #e6ebdc !important
+}
+
+.light-yellow-green-border,
+.light-yellow-green-border-top,
+.light-yellow-green-border-right,
+.light-yellow-green-border-bottom,
+.light-yellow-green-border-left
+{
+    border-left: 1px solid #e6ebdc
+}
+
+.gray,
+.gray-hover:hover,
+.gray-bg,
+.gray-hover-bg:hover
+{
+    background-color: #5e5e5e !important
+}
+
+.gray-border,
+.gray-border-top,
+.gray-border-right,
+.gray-border-bottom,
+.gray-border-left
+{
+    border-left: 1px solid #5e5e5e
+}
+
+.dark-gray,
+.dark-gray-hover:hover,
+.dark-gray-bg,
+.dark-gray-hover-bg:hover
+{
+    background-color: #555555 !important
+}
+
+.dark-gray-border,
+.dark-gray-border-top,
+.dark-gray-border-right,
+.dark-gray-border-bottom,
+.dark-gray-border-left
+{
+    border-left: 1px solid #555555
+}
+
+.light-gray,
+.light-gray-hover:hover,
+.light-gray-bg,
+.light-gray-hover-bg:hover
+{
+    background-color: #f5f5f5 !important
+}
+
+.light-gray-border,
+.light-gray-border-top,
+.light-gray-border-right,
+.light-gray-border-bottom,
+.light-gray-border-left
+{
+    border-left: 1px solid #f5f5f5
+}
+
+.black,
+.black-hover:hover,
+.black-bg,
+.black-hover-bg:hover
+{
+    background-color: #000000 !important
+}
+
+.black-border,
+.black-border-top,
+.black-border-right,
+.black-border-bottom,
+.black-border-left
+{
+    border-left: 1px solid #000000
+}
+
+.white,
+.white-hover:hover,
+.white-bg,
+.white-hover-bg:hover
+{
+    background-color: #ffffff !important
+}
+
+.white-border,
+.white-border-top,
+.white-border-right,
+.white-border-bottom,
+.white-border-left
+{
+    border-left: 1px solid #ffffff
+}
+/*#endregion*/
+
+/* BOOTSTRAP OVERRIDES *//*#region*/
+.navbar-nav .btn-group>.btn+.dropdown-toggle,
+.navbar-nav .btn-group>.btn,
+.navbar-default .btn-link,
+.navbar-default .btn-link.dropdown-toggle
+{
+    color: #ffffff;
+}
+
+.navbar-default .btn-link:focus,
+.navbar-default .btn-link:hover
+{
+    color: #ffffff;
+    background-color: #2969a0
+}
+/*#endregion*/
+
+/* This  is a hack to prevent against a known issue in Bootstrap in which the body content shifts when a modal is opened or closed *//*#region*/
+/* https://github.com/twbs/bootstrap/issues/15229 */
+.control-label,
+label
+{
+    color: #424242;
+}
+/*#endregion*/
+
+/* We're overriding the Bootstrap default z-index for these two classes - as they often interfere with other form elements (ie. date pickers) */
+/* when the z-index is set to the Bootstrap standard. *//*#region*/
+.btn-primary
+{
+    color: #ffffff;
+    background-color: #137F00;
+    border-color: #137F00
+}
+
+.btn-primary.active,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover
+{
+    color: #ffffff;
+    background-color: #298529;
+    border-color: #298529
+}
+
+.btn-default
+{
+    border: 1px solid #ccc
+}
+
+.btn-default.active,
+.btn-default.focus,
+.btn-default:active,
+.btn-default:focus,
+.btn-default:hover
+{
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad
+}
+
+.dropdown-menu>span>li>a
+{
+    color: #333;
+}
+
+.dropdown-menu>span>li:focus,
+.dropdown-menu>span>li:hover,
+.dropdown-menu>span>li>a:focus,
+.dropdown-menu>span>li>a:hover
+{
+    color: #262626;
+    background-color: #f5f5f5;
+}
+
+.dropdown-menu>li.dropdown-header
+{
+    color: #5e5e5e;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+ul.nav-sidebar>li.active>a
+{
+    background-color: #e7e7e7;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc
+}
+
+.column-filter>li
+{
+    color: #333
+}
+
+.dropdown-submenu>a:after
+{
+    border-color: transparent;
+    border-left-color: #ccc;
+}
+
+.dropdown-submenu:hover>a:after
+{
+    border-left-color: #fff
+}
+/*#endregion*/
+
+/* [Sidebar Styles] *//*#region*/
+nav#divTabHeader,
+nav.tab-header
+{
+    background-color: #f5f5f5
+}
+
+.sidebar .sidebar-wrapper
+{
+    background-color: #f5f5f5;
+    border-right: 1px solid #dcdcdc;
+    box-shadow: 1px 0 12px -3px #000000
+}
+
+.sidebar .sidebar-wrapper::-webkit-scrollbar-thumb
+{
+    background: #bdbdbd
+}
+
+.sidebar .nav-sidebar li.active>a
+{
+    background-color: #e7e7e7;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc
+}
+
+.sidebar .nav-sidebar li>a:not(.sidebar-brand)
+{
+    color: #306090;
+}
+
+#wrapper #divHeaderControl
+{
+    background-color: white;
+}
+
+#sidebar-wrapper
+{
+    background-color: #f5f5f5;
+    border-right: 1px solid #e1e1e1;
+}
+
+#sidebar-wrapper::-webkit-scrollbar-thumb
+{
+    background: #bdbdbd
+}
+
+#sidebar-wrapper .list-group-item
+{
+    border-color: transparent;
+    background-color: transparent;
+    color: #306090
+}
+
+#sidebar-wrapper .list-group-item.active
+{
+    background-color: #e7e7e7;
+    border-color: #dcdcdc
+}
+
+#sidebar-wrapper .list-group-item:hover
+{
+    background-color: #e8e8e8;
+    border-color: #dcdcdc
+}
+
+#page-content-wrapper .ButtonCell,
+#page-content-wrapper .ButtonCellTop
+{
+    background-color: #f5f5f5;
+}
+/*#endregion*/
+
+/*Right*//*#region*/
+div.filter-section
+{
+    background-color: #F3F3F3;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc
+}
+
+div.grid>.row
+{
+    border-bottom: 1px solid #ddd;
+}
+
+div.grid-hover>div.row:hover
+{
+    background-color: #F5F5F5
+}
+
+.grid-striped>div.row:nth-of-type(odd)
+{
+    background-color: #F9F9F9
+}
+
+div.grid>div.row-hdr
+{
+    border-bottom: 2px solid #ddd;
+}
+
+div.grid>div.row-grp
+{
+    background-color: #F9F9F9;
+}
+/*#endregion*/
+
+/* Styles for code regions (esp. used in KB articles, so there might not be a specific reference to this within the */
+/* code, but it is used in our internal KB articles content. *//*#region*/
+.code,
+code,
+pre
+{
+    background-color: #eee;
+}
+/*#endregion*/
+
+/* To better distinguish from read-only form-control fields (which use #EEE), */
+/* make form-control inputs with the code class use a slightly different color *//*#region*/
+.code.form-control
+{
+    background-color: #F9F2F4;
+    color: black
+}
+/*#endregion*/
+
+/* Element-level *//*#region*/
+a,
+a.noHover
+{
+    color: #306090
+}
+
+a:hover
+{
+    color: #c5400d
+        /* orangered */
+}
+
+a.disabledLink
+{
+    color: black;
+}
+
+a.disabledLink:hover
+{
+    color: black
+}
+
+hr
+{
+    background-color: #ddd;
+}
+
+.h1,
+.h2,
+h1,
+h2
+{
+    color: #424242
+}
+
+.h2,
+h2
+{
+    border-bottom: 1px solid #dcdcdc
+}
+
+.h3,
+h3
+{
+    color: #424242
+}
+
+.h4,
+h4
+{
+    color: #646464;
+}
+
+a.btn .fa-times:hover,
+a[role=button] .fa-times:hover,
+button .fa-times:hover
+{
+    color: #bf3935
+}
+/*#endregion*/
+
+/* Classes *//*#region*/
+td.ButtonCellBottom
+{
+    border-top: 1px solid #dcdcdc;
+    background-color: #f5f5f5;
+}
+
+.ButtonCell,
+.ButtonCellTop
+{
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #f5f5f5;
+}
+
+.ButtonCell
+{
+    border-top: 1px solid #dcdcdc;
+}
+
+.category-desc
+{
+    color: #515A61;
+}
+
+.category-desc-focus
+{
+    background-color: #f5f5f5;
+}
+
+.category-footer
+{
+    border-top: 1px solid #dcdcdc;
+}
+
+.user-link
+{
+    color: #336699;
+}
+
+.hilite,
+.hilite .btn-link,
+.hilite a,
+.hilite td,
+.table>tbody>tr.hilite.active,
+.table>tbody>tr.hilite.danger,
+.table>tbody>tr.hilite.info,
+.table>tbody>tr.hilite.success,
+.table>tbody>tr.hilite.warning,
+.table>tbody>tr.hilite>td.active,
+.table>tbody>tr.hilite>td.danger,
+.table>tbody>tr.hilite>td.info,
+.table>tbody>tr.hilite>td.success,
+.table>tbody>tr.hilite>td.warning
+{
+    color: white;
+    background-color: #0072C6
+}
+
+.table>tbody>tr.hilite-2.active,
+.table>tbody>tr.hilite-2.danger,
+.table>tbody>tr.hilite-2.info,
+.table>tbody>tr.hilite-2.success,
+.table>tbody>tr.hilite-2.warning,
+.table>tbody>tr.hilite-2>td.active,
+.table>tbody>tr.hilite-2>td.danger,
+.table>tbody>tr.hilite-2>td.info,
+.table>tbody>tr.hilite-2>td.success,
+.table>tbody>tr.hilite-2>td.warning,
+tr.hilite-2,
+tr.hilite-2 .btn-link,
+tr.hilite-2 a,
+tr.hilite-2 td
+{
+    color: #006100;
+    background-color: #C6EFCE
+}
+
+.copyButton
+{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /*rgba for transparency*/
+    background-color: white
+}
+
+.copyButton:hover
+{
+    background-color: #f6f6f6
+}
+
+.ReqFld,
+.form-group.required .control-label:after,
+.field-validation-error
+{
+    color: #bf3935
+}
+
+div.WhiteOut
+{
+    background-color: white;
+}
+/*#endregion*/
+/* CSS Compliant Table Styles *//*#region*/
+table.TDGrid_AllGridlines tbody,
+table.TDGrid_AllGridlines td,
+table.TDGrid_AllGridlines th,
+table.TDGrid_AllGridlines thead
+{
+    border: 1px solid #dcdcdc
+}
+
+table.TDGrid_VertGridlines td,
+table.TDGrid_VertGridlines th
+{
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc
+}
+
+table.TDGrid_HorizGridlines
+{
+    border-top: 1px solid #dcdcdc;
+}
+
+table.TDGrid_HorizGridlines td,
+table.TDGrid_HorizGridlines th
+{
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc
+}
+
+table.TDGrid_NoGridlines
+{
+    border-top: 1px solid #dcdcdc;
+}
+
+.TDTable_VertGridlines td,
+.TDTable_VertGridlines th
+{
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc
+}
+/*#endregion*/
+
+/* Auto complete *//*#region*/
+.ac_menu
+{
+    border: 1px solid #999999;
+    background-color: #F6F6F6;
+}
+
+.ac_menuitem
+{
+    color: #141414;
+}
+
+.ac_menuitem_over
+{
+    background-color: #E6E6E6
+}
+
+.ac_menuitem_selected
+{
+    background-color: #D6DEEC
+}
+
+.comment-alt
+{
+    background-color: #f0f0f0
+}
+
+.comment,
+.comment-alt
+{
+    border-bottom: 1px solid #ddd;
+}
+
+.comment-timestamp
+{
+    color: #828074
+}
+
+.commment-name
+{
+    color: #336699;
+}
+
+.TabButtonCell
+{
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #F8F9F9;
+}
+
+div.help
+{
+    background-color: #fefaef;
+    border: 1px solid #8e6a00;
+}
+
+.block-info
+{
+    color: #454545;
+}
+
+.block-actions
+{
+    background-color: #f5f5f5;
+}
+
+.block-actions .btn.btn-link
+{
+    color: #306090;
+}
+
+button.btn-link.btn-nav-style:hover
+{
+    background-color: #eee;
+    color: #c5400d;
+}
+
+ul.nav-pills li.dropdown button.dropdown-toggle:hover
+{
+    background-color: #eee
+}
+
+div.RightSideNav
+{
+    background-color: #f5f5f5;
+    border: 1px solid #dcdcdc;
+}
+
+.underlinable-anchor.selected,
+.underlinable-anchor:hover
+{
+    border-bottom-color: #0072C6
+}
+
+.popup
+{
+    background-color: #f8f8f8;
+    border: 1px solid #CDCDCD;
+}
+
+.ListItemLbl
+{
+    color: #515A61;
+}
+/*#endregion*/
+
+/*Menu displayed when a user right clicks on an item (ie. briefcase folders)*//*#region*/
+.right-click-menu,
+.save-search-div
+{
+    background-color: white;
+    border: 1px solid #dcdcdc;
+}
+
+div.nav-item
+{
+    color: Black;
+}
+
+div.nav-item:hover
+{
+    border: 1px solid #d0e4f9;
+    background-color: #F8F9F9;
+    color: #c5400d
+}
+/*#endregion*/
+
+/* tab styles. *//*#region*/
+ul.tabs
+{
+    border-bottom: 1px solid #dcdcdc;
+}
+/*#endregion*/
+
+/* this is a css hack stolen from the jquery ui css. this seems to make the border on the ul show up correctly. *//*#region*/
+ul.tabs>li
+{
+    color: #336699;
+    /* position: relative and top: 1px combine to let this tab override the bottom border on the parent ul element */
+}
+
+ul.tabs>li:hover
+{
+    color: #114477
+}
+
+ul.tabs>li.selected
+{
+    background-color: #F8F9F9;
+    border: 1px solid #dcdcdc;
+    border-top: 2px solid #f5f5f5;
+}
+
+.modal-target,
+.shadow-box
+{
+    background-color: white;
+    border: 1px solid #dcdcdc
+}
+/*#endregion*/
+
+/* Lookup Image Styles *//*#region*/
+input.lu_lookupbox,
+input.lu_lookupbox:hover,
+input.TDTextBox.lu_lookupbox
+{
+    border-color: #cdcdcd
+}
+/*#endregion*/
+
+/* Time Styles *//*#region*/
+.time-cell-submitted
+{
+    background-color: #d9edf7;
+    color: #333
+}
+
+.time-cell-approved
+{
+    background-color: #dff0d8;
+    color: #3c763d
+}
+
+.time-cell-rejected
+{
+    background-color: #f2dede;
+    color: #a94442
+}
+
+div.time-labeldiv-notsubmitted
+{
+    color: #454545
+}
+
+div.time-labeldiv-submitted
+{
+    color: #336699;
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1
+}
+
+div.time-labeldiv-approved
+{
+    color: #3c763d;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6
+}
+
+div.time-labeldiv-rejected
+{
+    color: #9C0006;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1
+}
+
+div.time-div-approved,
+div.time-div-notsubmitted,
+div.time-div-rejected,
+div.time-div-submitted
+{
+    border: 1px solid #dcdcdc;
+}
+
+div.time-div-notsubmitted
+{
+    background-color: #F9F9F9
+}
+
+div.time-div-submitted
+{
+    background-color: #AAE0FF
+}
+
+div.time-div-approved
+{
+    background-color: #C6EFCE
+}
+
+div.time-div-rejected
+{
+    background-color: #FFCAD1
+}
+/*#endregion*/
+
+/* Add a border to slider elements *//*#region*/
+span.ui-slider-handle.ui-state-default
+{
+    border: 1px solid #747474
+}
+/*#endregion*/
+
+/*Use this for any status or percent completes in the header*//*#region*/
+.status
+{
+    color: black;
+}
+
+div.comment
+{
+    background-color: #eef1f3;
+    border: 1px solid #CDCDCD;
+}
+/*#endregion*/
+
+/* tdbar styles *//*#region*/
+div.tdbar-settings i
+{
+    color: #454545;
+}
+
+.tab-row
+{
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #F8F9F9
+}
+
+.tdbar-sub
+{
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #f5f5f5;
+}
+
+div.tdbar-anchored-button,
+div.tdbar-anchored-button a,
+div.tdbar-button
+{
+    color: #343434
+}
+
+div.tdbar-anchored-button:hover,
+div.tdbar-button:hover
+{
+    background-color: #fff
+}
+
+div.tdbar-anchored-button-sel,
+div.tdbar-anchored-button-sel a,
+div.tdbar-button-sel
+{
+    color: white;
+}
+
+div.tdbar-anchored-button-sel:hover,
+div.tdbar-button-sel:hover
+{
+    background-color: #005899
+}
+
+div.tdbar-submenu
+{
+    border: 1px solid #0072C6;
+    background-color: white;
+}
+
+div.tdbar-submenu-item
+{
+    background-color: #ffffff;
+    color: black
+}
+
+div.tdbar-submenu-item:hover
+{
+    background-color: #f5f5f5
+}
+
+div.tdbar-submenu-item a
+{
+    color: black
+}
+
+div.tdbar-briefcase-submenu-item
+{
+    background-color: #ffffff;
+    color: black
+}
+
+div.tdbar-briefcase-submenu-item:hover
+{
+    background-color: #f5f5f5
+}
+/*#endregion*/
+
+/* Workflow Builder Styles *//*#region*/
+.rel-annotation
+{
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.step
+{
+    border: 1px solid #ddd;
+    background-color: white;
+    box-shadow: 2px 2px 19px #aaa;
+    -o-box-shadow: 2px 2px 19px #aaa;
+    -webkit-box-shadow: 2px 2px 19px #aaa;
+    -moz-box-shadow: 2px 2px 19px #aaa
+}
+
+.current .step-name
+{
+    background-color: #c6efce
+}
+
+.step-name
+{
+    background-color: #f0f0f0
+}
+
+.step-options>div
+{
+    border-top: 1px solid #eee
+}
+
+.drag-handle
+{
+    background-color: #bf3935;
+}
+/*#endregion*/
+
+/* auto-complete *//*#region*/
+.talu_holder
+{
+    /* Need this to prevent IE7 from being weird */
+    border: 1px solid #cdcdcd;
+}
+
+.talu_holder .bit-box
+{
+    color: #555;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.talu_holder .bit-box-focus
+{
+    background: #598BEC;
+    border-color: #598BEC;
+    color: #fff
+}
+
+.talu_holder.no-selection
+{
+    border-color: #bf3935
+}
+/*#endregion*/
+
+/* "Start typing here..." CSS *//*#region*/
+.talu_holder .luac_default
+{
+    color: #5e5e5e;
+    /* Vertically align in holder */
+}
+
+.talu_holder.holder-focused
+{
+    outline: 2px solid #3F9AE4;
+    -webkit-outline: 5px solid -webkit-focus-ring-color;
+}
+
+.talu_buttons a.btn-default.no-selection
+{
+    border-top-color: #bf3935;
+    border-bottom-color: #bf3935;
+    border-right-color: #bf3935
+}
+
+.talu_buttons a.btn-default.btn-typeahead-lookup.no-selection
+{
+    border-right-color: #ccc
+}
+/*#endregion*/
+
+/* Profile Image Styles *//*#region*/
+div.profile-image.initials
+{
+    color: white;
+}
+
+div.profile-image.initials.system>.fa:hover
+{
+    color: white;
+}
+/*#endregion*/
+
+/* Tile styles *//*#region*/
+div.secondary
+{
+    background-color: #2969a0
+}
+
+div.tertiary
+{
+    background-color: #388091
+}
+
+.tdTilebg
+{
+    border: 1px solid #dcdcdc;
+    background-color: #555555;
+}
+
+.tdTilebg .num
+{
+    color: white;
+}
+
+.tdTilebg .txt
+{
+    color: white
+}
+
+.tdTilemd
+{
+    border: 1px solid #dcdcdc;
+    background-color: #555555;
+}
+
+.tdTilemd .num
+{
+    color: white;
+}
+
+.tdTilemd .txt
+{
+    color: white
+}
+
+.tdTilesm
+{
+    border: 1px solid #dcdcdc;
+    background-color: #555555;
+}
+
+.tdTilesm .num
+{
+    color: white;
+}
+
+.tdTilesm .txt
+{
+    color: white
+}
+/*#endregion*/
+
+/* These styles are used to make a horizontal asp:RadioButtonList appear as inline bootstrap radio buttons *//*#region*/
+table>thead>tr>th
+{
+    border-bottom: 2px solid #ddd
+}
+
+table>tbody+tbody
+{
+    border-top: 2px solid #ddd
+}
+/*#endregion*/
+
+/* Panel styles from http://startbootstrap.com/template-overviews/sb-admin/ *//*#region*/
+.panel-green
+{
+    border-color: #298529
+}
+
+.panel-green>.panel-body,
+.panel-green>.panel-heading
+{
+    border-color: #298529;
+    color: #ffffff;
+    background-color: #298529
+}
+
+.panel-green>a
+{
+    color: #298529
+}
+
+.panel-green>a:hover
+{
+    color: #257825
+}
+
+.panel-gray
+{
+    border-color: #5e5e5e
+}
+
+.panel-gray>.panel-heading
+{
+    border-color: #5e5e5e;
+    color: #ffffff;
+    background-color: #5e5e5e
+}
+
+.panel-gray>a
+{
+    color: #5e5e5e
+}
+
+.panel-gray>a:hover
+{
+    color: #555555
+}
+
+.panel-red
+{
+    border-color: #bf3935
+}
+
+.panel-red>.panel-heading
+{
+    border-color: #bf3935;
+    color: #ffffff;
+    background-color: #bf3935
+}
+
+.panel-red>a
+{
+    color: #bf3935
+}
+
+.panel-red>a:hover
+{
+    color: #ac3330
+}
+
+.panel-yellow
+{
+    border-color: #8e6a00
+}
+
+.panel-yellow>.panel-heading
+{
+    border-color: #8e6a00;
+    color: #ffffff;
+    background-color: #8e6a00
+}
+
+.panel-yellow>a
+{
+    color: #8e6a00
+}
+
+.panel-yellow>a:hover
+{
+    color: #805f00
+}
+/*#endregion*/
+
+/* This is used for the icons associated with desktop modules *//*#region*/
+.module-header span
+{
+    color: #2b2b2b
+}
+/*#endregion*/
+
+/* START jquery.multiple-select customizations *//*#region*/
+.ms-choice
+{
+    border: 1px solid #ddd !important;
+}
+
+@-moz-document url-prefix()
+{
+    .ms-choice:focus
+{
+        outline: 2px solid #3F9AE4;
+    }
+}
+/*#endregion*/
+
+/* Turn off cursor for disabled datepickers *//*#region*/
+.nav-tabs>li.active a
+{
+    background-color: #F8F9F9;
+    border-bottom-color: #F8F9F9;
+}
+
+.tditemlist-sorting
+{
+    background-color: White;
+    border: 1px solid #dcdcdc;
+}
+/*#endregion*/
+
+/* Priority/Risk Styling *//*#region*/
+.rsk-status
+{
+    border: 1px solid #000000;
+    color: white
+}
+
+.pri-none
+{
+    background-color: #5e5e5e
+}
+
+.pri-low
+{
+    background-color: #298529
+}
+
+.pri-medlow
+{
+    background-color: #5c7815
+}
+
+.pri-nor
+{
+    background-color: #8e6a00
+}
+
+.pri-medhi
+{
+    background-color: #a7521b
+}
+
+.pri-hi
+{
+    background-color: #bf3935
+}
+
+.sortable-item
+{
+    border-bottom: 1px solid #dcdcdc
+}
+/*#endregion*/
+
+/* Autocompleter (i.e. popped-up list of items) *//*#region*/
+.lu_tdac-auto,
+.lu_tdac-auto ul
+{
+    background: #fff !important;
+}
+
+.lu_tdac-auto ul
+{
+    border: 1px solid #dcdcdc;
+}
+
+.lu_tdac-auto ul li
+{
+    /*background-color: #F6F6F6;*/
+}
+
+.lu_tdac-auto ul li div.talu_subcaption
+{
+    color: #555555
+}
+
+.lu_tdac-auto ul .auto-focus div.talu_subcaption
+{
+    color: #ffffff
+}
+
+.lu_tdac-auto ul .auto-focus
+{
+    background: #4173CC;
+    color: #fff
+}
+
+.lu_deleted
+{
+    background-color: #4173CC !important;
+    color: #ffffff !important
+}
+/*#endregion*/
+
+/* override select2 styles for tags *//*#region*/
+div.js-tagformfield .select2-container-multi .select2-choices,
+div.js-tags-inlineedit .select2-container-multi .select2-choices
+{
+    border: 1px solid #ccc;
+}
+
+div.js-tagformfield .select2-container-multi.select2-container-active .select2-choices,
+div.js-tags-inlineedit .select2-container-multi.select2-container-active .select2-choices
+{
+    border: 1px solid #5897fb
+}
+
+div.js-tagformfield .select2-container-multi .select2-choices .select2-search-choice,
+div.js-tags-inlineedit .select2-container-multi .select2-choices .select2-search-choice
+{
+    background: #dcdcdc;
+    border: 1px solid #cdcdcd;
+}
+
+div.js-tagformfield .select2-container-multi .select2-choices .select2-search-field input
+{
+    color: #5e5e5e !important;
+}
+/*#endregion*/
