@@ -249,7 +249,7 @@ nav.tab-header
 
 #wrapper #divHeaderControl
 {
-    background-color: white;
+    background-color: #ffffff;
 }
 
 #sidebar-wrapper
@@ -458,7 +458,7 @@ td.ButtonCellBottom
 .table>tbody>tr.hilite>td.success,
 .table>tbody>tr.hilite>td.warning
 {
-    color: white;
+    color: #ffffff;
     background-color: #0072C6
 }
 
@@ -485,7 +485,7 @@ tr.hilite-2 td
 {
     border: 1px solid rgba(0, 0, 0, 0.1);
     /*rgba for transparency*/
-    background-color: white
+    background-color: #ffffff
 }
 
 .copyButton:hover
@@ -502,7 +502,7 @@ tr.hilite-2 td
 
 div.WhiteOut
 {
-    background-color: white;
+    background-color: #ffffff;
 }
 /*#endregion*/
 
@@ -656,7 +656,7 @@ div.RightSideNav
 .right-click-menu,
 .save-search-div
 {
-    background-color: white;
+    background-color: #ffffff;
     border: 1px solid #dcdcdc;
 }
 
@@ -702,7 +702,7 @@ ul.tabs>li.selected
 .modal-target,
 .shadow-box
 {
-    background-color: white;
+    background-color: #ffffff;
     border: 1px solid #dcdcdc
 }
 /*#endregion*/
@@ -845,7 +845,7 @@ div.tdbar-anchored-button-sel,
 div.tdbar-anchored-button-sel a,
 div.tdbar-button-sel
 {
-    color: white;
+    color: #ffffff;
 }
 
 div.tdbar-anchored-button-sel:hover,
@@ -857,9 +857,10 @@ div.tdbar-button-sel:hover
 div.tdbar-submenu
 {
     border: 1px solid #0072C6;
-    background-color: white;
+    background-color: #ffffff;
 }
 
+div.tdbar-briefcase-submenu-item,
 div.tdbar-submenu-item
 {
     background-color: #ffffff;
@@ -873,12 +874,6 @@ div.tdbar-submenu-item:hover
 
 div.tdbar-submenu-item a
 {
-    color: black
-}
-
-div.tdbar-briefcase-submenu-item
-{
-    background-color: #ffffff;
     color: black
 }
 
@@ -898,7 +893,7 @@ div.tdbar-briefcase-submenu-item:hover
 .step
 {
     border: 1px solid #ddd;
-    background-color: white;
+    background-color: #ffffff;
     box-shadow: 2px 2px 19px #aaa;
     -o-box-shadow: 2px 2px 19px #aaa;
     -webkit-box-shadow: 2px 2px 19px #aaa;
@@ -982,12 +977,12 @@ div.tdbar-briefcase-submenu-item:hover
 /* Profile Image Styles *//*#region*/
 div.profile-image.initials
 {
-    color: white;
+    color: #ffffff;
 }
 
 div.profile-image.initials.system>.fa:hover
 {
-    color: white;
+    color: #ffffff;
 }
 /*#endregion*/
 
@@ -1002,52 +997,22 @@ div.tertiary
     background-color: #388091
 }
 
-.tdTilebg
+.tdTilebg .num,
+.tdTilebg .txt,
+.tdTilemd .num,
+.tdTilemd .txt,
+.tdTilesm .num,
+.tdTilesm .txt
 {
-    border: 1px solid #dcdcdc;
-    background-color: #555555;
+    color: #ffffff
 }
 
-.tdTilebg .num
-{
-    color: white;
-}
-
-.tdTilebg .txt
-{
-    color: white
-}
-
-.tdTilemd
-{
-    border: 1px solid #dcdcdc;
-    background-color: #555555;
-}
-
-.tdTilemd .num
-{
-    color: white;
-}
-
-.tdTilemd .txt
-{
-    color: white
-}
-
+.tdTilebg,
+.tdTilemd,
 .tdTilesm
 {
     border: 1px solid #dcdcdc;
     background-color: #555555;
-}
-
-.tdTilesm .num
-{
-    color: white;
-}
-
-.tdTilesm .txt
-{
-    color: white
 }
 /*#endregion*/
 
@@ -1064,7 +1029,8 @@ table>tbody+tbody
 /*#endregion*/
 
 /* Panel styles from http://startbootstrap.com/template-overviews/sb-admin/ *//*#region*/
-.panel-green
+.panel-green,
+.panel-green>a
 {
     border-color: #298529
 }
@@ -1077,17 +1043,13 @@ table>tbody+tbody
     background-color: #298529
 }
 
-.panel-green>a
-{
-    color: #298529
-}
-
 .panel-green>a:hover
 {
     color: #257825
 }
 
-.panel-gray
+.panel-gray,
+.panel-gray>a
 {
     border-color: #5e5e5e
 }
@@ -1099,17 +1061,13 @@ table>tbody+tbody
     background-color: #5e5e5e
 }
 
-.panel-gray>a
-{
-    color: #5e5e5e
-}
-
 .panel-gray>a:hover
 {
     color: #555555
 }
 
-.panel-red
+.panel-red,
+.panel-red>a
 {
     border-color: #bf3935
 }
@@ -1121,17 +1079,13 @@ table>tbody+tbody
     background-color: #bf3935
 }
 
-.panel-red>a
-{
-    color: #bf3935
-}
-
 .panel-red>a:hover
 {
     color: #ac3330
 }
 
-.panel-yellow
+.panel-yellow,
+.panel-yellow>a
 {
     border-color: #8e6a00
 }
@@ -1141,11 +1095,6 @@ table>tbody+tbody
     border-color: #8e6a00;
     color: #ffffff;
     background-color: #8e6a00
-}
-
-.panel-yellow>a
-{
-    color: #8e6a00
 }
 
 .panel-yellow>a:hover
@@ -1185,7 +1134,7 @@ table>tbody+tbody
 
 .tditemlist-sorting
 {
-    background-color: White;
+    background-color: #ffffff;
     border: 1px solid #dcdcdc;
 }
 /*#endregion*/
@@ -1194,7 +1143,7 @@ table>tbody+tbody
 .rsk-status
 {
     border: 1px solid #000000;
-    color: white
+    color: #ffffff
 }
 
 .pri-none
