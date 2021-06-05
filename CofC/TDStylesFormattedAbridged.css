@@ -1,51 +1,10 @@
-/* Font includes *//*#region*/
-@font-face {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans'), local('OpenSans'), url(//themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff')
-}
-
-@font-face {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 600;
-    src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(//themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format('woff')
-}
-
-@font-face {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 700;
-    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(//themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff')
-}
-
-@font-face {
-    font-family: Open Sans;
-    font-style: italic;
-    font-weight: 400;
-    src: local('Open Sans Italic'), local('OpenSans-Italic'), url(//themes.googleusercontent.com/static/fonts/opensans/v6/xjAJXh38I15wypJXxuGMBobN6UDyHWBl620a-IRfuBk.woff) format('woff')
-}
-/*#endregion*/
+/* Removing rules that don't include a color declaration. */
 
 /* LESS Variables *//*#region*/
 .form:focus {
     border-color: #3F9AE4;
     outline: 0;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6)
-}
-
-.btn-danger,
-.btn-default,
-.btn-primary {
-    border: 0px;
-    margin-left: 3px;
-    margin-right: 3px;
-    padding-top: 4px;
-    padding-bottom: 3px;
-    border-radius: 3px;
-    /*font-size: 12px;*/
-    -webkit-appearance: none
 }
 
 .input-group-btn .btn-default {
@@ -74,25 +33,12 @@
     margin-right: 0px
 }
 
-.input-group-btn:last-child>.btn {
-    margin-right: -1px
-}
-
-.frmFldLbl {
-    text-align: right
-}
-
 .frmFldLbl,
 .stacked .frmFldLbl {
     font-weight: 600;
     margin-bottom: 3px;
     color: #424242;
     font-size: 14px
-}
-
-.stacked .frmFldLbl {
-    text-align: left;
-    margin-top: 15px
 }
 
 tr.TDGridHeader {
@@ -117,11 +63,6 @@ tr.TDGridHeader td {
     text-align: left
 }
 
-.TDGroupingRow select {
-    display: inline;
-    width: 200px
-}
-
 .grouping-row {
     padding: 8px;
     background-color: #f5f5f5;
@@ -142,10 +83,6 @@ tr.TDGridHeader td {
     font-size: 12px !important
 }
 
-.TDPagerRow>td>a {
-    margin-right: 8px
-}
-
 .TDPagerRow>td>span {
     margin-right: 8px;
     padding: 1px 6px;
@@ -155,25 +92,10 @@ tr.TDGridHeader td {
     font-weight: 700
 }
 
-.TDPagerRow>div {
-    padding: 10px 10px 0px 8px;
-    font-size: 12px !important
-}
-
 td.SortColumn a,
 th.SortColumn a {
     font-weight: bolder;
     color: #bf3935
-}
-
-td.CheckColumn,
-th.CheckColumn {
-    width: 50px;
-    text-align: center
-}
-
-select.TDSelect {
-    height: 34px
 }
 
 select.TDSelect,
@@ -190,15 +112,6 @@ select[multiple].TDSelect {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
 }
 
-select[multiple].TDSelect {
-    height: 34px;
-    height: 60px
-}
-
-select[multiple][size].TDSelect {
-    height: auto
-}
-
 input.TDTextBox,
 textarea.TDTextArea {
     height: 34px;
@@ -213,278 +126,6 @@ textarea.TDTextArea {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     border: 1px solid #cdcdcd
-}
-
-input.TDTextBox {
-    min-width: 40px
-}
-
-.gutter-none {
-    margin: 0
-}
-
-.gutter {
-    margin: 15px
-}
-
-.gutter-xs {
-    margin: 4px
-}
-
-.gutter-sm {
-    margin: 8px
-}
-
-.gutter-lg {
-    margin: 30px
-}
-
-.gutter-xl {
-    margin: 45px
-}
-
-.gutter-top-none {
-    margin-top: 0
-}
-
-.gutter-top {
-    margin-top: 15px
-}
-
-.gutter-top-xs {
-    margin-top: 4px
-}
-
-.gutter-top-sm {
-    margin-top: 8px
-}
-
-.gutter-top-lg {
-    margin-top: 30px
-}
-
-.gutter-top-xl {
-    margin-top: 45px
-}
-
-.gutter-bottom-none {
-    margin-bottom: 0
-}
-
-.gutter-bottom {
-    margin-bottom: 15px
-}
-
-.gutter-bottom-xs {
-    margin-bottom: 4px
-}
-
-.gutter-bottom-sm {
-    margin-bottom: 8px
-}
-
-.gutter-bottom-lg {
-    margin-bottom: 30px
-}
-
-.gutter-bottom-xl {
-    margin-bottom: 45px
-}
-
-.gutter-left-none {
-    margin-left: 0
-}
-
-.gutter-left {
-    margin-left: 15px
-}
-
-.gutter-left-xs {
-    margin-left: 4px
-}
-
-.gutter-left-sm {
-    margin-left: 8px
-}
-
-.gutter-left-lg {
-    margin-left: 30px
-}
-
-.gutter-left-xl {
-    margin-left: 45px
-}
-
-.gutter-right-none {
-    margin-right: 0
-}
-
-.gutter-right {
-    margin-right: 15px
-}
-
-.gutter-right-xs {
-    margin-right: 4px
-}
-
-.gutter-right-sm {
-    margin-right: 8px
-}
-
-.gutter-right-lg {
-    margin-right: 30px
-}
-
-.gutter-right-xl {
-    margin-right: 45px
-}
-
-.padding-none {
-    padding: 0
-}
-
-.padding {
-    padding: 15px
-}
-
-.padding-xs {
-    padding: 4px
-}
-
-.padding-sm {
-    padding: 8px
-}
-
-.padding-lg {
-    padding: 30px
-}
-
-.padding-xl {
-    padding: 45px
-}
-
-.padding-top-none {
-    padding-top: 0
-}
-
-.padding-top {
-    padding-top: 15px
-}
-
-.padding-top-xs {
-    padding-top: 4px
-}
-
-.padding-top-sm {
-    padding-top: 8px
-}
-
-.padding-top-lg {
-    padding-top: 30px
-}
-
-.padding-top-xl {
-    padding-top: 45px
-}
-
-.padding-bottom-none {
-    padding-bottom: 0
-}
-
-.padding-bottom {
-    padding-bottom: 15px
-}
-
-.padding-bottom-xs {
-    padding-bottom: 4px
-}
-
-.padding-bottom-sm {
-    padding-bottom: 8px
-}
-
-.padding-bottom-lg {
-    padding-bottom: 30px
-}
-
-.padding-bottom-xl {
-    padding-bottom: 45px
-}
-
-.padding-left-none {
-    padding-left: 0
-}
-
-.padding-left {
-    padding-left: 15px
-}
-
-.padding-left-xs {
-    padding-left: 4px
-}
-
-.padding-left-sm {
-    padding-left: 8px
-}
-
-.padding-left-lg {
-    padding-left: 30px
-}
-
-.padding-left-xl {
-    padding-left: 45px
-}
-
-.padding-right-none {
-    padding-right: 0
-}
-
-.padding-right {
-    padding-right: 15px
-}
-
-.padding-right-xs {
-    padding-right: 4px
-}
-
-.padding-right-sm {
-    padding-right: 8px
-}
-
-.padding-right-lg {
-    padding-right: 30px
-}
-
-.padding-right-xl {
-    padding-right: 45px
-}
-
-.font-xs {
-    font-size: 0.3em
-}
-
-.font-sm {
-    font-size: 0.7em
-}
-
-.font-base {
-    font-size: 1em
-}
-
-.font-md {
-    font-size: 1.3em
-}
-
-.font-lg {
-    font-size: 1.7em
-}
-
-.font-xl {
-    font-size: 2.5em
-}
-
-.font-xxl {
-    font-size: 3em
 }
 
 .border {
@@ -527,68 +168,9 @@ input.TDTextBox {
     border-left: 1px solid #dcdcdc
 }
 
-.text-left {
-    text-align: left
-}
-
-.text-right {
-    text-align: right
-}
-
-.text-center {
-    text-align: center
-}
-
-.vert-middle {
-    vertical-align: middle
-}
-
-.vert-75 {
-    position: relative;
-    top: 75%;
-    transform: perspective(1px) translateY(-75%)
-}
-
-.vert-50 {
-    position: relative;
-    top: 50%;
-    transform: perspective(1px) translateY(-50%)
-}
-
-.vert-25 {
-    position: relative;
-    top: 25%;
-    transform: perspective(1px) translateY(-25%)
-}
-
-.pull-right {
-    float: right
-}
-
-.pull-left {
-    float: left
-}
 /*#endregion*/
 
-/* Width utility classes *//*#region*/
-.w-25 {
-    width: 25%
-}
-
-.w-50 {
-    width: 50%
-}
-
-.w-75 {
-    width: 75%
-}
-
-.w-100 {
-    width: 100%
-}
-/*#endregion*/
-
-/* End width utility classes *//*#region*/
+/* Color utility classes *//*#region*/
 .red,
 .red-hover:hover {
     color: #bf3935 !important
@@ -1368,105 +950,9 @@ input.TDTextBox {
 .white-border-left {
     border-left: 1px solid #ffffff
 }
-
-.truncate {
-    width: 100%
-}
-
-.truncate,
-.truncate-inline {
-    white-space: nowrap;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    text-overflow: ellipsis
-}
-
-.truncate-inline {
-    max-width: 100%
-}
-
-.ms-drop ul>li label,
-.wrap-text {
-    word-break: break-word;
-    word-wrap: break-word;
-    overflow-wrap: break-word
-}
-
-.rotate-45 {
-    transform: rotate(45deg)
-}
-
-.cursor-pointer {
-    cursor: pointer
-}
-
-.void-bootstrap-padding {
-    padding-right: 0 !important
-}
-
-.no-fade {
-    transition: none
-}
-
-.text-noverflow {
-    /* These are technically the same, but use both */
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    -ms-word-break: break-all;
-    /* This is the dangerous one in WebKit, as it breaks things wherever */
-    word-break: break-all;
-    /* Instead use this non-standard one: */
-    word-break: break-word;
-    /* Adds a hyphen where the word breaks, if supported (No Blink) */
-    -ms-hyphens: auto;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto
-}
 /*#endregion*/
 
 /* BOOTSTRAP OVERRIDES *//*#region*/
-.btn,
-.form-control,
-.well {
-    border-radius: 3px
-}
-
-.panel-heading i.fa {
-    margin-left: 5px
-}
-
-.media {
-    padding: 10px 15px 10px 0px
-}
-
-.form-group {
-    margin-bottom: 20px
-}
-
-.well {
-    padding: 15px;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word
-}
-
-.well>.table {
-    margin-bottom: 0px
-}
-
-.btn-row .btn {
-    margin-bottom: 5px
-}
-
-.navbar {
-    min-height: 40px
-}
-
-.navbar-btn {
-    margin-top: 0px;
-    margin-bottom: 0px
-}
-
 .navbar-nav .btn-group>.btn+.dropdown-toggle {
     padding-left: 2px;
     color: #ffffff
@@ -1475,10 +961,6 @@ input.TDTextBox {
 .navbar-nav .btn-group>.btn {
     padding-right: 2px;
     color: #ffffff
-}
-
-.navbar-nav .btn-group>.btn-link {
-    font-size: 15px
 }
 
 .navbar-default .btn-link {
@@ -1500,37 +982,10 @@ input.TDTextBox {
     text-decoration: none;
     background-color: #2969a0
 }
-
-.nav .open>a,
-.nav .open>a:hover {
-    background-color: transparent
-}
-
-.navbar-nav>li>a {
-    padding-top: 10px;
-    padding-bottom: 10px
-}
 /*#endregion*/
 
 /* This  is a hack to prevent against a known issue in Bootstrap in which the body content shifts when a modal is opened or closed *//*#region*/
 /* https://github.com/twbs/bootstrap/issues/15229 */
-body.modal-open-noscroll {
-    margin-right: 0 !important;
-    overflow: hidden
-}
-
-.modal-open-noscroll .navbar-default,
-.modal-open-noscroll .navbar-fixed-top,
-.modal-open .navbar-default,
-.modal-open .navbar-fixed-bottom {
-    margin-right: 0 !important
-}
-
-.form-group {
-    margin-bottom: 18px;
-    font-size: 14px
-}
-
 .control-label,
 label {
     font-weight: 600;
@@ -1538,65 +993,10 @@ label {
     color: #424242;
     font-size: 14px
 }
-
-.table-borderless tbody>tr>td,
-.table-borderless tbody>tr>th {
-    border: none
-}
-
-.disp-group {
-    margin-bottom: 20px;
-    font-size: 14px
-}
-
-.disp-group label {
-    margin-bottom: 2px;
-    font-size: 14px
-}
 /*#endregion*/
 
 /* We're overriding the Bootstrap default z-index for these two classes - as they often interfere with other form elements (ie. date pickers) */
 /* when the z-index is set to the Bootstrap standard. *//*#region*/
-.input-group .form-control {
-    z-index: 0
-        /* Bootstrap 3.3.7 (or possibly 3.3.6) added a z-index to the focus styles which messes up datepickers. (Incident #3433001) */
-}
-
-.input-group .form-control:focus {
-    z-index: 0
-}
-
-.input-group-btn:last-child>.btn,
-.input-group-btn:last-child>.btn-group {
-    z-index: 0;
-    margin-left: -1px
-}
-
-.panel-heading>.h4,
-.panel-heading h4 {
-    font-weight: 500;
-    padding: 0px
-}
-
-label {
-    font-weight: 400
-}
-
-.btn {
-    border: 0px;
-    padding: 4px 17px;
-    border-radius: 3px;
-    -webkit-appearance: none;
-    font-size: 14px
-}
-
-.btn-lg {
-    padding: 10px 16px;
-    font-size: 18px;
-    line-height: 1.3333333;
-    border-radius: 6px
-}
-
 .btn-primary {
     color: #ffffff;
     background-color: #137F00;
@@ -1613,20 +1013,6 @@ label {
     border-color: #298529
 }
 
-.btn:focus,
-.btn:focus>.fa-filter {
-    text-decoration: underline
-}
-
-.btn:focus>.sr-only,
-.btn>.fa-bars {
-    text-decoration: none
-}
-
-.nav-pills>li.active>a:focus {
-    text-decoration: underline
-}
-
 .btn-default {
     border: 1px solid #ccc
 }
@@ -1639,10 +1025,6 @@ label {
     color: #333;
     background-color: #e6e6e6;
     border-color: #adadad
-}
-
-.table>tbody+tbody {
-    border-top: none
 }
 
 .dropdown-menu>span>li>a {
@@ -1675,84 +1057,12 @@ label {
     font-size: 1.1em
 }
 
-.dropdown-menu>li+li.dropdown-header {
-    margin-top: 8px
-}
-
-.dsktpMoveBtn:focus,
-.navbar .nav-pills .dropdown-toggle:focus {
-    outline: 1px dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px
-}
-
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    line-height: 1.5em
-}
-
 ul.nav-sidebar>li.active>a {
     text-decoration: none;
     background-color: #e7e7e7;
     font-weight: 600;
     border-top: 1px solid #dcdcdc;
     border-bottom: 1px solid #dcdcdc
-}
-
-.form-control:not(.talu_holder) {
-    padding: 5px 12px !important
-}
-
-div.select2-container.form-control {
-    padding: 0px !important
-}
-
-div.select2-container.form-control .select2-choice {
-    height: inherit;
-    font-size: inherit
-}
-
-.input-lg {
-    height: 46px;
-    padding: 10px 16px;
-    font-size: 18px;
-    line-height: 1.3333333;
-    border-radius: 6px
-}
-
-.nav>li>a:focus {
-    background-color: transparent
-}
-
-h4.modal-title {
-    padding: 0px
-}
-
-.modal-header {
-    cursor: move
-}
-
-.dropdown .btn-link {
-    text-decoration: none
-}
-
-.dropdown-menu-scrollable {
-    overflow: auto;
-    max-height: 300px
-}
-
-.column-filter {
-    min-width: 200px
 }
 
 .column-filter>li {
@@ -1762,29 +1072,6 @@ h4.modal-title {
     font-weight: 400;
     line-height: 1.42857143;
     color: #333
-}
-
-.modal-clear {
-    background-color: transparent;
-    display: block
-}
-
-.modal-clear .modal-content {
-    background-color: transparent;
-    box-shadow: none;
-    border: none
-}
-
-.dropdown-submenu {
-    position: relative
-}
-
-.dropdown-submenu>.dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top: -6px;
-    margin-left: -1px;
-    border-radius: 6px
 }
 
 .dropdown-submenu>a:after {
@@ -1804,46 +1091,7 @@ h4.modal-title {
 .dropdown-submenu:hover>a:after {
     border-left-color: #fff
 }
-
-.dropdown-submenu.pull-left {
-    float: none
-}
-
-.dropdown-submenu.pull-left>.dropdown-menu {
-    left: -100%;
-    margin-left: 10px;
-    border-radius: 6px
-}
-
-.input-group .input-group-btn .btn-primary {
-    padding: 7px 12px;
-    line-height: 1.42857143
-}
 /*#endregion*/
-
-/* Ensure that no negative margin gets applied when a radio/checkbox follows a *hidden* radio/checkbox *//*#region*/
-.checkbox.hidden+.checkbox,
-.radio.hidden+.radio {
-    margin-top: 10px
-}
-/*#endregion*/
-
-/* However, preserve this negative margin if the radio/checkbox follows something that's still visible *//*#region*/
-.checkbox:not(.hidden)~.checkbox,
-.radio:not(.hidden)~.radio {
-    margin-top: -5px
-}
-/*#endregion*/
-
-/* Ignore this if the radio/checkbox is preceded by a non-radio *//*#region*/
-:not(.checkbox)+.checkbox,
-:not(.radio)+.radio {
-    margin-top: 10px
-}
-
-.modal-dialog {
-    z-index: 1050 !important
-}/*#endregion*/
 
 /*.btn.btn-danger {
   color: #cc4642;
@@ -1857,139 +1105,7 @@ h4.modal-title {
   }
 }*/
 
-/* Prevent select2's within input-groups from extending past the container width
- when the selected value is wider than the input. *//*#region*/
-.input-group {
-}
-
-.input-group .select2-container {
-    position: relative !important;
-    float: left !important;
-    width: 100% !important;
-    margin-bottom: 0 !important;
-    display: table !important;
-    table-layout: fixed !important
-}
-
-.input-group .select2-choice {
-    border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0 !important
-}
-
-.input-group .input-group-btn .btn-default:not(:last-child) {
-    border-radius: 0
-}
-
-.input-group .input-group-btn .btn-default:last-child {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0
-}
-
-.close {
-    opacity: .5
-}
-/*#endregion*/
-
-/* Print Styles *//*#region*/
-@media print {
-    body {
-        font-family: Segoe UI, Open Sans, Arial, Sans-Serif
-    }
-
-    a,
-    body {
-        font-size: 7pt;
-        color: black
-    }
-
-    a {
-        text-decoration: none
-    }
-
-    table {
-        font-size: 7pt;
-        color: black
-    }
-
-    thead {
-        display: table-header-group
-    }
-
-    tbody {
-        display: table-row-group
-    }
-
-    th {
-        text-align: left
-    }
-
-    .NoPrint,
-    td.ButtonCellTop {
-        display: none
-    }
-
-    .PrintOnly {
-        display: inline !important
-    }
-
-    .ui-layout-west,
-    div.shim-spacer {
-        display: none
-    }
-
-    .fixed {
-        position: absolute !important
-    }
-
-    *,
-    :after,
-    :before {
-        color: inherit !important;
-        text-shadow: none !important;
-        background: 0 0 !important;
-        box-shadow: none !important
-    }
-
-    .green-health-print {
-        color: #5cb85c !important
-    }
-
-    .yellow-health-print {
-        color: #f0ad4e !important
-    }
-
-    .red-health-print {
-        color: #d9534f !important
-    }
-
-    .on-hold-health-print {
-        color: #666666 !important
-    }
-
-    .no-health-print {
-        color: #337ab7 !important
-    }
-
-    .other-health-print {
-        color: #009DDB !important
-    }
-}
-
-.print-dialog {
-    display: none;
-    position: fixed;
-    top: 33px;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-    z-index: 1000;
-    overflow: auto
-}
-/*#endregion*/
-
-/* End Print Styles *//*#region*/
+/* [Sidebar Styles] *//*#region*/
 nav#divTabHeader,
 nav.tab-header {
     background-color: #f5f5f5
@@ -2317,134 +1433,7 @@ nav.tab-header {
 }
 /*#endregion*/
 
-/* Sidebar Styles *//*#region*/
-.sidebar-nav {
-    position: absolute;
-    top: 0;
-    width: 250px
-}
-
-.sidebar-nav a:hover {
-    cursor: pointer
-}
-
-@media (min-width:768px) {
-    #wrapper {
-        padding-left: 250px
-    }
-
-    #wrapper.toggled {
-        padding-left: 0
-    }
-
-    #sidebar-wrapper {
-        width: 250px
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0
-    }
-
-    #page-content-wrapper {
-        padding-left: 0
-    }
-
-    #page-content-wrapper .ButtonCell,
-    #page-content-wrapper .ButtonCellTop {
-        left: 250px
-    }
-
-    #wrapper.toggled #page-content-wrapper {
-        margin-right: 0
-    }
-
-    #wrapper.toggled #page-content-wrapper .ButtonCell,
-    #wrapper.toggled #page-content-wrapper .ButtonCellTop {
-        left: 0
-    }
-}
-
-@media print {
-    #sidebar-wrapper {
-        display: none
-    }
-
-    #page-content-wrapper {
-        padding-left: 0;
-        padding-top: 0px !important;
-        height: auto
-    }
-
-    #wrapper {
-        padding-left: 0;
-        height: auto;
-        overflow: visible
-    }
-
-    #wrapper #divHeaderControl {
-        position: static !important;
-        padding-right: 0px;
-        padding-left: 0px;
-        width: 100%;
-        height: auto
-    }
-
-    #page-content-wrapper .project-section-container {
-        padding-top: 0px;
-        overflow: initial
-    }
-}
-
-.modal.modal-left .modal-dialog,
-.modal.modal-right .modal-dialog {
-    position: fixed;
-    margin: auto;
-    width: 400px;
-    height: 100%;
-    transform: translate3d(0%, 0, 0)
-}
-
-.modal.modal-left .modal-content,
-.modal.modal-right .modal-content {
-    height: 100%;
-    overflow-y: auto;
-    border-radius: 0;
-    border: none
-}
-
-.modal.modal-left .modal-content .modal-header,
-.modal.modal-right .modal-content .modal-header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    cursor: auto
-}
-
-.modal.modal-left .modal-body,
-.modal.modal-right .modal-body {
-    padding: 15px 15px 25px
-}
-/*#endregion*/
-
-/*Left*//*#region*/
-.modal.modal-left.fade .modal-dialog {
-    left: -400px;
-    transition: opacity 0.3s linear, left 0.3s ease-out
-}
-
-.modal.modal-left.fade.in .modal-dialog {
-    left: 0
-}
-/*#endregion*/
-
 /*Right*//*#region*/
-.modal.modal-right.fade .modal-dialog {
-    right: -400px;
-    transition: opacity 0.3s linear, right 0.3s ease-out
-}
-
-.modal.modal-right.fade.in .modal-dialog {
-    right: 0
-}
 
 div.filter-section {
     font-size: 15px;
@@ -2463,10 +1452,6 @@ div.grid>.row {
     padding-bottom: 0
 }
 
-div.grid>.row>div {
-    padding: 8px
-}
-
 div.grid-hover>div.row:hover {
     background-color: #F5F5F5
 }
@@ -2483,23 +1468,6 @@ div.grid>div.row-hdr {
 div.grid>div.row-grp {
     background-color: #F9F9F9;
     font-weight: 700
-}
-
-*,
-:after,
-:before {
-    box-sizing: border-box
-}
-
-html {
-    -webkit-font-smoothing: antialiased
-}
-
-body {
-    font-family: Segoe UI, Open Sans, Arial, Sans-Serif;
-    font-size: 13px;
-    margin: 0px;
-    text-rendering: optimizeLegibility
 }
 /*#endregion*/
 
@@ -2520,10 +1488,6 @@ pre {
     background-color: #F9F2F4;
     color: black
 }
-
-span {
-    font-size: inherit
-}
 /*#endregion*/
 
 /* Element-level *//*#region*/
@@ -2532,20 +1496,9 @@ a.noHover {
     color: #306090
 }
 
-a,
-a.noHover,
-a:hover {
-    text-decoration: none
-}
-
 a:hover {
     color: #c5400d
         /* orangered */
-}
-
-a.disabledLink,
-a.noHover:hover {
-    text-decoration: none
 }
 
 a.disabledLink {
@@ -2557,33 +1510,12 @@ a.disabledLink:hover {
     color: black
 }
 
-img {
-    border-width: 0px
-}
-
-th {
-    text-align: left
-}
-
-.ckeShim th[scope=col] {
-    text-align: center
-}
-
 hr {
     border: 0px;
     width: 100%;
     height: 1px;
     background-color: #ddd;
     size: 1px
-}
-
-textarea.form-control {
-    height: 130px
-}
-
-.h1,
-h1 {
-    font-size: 28px
 }
 
 .h1,
@@ -2603,34 +1535,11 @@ h2 {
     border-bottom: 1px solid #dcdcdc
 }
 
-h2.h1,
-h2.h3,
-h2.h4,
-h2.h5,
-h2.h6 {
-    /* Turn off custom h2 styles if this isn't really an h2. */
-    padding: 0px;
-    border-bottom: 0 solid
-}
-
-h2 input {
-    float: right;
-    margin-top: -5px;
-    margin-left: 5px
-}
-
 .h3,
 h3 {
     font-weight: 400;
     margin: 0px;
     color: #424242
-}
-
-.h3,
-.h4,
-h3,
-h4 {
-    font-size: 15px
 }
 
 .h4,
@@ -2641,80 +1550,14 @@ h4 {
     text-decoration: none
 }
 
-h4 span {
-    float: right;
-    margin: 2px
-}
-
-.fa {
-    margin-right: 4px
-}
-
-.fa.fa-nopad {
-    margin-right: 0px
-}
-
-.fa+.padding-left-xs {
-    padding-left: 0
-}
-
-.fa.fa-nopad+.padding-left-xs {
-    padding-left: 4px
-}
-
 a.btn .fa-times:hover,
 a[role=button] .fa-times:hover,
 button .fa-times:hover {
     color: #bf3935
 }
-
-img.fa-google-drive {
-    width: 16px
-}
-
-img.fa-box {
-    width: 18px
-}
-
-img.fa-dropbox,
-img.fa-onedrive,
-img.fa-onedrivebiz {
-    width: 22px
-}
-
-.fa-lg.img.fa-box {
-    width: 20px
-}
-
-.fa-lg.img.fa-onedrive,
-.fa-lg.img.fa-onedrivebiz {
-    width: 22px
-}
-
-.fa-lg.img.fa-dropbox {
-    width: 24px
-}
-
-img.fa-dropbox,
-img.fa-google-drive,
-img.fa-onedrive,
-img.fa-onedrivebiz {
-    right: 2px;
-    position: relative
-}
-
-input[type=checkbox],
-input[type=radio] {
-    margin-right: 3px
-}
 /*#endregion*/
 
 /* File Upload control classes *//*#region*/
-.btn-file {
-    position: relative;
-    overflow: hidden
-}
-
 .btn-file input[type=file] {
     position: absolute;
     top: 0;
@@ -2733,13 +1576,6 @@ input[type=radio] {
 /*#endregion*/
 
 /* Classes *//*#region*/
-td.button {
-    width: 20px;
-    cursor: pointer;
-    height: 15px;
-    text-align: center
-}
-
 td.ButtonCellBottom {
     border-top: 1px solid #dcdcdc;
     background-color: #f5f5f5;
@@ -2824,10 +1660,6 @@ tr.hilite-2 td {
     background-color: #C6EFCE
 }
 
-.PrintOnly {
-    display: none
-}
-
 .copyButton {
     border: 1px solid rgba(0, 0, 0, 0.1);
     /*rgba for transparency*/
@@ -2867,11 +1699,6 @@ div.WhiteOut {
 /*#endregion*/
 
 /* CSS Compliant Table Styles *//*#region*/
-table.TDGrid_AllGridlines {
-    width: 100%;
-    border-collapse: collapse
-}
-
 table.TDGrid_AllGridlines tbody,
 table.TDGrid_AllGridlines td,
 table.TDGrid_AllGridlines th,
@@ -2905,20 +1732,6 @@ table.TDGrid_NoGridlines {
     border-top: 1px solid #dcdcdc
 }
 
-table.TDGrid_NoGridlines td {
-    border: 0
-}
-
-.TDTable_AllGridlines tbody,
-.TDTable_AllGridlines td,
-.TDTable_AllGridlines th,
-.TDTable_AllGridlines thead,
-.TDTable_AllGridlines tr {
-    border-style: inherit;
-    border-width: inherit;
-    border-color: inherit
-}
-
 .TDTable_VertGridlines td,
 .TDTable_VertGridlines th {
     border-top: none;
@@ -2926,21 +1739,7 @@ table.TDGrid_NoGridlines td {
     border-left: 1px solid #dcdcdc;
     border-right: 1px solid #dcdcdc
 }
-
-.fixedtable,
-table.fixed-table {
-    table-layout: fixed
-}
 /* End CSS Compliant Table Styles */
-/*#endregion*/
-
-/* Accessibility Styling *//*#region*/
-.legend-no-underline,
-.legend-no-undies {
-    border-bottom: none;
-    border: none
-}
-/* End Accessibility Styling */
 /*#endregion*/
 
 /* Auto complete *//*#region*/
@@ -2949,11 +1748,6 @@ table.fixed-table {
     background-color: #F6F6F6;
     cursor: default;
     overflow: hidden
-}
-
-.ac_menu,
-.ac_menuitem {
-    -moz-box-sizing: border-box
 }
 
 .ac_menuitem {
@@ -3000,19 +1794,6 @@ table.fixed-table {
     padding: 7px 7px 7px 13px
 }
 
-.TabButtonCell a:not(.btn) {
-    font-size: 13px
-}
-
-div.fixed-bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 45
-        /* Designed to go below a white out div, but above other regular content. */
-}
-
 div.help {
     padding: 8px;
     background-color: #fefaef;
@@ -3021,32 +1802,6 @@ div.help {
     margin-bottom: 5px;
     border-radius: 2px;
     display: none
-}
-
-div.help.stacked {
-    margin-right: 6px
-}
-
-div.clear {
-    clear: both
-}
-
-.clearfix:after {
-    content: ".";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both
-}
-
-.block-container {
-    padding: 8px 8px 8px 2px;
-    margin-bottom: 5px
-}
-
-.block-container>div {
-    padding-top: 3px;
-    padding-bottom: 2px
 }
 
 .block-info {
@@ -3062,14 +1817,6 @@ div.clear {
     line-height: 22px
 }
 
-.block-actions .btn.btn-link,
-.block-actions a {
-    margin: 0 11px 0 3px;
-    padding: 0;
-    line-height: 22px;
-    font-size: 14px
-}
-
 .block-actions .btn.btn-link {
     display: inline;
     color: #306090;
@@ -3080,12 +1827,6 @@ button.btn-link.btn-nav-style:hover {
     background-color: #eee;
     color: #c5400d;
     text-decoration: none
-}
-
-ul.nav-pills li.dropdown button.dropdown-toggle {
-    position: relative;
-    display: block;
-    padding: 10px 15px
 }
 
 ul.nav-pills li.dropdown button.dropdown-toggle:hover {
@@ -3104,34 +1845,6 @@ div.RightSideNav {
     -ms-word-break: break-word
 }
 
-div.RightSideNav div.block-container div.profile-pic {
-    width: 60px;
-    float: left
-}
-
-div.RightSideNav div.block-container div.user-info {
-    padding-left: 75px;
-    word-wrap: break-word
-}
-
-div.RightSideNav:after {
-    content: ".";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both
-}
-
-#divProjectNav {
-    padding: 12px 0px 15px
-}
-
-#divProjectNav a {
-    margin-right: 20px;
-    font-size: 16px;
-    padding: 0px 2px
-}
-
 .underlinable-anchor.selected,
 .underlinable-anchor:hover {
     border-bottom-style: solid;
@@ -3148,12 +1861,6 @@ div.RightSideNav:after {
     padding: 15px
 }
 
-.big-link {
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 18px
-}
-
 .ListItemLbl {
     color: #515A61;
     font-weight: 700;
@@ -3163,43 +1870,9 @@ div.RightSideNav:after {
 .underlined-row {
     border-bottom: 1px solid Gainsboro
 }
-
-.underline {
-    text-decoration: underline
-}
-/*#endregion*/
-
-/*stacked display help styles*//*#region*/
-.help-glyph {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    padding-left: 15px;
-    background: url(../Images/v_collapsed.png);
-    background-repeat: no-repeat;
-    background-position: 3px 8px;
-    cursor: pointer
-}
-
-.help-glyph:hover {
-    background-image: url(../Images/v_collapsed_hover.png)
-}
-
-.help-glyph.expanded {
-    background-image: url(../Images/v_expanded.png)
-}
-
-.help-glyph.expanded:hover {
-    background-image: url(../Images/v_expanded_hover.png)
-}
 /*#endregion*/
 
 /*Menu displayed when a user right clicks on an item (ie. briefcase folders)*//*#region*/
-.right-click-menu {
-    width: 200px
-        /* ensure that action menus appear above everything */
-}
-
 .right-click-menu,
 .save-search-div {
     display: none;
@@ -3210,16 +1883,6 @@ div.RightSideNav:after {
     border-collapse: separate;
     border: 1px solid #dcdcdc;
     z-index: 10000
-}
-
-.save-search-div {
-    width: 300px
-        /* ensure that action menus appear above everything */
-}
-
-.save-search-div.scrollable {
-    overflow: auto;
-    max-height: 300px
 }
 
 div.nav-item {
@@ -3244,10 +1907,6 @@ div.nav-item:hover {
     color: #c5400d
 }
 
-div.nav-item a {
-    font-size: 12px;
-    color: inherit
-}
 /*#endregion*/
 
 /* tab styles. *//*#region*/
@@ -3262,14 +1921,6 @@ ul.tabs {
 /*#endregion*/
 
 /* this is a css hack stolen from the jquery ui css. this seems to make the border on the ul show up correctly. *//*#region*/
-ul.tabs:after {
-    clear: both;
-    content: ".";
-    display: block;
-    height: 0;
-    visibility: hidden
-}
-
 ul.tabs>li {
     color: #336699;
     display: block;
@@ -3297,13 +1948,6 @@ ul.tabs>li.selected {
     font-weight: 700
 }
 
-img.person {
-    /*-moz-box-shadow: 0px 1px 12px -3px black;
-  -webkit-box-shadow: 0px 1px 12px -3px black;
-  box-shadow: 0px 1px 12px -3px black;
-  border-collapse: separate;*/
-}
-
 .modal-target,
 .shadow-box {
     background-color: white;
@@ -3313,68 +1957,12 @@ img.person {
     border: 1px solid #dcdcdc
 }
 
-.shadow-box.js-hide-mouseleave {
-    /* make sure "actions" menus are shown above the fixed header */
-    z-index: 10000
-}
-
 .shadow {
     box-shadow: 0px 1px 12px -3px black
 }
 /*#endregion*/
 
-/* Nav images - now typically used solely by the Lookup/TypeAheadLookup *//*#region*/
-.close-nav {
-    padding-left: 16px;
-    background: url(../Images/x.png) no-repeat 0px 0px
-}
-
-.close-nav.accent:hover,
-.close-nav:hover {
-    background: url(../Images/x_hover.png) no-repeat 0px 0px
-}
-
-.close-nav.accent {
-    background: url(../Images/x_accent.png) no-repeat 0px 0px
-}
-
-.search-nav {
-    padding-left: 18px;
-    background: url(../Images/search.png) no-repeat 0px 0px
-}
-
-.search-nav:hover {
-    background: url(../Images/search_hover.png) no-repeat 0px 0px
-}
-/*#endregion*/
-
 /* Lookup Image Styles *//*#region*/
-.lu_lookupimage {
-    display: inline-block;
-    height: 19px;
-    width: 16px;
-    padding-left: 0px;
-    vertical-align: middle;
-    cursor: pointer
-}
-
-.lu_lookupimage,
-.lu_lookupimage:hover {
-    background-position: 0px 3px
-}
-
-.search-nav.lu_lookupimage {
-    margin-left: 3px
-}
-
-.close-nav.lu_lookupimage {
-    background-image: url(../Images/x_accent.png)
-}
-
-.close-nav.lu_lookupimage:hover {
-    background-image: url(../Images/x_hover.png)
-}
-
 input.lu_lookupbox,
 input.lu_lookupbox:hover,
 input.TDTextBox.lu_lookupbox {
@@ -3397,17 +1985,6 @@ input.TDTextBox.lu_lookupbox {
 .time-cell-rejected {
     background-color: #f2dede;
     color: #a94442
-}
-
-div.time-labeldiv-approved,
-div.time-labeldiv-notsubmitted,
-div.time-labeldiv-rejected,
-div.time-labeldiv-submitted {
-    font-size: 15px;
-    display: inline;
-    vertical-align: middle;
-    margin-top: 3px;
-    padding: 1px 5px
 }
 
 div.time-labeldiv-notsubmitted {
@@ -3459,92 +2036,9 @@ div.time-div-rejected {
 /* End Time Styles */
 /*#endregion*/
 
-/* Turn off cursor for disabled datepickers *//*#region*/
-/* Add some spacing, alignment, and custom cursor behavior to jQuery calendar icons */
-img.ui-datepicker-trigger {
-    vertical-align: middle;
-    cursor: pointer;
-    margin-left: 3px
-}
-/*#endregion*/
-
-/* Add the ability to hide the year of datepickers with a certain class *//*#region*/
-.yearless-datepicker .ui-datepicker-year {
-    display: none
-}
-/*#endregion*/
-
 /* Add a border to slider elements *//*#region*/
 span.ui-slider-handle.ui-state-default {
     border: 1px solid #747474
-}
-/*#endregion*/
-
-/* jQuery-Timepicker-Addon Styles *//*#region*/
-.ui-timepicker-div .ui-widget-header {
-    margin-bottom: 8px
-}
-
-.ui-timepicker-div dl {
-    text-align: left
-}
-
-.ui-timepicker-div dl dt {
-    height: 25px;
-    margin-bottom: -25px
-}
-
-.ui-timepicker-div dl dd {
-    margin: 0 10px 10px 65px
-}
-
-.ui-timepicker-div td {
-    font-size: 90%
-}
-
-.ui-tpicker-grid-label {
-    background: none;
-    border: none;
-    margin: 0;
-    padding: 0
-}
-/* End jQuery-Timepicker-Addon Styles */
-/*#endregion*/
-
-/* Workflow Stage Status Styles *//*#region*/
-.stages {
-    /* Each stage icon div. They should be display: inline when display is not expanded. */
-    /* Styles to apply when the stages display has been expanded. */
-}
-
-.stages>div {
-    cursor: pointer;
-    display: inline-block;
-    overflow: hidden;
-    padding: 3px
-        /* The span contains the stage name. It should be hidden when the stages display is not expanded. */
-}
-
-.stages>div span.name {
-    display: none;
-    vertical-align: middle
-}
-
-.stages.expanded {
-    /* The stage icon divs should all be display: block to show each stage on a different line. */
-}
-
-.stages.expanded>div {
-    display: block;
-    overflow: inherit;
-    width: inherit
-        /* The name of the stage should be visible. */
-}
-
-.stages.expanded>div span.name {
-    display: inline;
-    vertical-align: middle;
-    margin-left: 3px
 }
 /*#endregion*/
 
@@ -3571,48 +2065,9 @@ div.comment {
     margin-top: 5px;
     position: relative
 }
-
-.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 40
-        /* Designed to go below a white out div, but above other regular content. */
-}
-/*#endregion*/
-
-/* This reserves space for a position: fixed button row so content does not appear to be beneath it. *//*#region*/
-.button-row-shim {
-    padding-top: 41px
-}
-/*#endregion*/
-
-/* These classes are used to render a fixed button row beneath a fixed header *//*#region*/
-.fixed-button-row-header-offset {
-    top: 122px
-}
-
-.fixed-button-row-header-shim {
-    padding-top: 162px
-}
 /*#endregion*/
 
 /* tdbar styles *//*#region*/
-div.tdbar {
-    line-height: 33px;
-    position: fixed;
-    width: 100%;
-    font-size: 14px;
-    z-index: 100
-}
-
-div.tdbar-settings {
-    right: 0px;
-    margin-right: 10px;
-    width: auto
-}
-
 div.tdbar-settings i {
     color: #454545;
     padding-right: 5px
@@ -3623,32 +2078,12 @@ div.tdbar-settings i {
     background-color: #F8F9F9
 }
 
-.btn-link:focus,
-.tab-row>div>.btn-link:hover,
-.tab-row>div>span>.btn-link:hover {
-    text-decoration: none
-}
-
-.tab-row>div>a {
-    font-size: 13px;
-    white-space: nowrap
-}
-
 .tdbar-sub {
     border-bottom: 1px solid #dcdcdc;
     background-color: #f5f5f5;
     line-height: 30px;
     display: table;
     width: 100%
-}
-
-.tdbar-sub a {
-    margin-left: 12px;
-    font-size: 13px
-}
-
-div.shim-spacer {
-    height: 34px
 }
 
 div.tdbar-anchored-button,
@@ -3660,15 +2095,6 @@ div.tdbar-button {
     line-height: 35px;
     cursor: pointer;
     color: #343434
-}
-
-#divUserSettings .btn {
-    font-size: 14px
-}
-
-div.tdbar-anchored-button a {
-    padding-left: 10px;
-    padding-right: 10px
 }
 
 div.tdbar-anchored-button:hover,
@@ -3691,12 +2117,6 @@ div.tdbar-button-sel {
 div.tdbar-anchored-button-sel:hover,
 div.tdbar-button-sel:hover {
     background-color: #005899
-}
-
-div.tdbar-button,
-div.tdbar-button-sel {
-    padding-left: 8px;
-    padding-right: 8px
 }
 
 div.tdbar-submenu {
@@ -3727,12 +2147,6 @@ div.tdbar-submenu-item a {
     color: black
 }
 
-div.tdbar-submenu-item.dynamictext {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis
-}
-
 div.tdbar-briefcase-submenu-item {
     height: 30px;
     line-height: 30px;
@@ -3746,10 +2160,6 @@ div.tdbar-briefcase-submenu-item {
 
 div.tdbar-briefcase-submenu-item:hover {
     background-color: #f5f5f5
-}
-
-div.tdbar-briefcase-submenu-item img {
-    padding: 0 2px 4px 0
 }
 /* end tdbar styles */
 /*#endregion*/
@@ -3800,123 +2210,10 @@ div.tdbar-briefcase-submenu-item img {
     margin-right: 10px;
     width: 15px
 }
-
-.drag-handle:active {
-    cursor: grabbing;
-    cursor: -webkit-grabbing
-}
 /* End: Workflow Builder Styles */
 /*#endregion*/
 
-/* Time entry CSS classes *//*#region*/
-.hours-cell {
-    text-align: center
-}
-
-.hours-cell input {
-    width: 53px;
-    text-align: right
-}
-
-.desc-cell {
-    display: none
-}
-
-.desc-cell textarea {
-    width: 370px;
-    height: 60px
-}
-
-.current-day {
-    font-weight: 400
-}
-
-.ellipsis,
-.nowrap {
-    white-space: nowrap
-}
-
-.ellipsis {
-    overflow: hidden;
-    text-overflow: ellipsis
-}
-
-.TRItemTitleCell .hot-add-btn {
-    padding: 0;
-    padding-right: 4px;
-    border: 0
-}
-
-table.time-report {
-    table-layout: fixed
-}
-
-table.time-report td,
-table.time-report th {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis
-}
-
-.time-approve-table table.time-report {
-    table-layout: fixed
-}
-
-.time-approve-table table.time-report th {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis
-}
-
-.time-approve-table table.time-report td {
-    overflow: auto;
-    white-space: normal
-}
-
-div.SearchBox>input[type=text] {
-    padding-right: 20px;
-    border-radius: 2px
-}
-
-div.SearchBox>a>i {
-    border: 0;
-    position: relative;
-    right: 20px
-}
-
-.divSection {
-    margin-bottom: 15px
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0
-}
-
-.sr-only-focusable:active,
-.sr-only-focusable:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto
-}
-/*#endregion*/
-
 /* auto-complete *//*#region*/
-.form-inline .talu_holder {
-    /* This makes sure the typeahead lookup takes up a resonable amount of space when in an inline form. Otherwise, it
-  shrinks down real small. */
-    min-width: 300px
-}
-
 .talu_holder {
     padding: 5px 12px 0 6px;
     font-size: 14px;
@@ -3932,13 +2229,6 @@ div.SearchBox>a>i {
     max-height: 200px;
     height: auto;
     overflow-y: auto
-}
-
-.talu_holder li {
-    float: left;
-    list-style-type: none;
-    margin: 0 5px 4px 0;
-    white-space: nowrap
 }
 
 .talu_holder .bit-box {
@@ -3959,43 +2249,6 @@ div.SearchBox>a>i {
     color: #fff
 }
 
-.talu_holder .bit-input {
-    font-size: 12px;
-    padding: 0;
-    display: inline-block;
-    float: left
-}
-
-.talu_holder .bit-input input {
-    border: 0;
-    font-size: 14px;
-    margin: 0;
-    outline: 0;
-    overflow: visible;
-    line-height: 18px;
-    /* Vertically align in holder */
-    /*padding-top: 3px;*/
-    display: inline-block
-}
-
-.talu_holder .bit-box a.closebutton {
-    background: url(../Images/ac_close.gif);
-    cursor: pointer;
-    display: inline-block;
-    height: 7px;
-    width: 7px;
-    margin: 0 0 0 5px
-}
-
-.talu_holder .bit-box a.closebutton:hover {
-    background-position: 7px
-}
-
-.talu_holder .bit-box-focus a.closebutton,
-.talu_holder .bit-box-focus a.closebutton:hover {
-    background-position: bottom
-}
-
 .talu_holder.no-selection {
     border-color: #bf3935
 }
@@ -4012,10 +2265,6 @@ div.SearchBox>a>i {
     /* Vertically align in holder */
     padding-left: 6px;
     float: left
-}
-
-.talu_buttons {
-    vertical-align: top
 }
 
 .talu_holder.holder-focused {
@@ -4035,31 +2284,7 @@ div.SearchBox>a>i {
 }
 /*#endregion*/
 
-/* Profile Views desktop module *//*#region*/
-.profile-views .profile-views-count {
-    font-size: 48px
-}
-
-.profile-views .profile-views-text {
-    font-size: 14px
-}
-/* End Profile Views desktop module */
-/*#endregion*/
-
 /* Profile Image Styles *//*#region*/
-div.profile-image {
-    height: 60px;
-    width: 60px
-}
-
-div.profile-image.clickable {
-    cursor: pointer
-}
-
-div.profile-image.picture>img {
-    border-radius: 3px
-}
-
 div.profile-image.initials {
     line-height: 60px;
     text-align: center;
@@ -4068,21 +2293,9 @@ div.profile-image.initials {
     border-radius: 3px
 }
 
-div.profile-image.initials.system {
-    font-size: 36px
-}
-
-div.profile-image.initials.system>.fa {
-    margin: 0
-}
-
 div.profile-image.initials.system>.fa:hover {
     color: white;
     cursor: default
-}
-
-div.profile-image.initials.anonymous {
-    font-size: 42px
 }
 /* End Profile Image Styles */
 /*#endregion*/
@@ -4113,37 +2326,11 @@ div.tertiary {
     margin: 0px
 }
 
-.tdTilebg .num a {
-    color: inherit
-}
-
-.tdTilebg .num.smalltext {
-    font-size: 40px;
-    padding-top: 2.5px;
-    line-height: 61.7857143px
-}
-
 .tdTilebg .txt {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
     color: white
-}
-
-.tdTilebg .txt.smalltext {
-    font-size: 13px;
-    line-height: 22.85714286px
-}
-
-.tdTilebg.smalltext .num {
-    font-size: 40px;
-    padding-top: 2.5px;
-    line-height: 61.7857143px
-}
-
-.tdTilebg.smalltext .txt {
-    font-size: 13px;
-    line-height: 22.85714286px
 }
 
 .tdTilemd {
@@ -4164,37 +2351,11 @@ div.tertiary {
     padding-top: 15px
 }
 
-.tdTilemd .num a {
-    color: inherit
-}
-
-.tdTilemd .num.smalltext {
-    font-size: 25px;
-    padding-top: 12.5px;
-    line-height: 49.64285716px
-}
-
 .tdTilemd .txt {
     font-size: 15px;
     font-weight: 600;
     text-align: center;
     color: white
-}
-
-.tdTilemd .txt.smalltext {
-    font-size: 12px;
-    line-height: 21.42857143px
-}
-
-.tdTilemd.smalltext .num {
-    font-size: 25px;
-    padding-top: 12.5px;
-    line-height: 49.64285716px
-}
-
-.tdTilemd.smalltext .txt {
-    font-size: 12px;
-    line-height: 21.42857143px
 }
 
 .tdTilesm {
@@ -4214,109 +2375,11 @@ div.tertiary {
     margin: 0px
 }
 
-.tdTilesm .num a {
-    color: inherit
-}
-
-.tdTilesm .num.smalltext {
-    font-size: 25px;
-    padding-top: 7.5px;
-    line-height: 49.64285716px
-}
-
 .tdTilesm .txt {
     font-size: 15px;
     font-weight: 600;
     text-align: center;
     color: white
-}
-
-.tdTilesm .txt.smalltext {
-    font-size: 12px;
-    line-height: 21.42857143px
-}
-
-.tdTilesm.smalltext .num {
-    font-size: 25px;
-    padding-top: 7.5px;
-    line-height: 49.64285716px
-}
-
-.tdTilesm.smalltext .txt {
-    font-size: 12px;
-    line-height: 21.42857143px
-}
-
-.num.smalltext,
-.smalltext .num,
-.smalltext .txt,
-.txt.smalltext {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-left: 2px;
-    padding-right: 2px
-}
-/*#endregion*/
-
-/* MEDIA QUERIES *//*#region*/
-/* Extra Small */
-/* END MEDIA QUERIES */
-/*#endregion*/
-
-/* [.form-signin styles] *//*#region*/
-.form-signin {
-    margin: 0 auto
-}
-
-.form-signin .checkbox,
-.form-signin .form-signin-heading {
-    margin-bottom: 10px
-}
-
-.form-signin .checkbox {
-    font-weight: 400
-}
-
-.form-signin .form-control {
-    position: relative;
-    box-sizing: border-box;
-    padding: 10px;
-    font-size: 16px
-}
-
-.form-signin .form-control:focus {
-    z-index: 2
-}
-
-.form-signin input[placeholder=Username] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0
-}
-
-.form-signin input[type=password] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0
-}
-/*#endregion*/
-
-/* Styles for optional fields (see AssetUpdateMultiple.aspx) *//*#region*/
-div.selectable-field {
-    display: table;
-    width: 100%
-}
-
-div.selectable-field div.form-group-toggle {
-    padding-bottom: 18px
-}
-
-div.selectable-field>div:first-child {
-    width: 25px
-}
-
-div.selectable-field>div {
-    display: table-cell
 }
 /*#endregion*/
 
@@ -4329,118 +2392,13 @@ div.selectable-field>div {
   </asp:RadioButtonList>
 */
 
-span.radio {
-    padding: 0px
-}
-
-span.radio>input[type=radio] {
-    margin: 8px -5px 7px 0px
-}
-
-span.radio>label {
-    float: left;
-    margin-right: 15px;
-    padding: 3px 5px 0px 15px
-}
-
-table {
-    border-spacing: 0;
-    border-collapse: collapse !important;
-    max-width: 100%
-}
-
-table h4 {
-    padding: 0px
-}
-
-table>tbody>tr>td,
-table>tbody>tr>th,
-table>tfoot>tr>td,
-table>tfoot>tr>th,
-table>thead>tr>td,
-table>thead>tr>th {
-    padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: top
-}
-
 table>thead>tr>th {
     vertical-align: bottom;
     border-bottom: 2px solid #ddd
 }
 
-table>caption+thead>tr:first-child>td,
-table>caption+thead>tr:first-child>th,
-table>colgroup+thead>tr:first-child>td,
-table>colgroup+thead>tr:first-child>th,
-table>thead:first-child>tr:first-child>td,
-table>thead:first-child>tr:first-child>th {
-    border-top: 0
-}
-
 table>tbody+tbody {
     border-top: 2px solid #ddd
-}
-
-.accessible-desktop .dropdown-menu {
-    min-width: initial;
-    position: relative
-}
-
-.accessible-desktop .dropdown-menu>li>a {
-    white-space: break-spaces;
-    word-wrap: normal;
-    padding-right: 10px;
-    padding-left: 10px
-}
-
-.btn-group.open .btn-link {
-    text-decoration: none
-}
-
-.btn-group>.btn-link:hover,
-.btn-link:active,
-.btn-link:focus {
-    text-decoration: none;
-    outline: 1px dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px
-}
-
-.ButtonCellTop>table>tbody>tr>td {
-    padding: 0px
-}
-
-.checkbox-list label,
-.HorizRadio label {
-    font-weight: 400;
-    padding-left: 3px;
-    padding-right: 15px
-}
-
-.dropdown-menu {
-    z-index: 9999
-}
-
-.dropdown-menu>li>a {
-    cursor: pointer
-}
-
-.form-horizontal span.radio {
-    padding-top: 4px
-}
-
-.HorizRadio td,
-.TDCheckBoxList td {
-    padding: 0
-}
-
-.schedule-input {
-    width: 80px
-}
-
-.TDCheckBoxList label {
-    font-weight: 400
 }
 /*#endregion*/
 
@@ -4517,96 +2475,15 @@ table>tbody+tbody {
 .panel-yellow>a:hover {
     color: #805f00
 }
-
-p {
-    margin: 12px 0px
-}
-
-h2+.disp-group:first-of-type,
-h2+.form-group:first-of-type {
-    margin-top: 15px
-}
-/*#endregion*/
-
-/* Get rid of the auto-hiding scrollbar in IE *//*#region*/
-@-ms-viewport {
-    width: auto !important
-}
-
-.modal-title {
-    font-size: 24px !important;
-    font-weight: 500 !important
-}
-
-.modal-body textarea {
-    max-width: 100%
-}
-
-.modal-footer {
-    text-align: left
-}
-
-.modal-xl {
-    margin: 30px;
-    width: auto
-}
-
-.ModuleContent {
-    overflow-x: auto
-}
 /*#endregion*/
 
 /* This is used for the icons associated with desktop modules *//*#region*/
-.module-header {
-    cursor: move
-}
-
-.module-header i:hover,
-.module-header span:hover {
-    cursor: pointer
-}
-
 .module-header span {
     color: #2b2b2b
 }
 /*#endregion*/
 
-/* This is used primarily to remove the borders from desktop modules *//*#region*/
-.no-border {
-    border: none !important
-}
-
-.no-top-border {
-    border-top: none !important
-}
-
-.no-right-border {
-    border-right: none !important
-}
-
-.no-bottom-border {
-    border-bottom: none !important
-}
-
-.no-left-border {
-    border-left: none !important
-}
-
-.inline {
-    display: inline
-}
-
-.inline-block {
-    display: inline-block
-}
-/*#endregion*/
-
 /* START jquery.multiple-select customizations *//*#region*/
-.ms-parent {
-    height: 34px;
-    border-radius: 3px !important
-}
-
 .ms-choice {
     height: 34px !important;
     line-height: 34px !important;
@@ -4620,36 +2497,10 @@ h2+.form-group:first-of-type {
         outline-offset: -2px
     }
 }
-
-.ms-drop {
-    border-radius: 0px 0px 3px 3px !important
-}
-
-.ms-choice>div {
-    height: 20px !important;
-    margin-top: 5px !important
-}
-
-.ms-drop ul>li label {
-    white-space: normal !important
-}
-
-.ms-drop input[type=checkbox] {
-    margin-top: -1px !important;
-    margin-right: 6px !important
-}
 /* END jquery.multiple-select customizations */
 /*#endregion*/
 
 /* Turn off cursor for disabled datepickers *//*#region*/
-.TDTextBox.TDDatePicker.disabled {
-    cursor: default
-}
-
-ul.nav-tabs>li a {
-    line-height: 1.0em
-}
-
 .nav-tabs>li.active a {
     background-color: #F8F9F9;
     border-bottom-color: #F8F9F9;
@@ -4658,41 +2509,14 @@ ul.nav-tabs>li a {
     border-top-right-radius: 3px
 }
 
-.ie10-bootstrap-shim .form-control,
-.ie10-bootstrap-shim .TDTextBox {
-    border-radius: 0px
-}
-
-.user-profile-menu .profile-image {
-    margin: 15px auto
-}
-
 .tditemlist-sorting {
     background-color: White;
     border: 1px solid #dcdcdc;
     border-bottom: none
 }
-
-.tditemlist-id,
-.tditemlist-pos {
-    display: none
-}
 /*#endregion*/
 
 /* Priority/Risk Styling *//*#region*/
-.pri {
-    width: 16px;
-    height: 16px;
-    margin: 2px 5px 2px 0;
-    border-radius: 1px;
-    float: left
-}
-
-.rsk-name {
-    font-size: 16px;
-    font-weight: 700
-}
-
 .rsk-status {
     padding: 2px;
     text-align: center;
@@ -4729,30 +2553,9 @@ ul.nav-tabs>li a {
     padding: 15px 0px 11px;
     border-bottom: 1px solid #dcdcdc
 }
-
-.js-td-select {
-    width: 100%
-}
-
-.input-group>.select2-container--bootstrap .select2-selection {
-    border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0 !important
-}
 /*#endregion*/
 
 /* Autocompleter (i.e. popped-up list of items) *//*#region*/
-.talu_holder.form-control {
-    border-top-left-radius: 3px !important;
-    border-bottom-left-radius: 3px !important
-}
-
-.lu_tdac-auto {
-    position: relative;
-    z-index: 28;
-    top: 33px;
-    left: 0
-}
-
 .lu_tdac-auto,
 .lu_tdac-auto ul {
     background: #fff !important;
@@ -4782,14 +2585,6 @@ ul.nav-tabs>li a {
     z-index: 29
 }
 
-.lu_tdac-auto ul li em {
-    font-weight: 700
-}
-
-.lu_tdac-auto ul li div.talu_caption em {
-    font-style: normal
-}
-
 .lu_tdac-auto ul li div.talu_subcaption {
     font-style: italic;
     font-size: 90%;
@@ -4805,20 +2600,10 @@ ul.nav-tabs>li a {
     color: #fff
 }
 
-.lu_tdac-auto ul .auto-focus em {
-    background: none
-}
-
 .lu_deleted {
     background-color: #4173CC !important;
     color: #ffffff !important
 }
-
-.btn-typeahead-lookup {
-    border-top-right-radius: 3px !important;
-    border-bottom-right-radius: 3px !important
-}
-/* End auto-complete */
 /*#endregion*/
 
 /* override select2 styles for tags *//*#region*/
@@ -4849,18 +2634,6 @@ div.js-tags-inlineedit .select2-container-multi .select2-choices .select2-search
     word-break: break-all
 }
 
-div.js-tagformfield .select2-container-multi .select2-choices .select2-search-choice>div,
-div.js-tags-inlineedit .select2-container-multi .select2-choices .select2-search-choice>div {
-    margin-right: 15px
-}
-
-div.js-tagformfield .select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close,
-div.js-tags-inlineedit .select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close {
-    left: auto;
-    right: 3px;
-    top: 50%
-}
-
 div.js-tagformfield .select2-container-multi .select2-choices .select2-search-field input {
     border-width: 0;
     color: #5e5e5e !important;
@@ -4870,88 +2643,4 @@ div.js-tagformfield .select2-container-multi .select2-choices .select2-search-fi
     line-height: 19px;
     padding-left: 0
 }
-
-div.js-tagformfield .select2-container-multi .select2-choices .select2-search-field input:focus {
-    font-style: normal
-}
-/* end select2 override */
 /*#endregion*/
-
-/* Feed styles *//*#region*/
-.ilike.feed-comment,
-.ilike.feed-like {
-    color: #369 !important
-}
-
-.feed-comment:hover,
-.feed-like:hover {
-    cursor: pointer
-}
-
-.feed-deleted {
-    font-style: italic
-}
-/* End Feed styles */
-/*#endregion*/
-
-/* Person Card Panel styles *//*#region*/
-.panel.panel-default.panel-person-card {
-    min-height: 120px
-}
-/* End Person Card Panel styles */
-/*#endregion*/
-
-.textbox-sm {
-    display: inline-block;
-    width: 126px
-}
-
-.pagination-label {
-    vertical-align: 0%
-}
-
-.bootstrap-pagination-label,
-.pagination-label {
-    display: inline;
-    font-size: inherit;
-    line-height: initial
-}
-
-.bootstrap-pagination-label {
-    vertical-align: 75%
-}
-
-.btn-text {
-    background-color: transparent;
-    border: none;
-    padding: 0px
-}
-
-.modal-grid-wrapper {
-    display: block;
-    max-height: 400px;
-    overflow-y: auto
-}
-
-.report-module-not-loaded {
-    text-align: center;
-    padding: 10px;
-    height: 600px
-}
-
-.focus-no-underline:focus {
-    text-decoration: none
-}
-
-.font-weight-bold {
-    font-weight: 700
-}
-
-a.disabled {
-    pointer-events: none
-}
-
-.sort-attachments {
-    margin-right: 10px;
-    font-size: 14px
-}
