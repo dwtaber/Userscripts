@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         MyCharleston Admin Dark Mode
-// @version      2021.05.18.1
+// @version      2021.06.10.0
 // @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonDarkMode.user.js
 // @updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonDarkMode.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
@@ -161,6 +161,18 @@ tr:hover > td.datarowitem-username
     cursor: pointer;
 }
 
+/* Pointer cursor on values in user information page. */
+table>tbody>tr>td>span.text12
+{
+    cursor: pointer;
+}
+
+/* Pointer cursor on values in user information page on hover. */
+table>tbody>tr>td>span.text12>strong:hover
+{
+    color: #ffffff;
+}
+
 `;
 
 // Inject dark mode style sheet into document head.
@@ -183,3 +195,13 @@ if (document.URL.includes("https://my.cofc.edu/jsp/admin/menu.jsp"))
 {
     document.getElementById("folder_menu").removeAttribute("width");
 }
+
+// On User Information page, click a value to copy it to the clipboard.
+
+let queryResults = document.querySelectorAll("span.text12");
+// let resultsArray = Array.from(queryResults);
+queryResults.forEach( function(item)
+    {
+        item.onclick = function() { navigator.clipboard.writeText(this.innerText.trim() ); }
+    }
+)
