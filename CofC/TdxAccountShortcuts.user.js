@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TDX Account Shortcuts
-// @version      2021.05.20.1
+// @version      2021.06.22.1
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxAccountShortcuts.user.js
 // @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxAccountShortcuts.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
@@ -9,6 +9,7 @@
 // @author       Dan Taber
 // @match        https://cofc.teamdynamix.com/TDNext/Apps/People/PersonNew
 // @match        https://cofc.teamdynamix.com/SBTDNext/Apps/People/PersonNew
+// @match        https://cofc.teamdynamix.com/TDNext/Apps/People/PersonEdit.aspx*
 // @grant        none
 // ==/UserScript==
 
@@ -23,7 +24,7 @@ function makeQuickButton(accountName,accountID)
     button.type = "button";
     button.className = "quickButton";
     button.id = `quickButton-${accountName}`;
-    button.onclick = function(){setAccount(accountName,accountID);}
+    button.onclick = function(){acb_taluDepartment.addItem(accountName,accountID);}
     return button;
 }
 
