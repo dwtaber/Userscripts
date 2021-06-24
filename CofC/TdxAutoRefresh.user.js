@@ -1,72 +1,89 @@
 // ==UserScript==
 // @name         TDX Auto-refresh
 // @namespace    https://github.com/dwtaber/userscripts
-// @version      0.8.1
-// @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxAutoRefresh.user.js
-// @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxAutoRefresh.user.js
+// @version      2021.06.23.1
+// @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxAutoRefresh.js
+// @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxAutoRefresh.js
 // @description  Refreshes all modules in TDNext desktops at a specified interval.
 // @author       dwtaber@cofc.edu
 // @match        https://cofc.teamdynamix.com/*/Desktop.aspx
 // @grant        none
 // ==/UserScript==
 
-//Inject slider style into document head.
+// Determines whether modules auto-refresh by default.
+const checkedByDefault = true;
+
+// Slider colors.
+const sliderColor = "#f5f5f5";
+const sliderOffBgColor = "#cccccc";
+const sliderOnBgColor = "#2b2b2b";
+
+// Inject slider style into document head.
 const togglestylecontent = `
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 2em;
-  height: 1.05em;
-  vertical-align: -30%;
+.switch
+{
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 1.05em;
+    vertical-align: -30%;
 }
 
 .switch input {display:none;}
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+.slider
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: ${sliderOffBgColor}; /* Slider background while unchecked/off */
+    -webkit-transition: .4s;
+    transition: .4s;
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: .75em;
-  width: .75em;
-  left: .15em;
-  bottom: .15em;
-  background-color: #f5f5f5;
-  -webkit-transition: .4s;
-  transition: .4s;
+
+.slider:before
+{
+    position: absolute;
+    content: "";
+    height: .75em;
+    width: .75em;
+    left: .15em;
+    bottom: .15em;
+    background-color: ${sliderColor}; /* Color of the slider itself. */
+    -webkit-transition: .4s;
+    transition: .4s;
 }
 
-input:checked + .slider {
-  background-color: #2b2b2b;
+input:checked + .slider
+{
+    background-color: ${sliderOnBgColor}; /* Slider background while checked/on */
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #2b2b2b;
+input:focus + .slider
+{
+    box-shadow: 0 0 1px #2b2b2b;
 }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(.95em);
-  -ms-transform: translateX(.95em);
-  transform: translateX(.95em);
+input:checked + .slider:before
+{
+    -webkit-transform: translateX(.95em);
+    -ms-transform: translateX(.95em);
+    transform: translateX(.95em);
 }
 
 /* Rounded sliders */
-.slider.round {
-  border-radius: 1em;
+.slider.round
+{
+    border-radius: 1em;
 }
 
-.slider.round:before {
-  border-radius: 50%;
+.slider.round:before
+{
+    border-radius: 50%;
 }
 `;
 const togglestyle = document.createElement("style");
@@ -90,7 +107,7 @@ for(let value of modulelist){
 	let toggle = document.createElement("input");
 	toggle.setAttribute("type", "checkbox");
 	toggle.setAttribute("id", value.id + "-toggle");
-	toggle.setAttribute("checked", "checked");
+	toggle.checked = checkedByDefault;
 	let slider = document.createElement("span");
 	slider.setAttribute("class", "slider round");
 	switchbg.appendChild(toggle);
