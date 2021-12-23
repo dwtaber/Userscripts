@@ -199,7 +199,6 @@ if (document.URL.includes("https://my.cofc.edu/jsp/admin/menu.jsp"))
 // On User Information page, click a value to copy it to the clipboard.
 
 let queryResults = document.querySelectorAll("span.text12");
-// let resultsArray = Array.from(queryResults);
 queryResults.forEach( function(item)
     {
         item.onclick = function() { navigator.clipboard.writeText(this.innerText.trim() ); }
