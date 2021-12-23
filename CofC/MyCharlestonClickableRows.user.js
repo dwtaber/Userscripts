@@ -19,7 +19,7 @@ const rowHoverStyle = `
 tr:hover > td.datarowitem,
 tr:hover > td.datarowitem-username
 {
-	backdrop-filter: invert(0.2);
+	background-color: #7f7f7f7f;
     cursor: pointer;
 }
 `
