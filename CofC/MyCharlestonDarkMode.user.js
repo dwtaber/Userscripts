@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         MyCharleston Admin Dark Mode
-// @version      2021.12.23.0
+// @version      2021.12.23.1
 // @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonDarkMode.user.js
 // @updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonDarkMode.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
@@ -152,27 +152,6 @@ input.btn:hover
     text-decoration: none;
     cursor: pointer;
 }
-
-/* Hovering over search results highlights that row. */
-tr:hover > td.datarowitem,
-tr:hover > td.datarowitem-username
-{
-	background-color: #333;
-    cursor: pointer;
-}
-
-/* Pointer cursor on values in user information page. */
-table>tbody>tr>td>span.text12
-{
-    cursor: pointer;
-}
-
-/* Pointer cursor on values in user information page on hover. */
-table>tbody>tr>td>span.text12>strong:hover
-{
-    color: #ffffff;
-}
-
 `;
 
 // Inject dark mode style sheet into document head.

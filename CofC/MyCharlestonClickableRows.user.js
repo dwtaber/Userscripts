@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         MyCharleston Admin Clickable Rows
-// @version      2021.12.23.0
+// @version      2021.12.23.1
 // @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonClickableRows.user.js
 // @updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonClickableRows.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
@@ -13,6 +13,20 @@
 // @exclude      https://my.cofc.edu/cp/home/displaylogin
 // @grant        none
 // ==/UserScript==
+
+const rowHoverStyle = `
+/* Hovering over search results highlights that row. */
+tr:hover > td.datarowitem,
+tr:hover > td.datarowitem-username
+{
+	backdrop-filter: invert(0.2);
+    cursor: pointer;
+}
+`
+// Inject css into document head.
+const styleTag = document.createElement("style");
+styleTag.innerHTML = rowHoverStyle;
+document.head.append(styleTag);
 
 const dataRowItems = document.getElementsByClassName("datarowitem-username")
 if (dataRowItems != null)

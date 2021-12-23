@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         MyCharleston Admin Click to Copy
-// @version      2021.12.23.0
+// @version      2021.12.23.1
 // @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonClickToCopy.user.js
 // @updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonClickToCopy.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
@@ -13,6 +13,24 @@
 // @exclude      https://my.cofc.edu/cp/home/displaylogin
 // @grant        none
 // ==/UserScript==
+
+const pointerStyle = `
+/* Pointer cursor on values in user information page. */
+table>tbody>tr>td>span.text12
+{
+    cursor: pointer;
+}
+
+/* Pointer cursor on values in user information page on hover. */
+table>tbody>tr>td>span.text12>strong:hover
+{
+    filter: invert(0.3);
+}
+`
+// Inject css into document head.
+const styleTag = document.createElement("style");
+styleTag.innerHTML = pointerStyle;
+document.head.append(styleTag);
 
 let queryResults = document.querySelectorAll("span.text12");
 queryResults.forEach( function(item)
