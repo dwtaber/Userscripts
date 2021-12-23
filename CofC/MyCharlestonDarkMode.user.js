@@ -179,28 +179,3 @@ table>tbody>tr>td>span.text12>strong:hover
 const styleTag = document.createElement("style");
 styleTag.innerHTML = darkModeStyle;
 document.head.append(styleTag);
-
-// Clicking anywhere within a row opens that user record.
-const dataRowItems = document.getElementsByClassName("datarowitem-username")
-if (dataRowItems != null)
-{
-    for (let item of dataRowItems) {
-        let uri = item.firstChild.firstChild.href;
-        item.parentNode.onclick = function(){window.location.href = uri}
-    }
-}
-
-// Fix menu bar scrollbar.
-if (document.URL.includes("https://my.cofc.edu/jsp/admin/menu.jsp"))
-{
-    document.getElementById("folder_menu").removeAttribute("width");
-}
-
-// On User Information page, click a value to copy it to the clipboard.
-
-let queryResults = document.querySelectorAll("span.text12");
-queryResults.forEach( function(item)
-    {
-        item.onclick = function() { navigator.clipboard.writeText(this.innerText.trim() ); }
-    }
-)
