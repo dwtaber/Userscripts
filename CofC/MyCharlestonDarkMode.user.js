@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         MyCharleston Admin Dark Mode
-// @version      2021.06.10.0
+// @version      2021.12.23.0
 // @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonDarkMode.user.js
 // @updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonDarkMode.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
