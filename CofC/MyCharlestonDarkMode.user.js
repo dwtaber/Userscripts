@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         MyCharleston Admin Dark Mode
-// @version      2021.12.23.1
+// @version      2022.03.07.0
 // @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonDarkMode.user.js
 // @updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonDarkMode.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
@@ -20,6 +20,11 @@ const darkModeStyle = `
 body
 {
     background-color: #1E1E1E;
+}
+
+body.Admin
+{
+        margin: 10px 10px 0px 10px;
 }
 
 .dataheader, .datatable, td.dataheader, td.dataheader-firstcell, td.dataheader-lastcell,
@@ -152,6 +157,17 @@ input.btn:hover
     text-decoration: none;
     cursor: pointer;
 }
+
+form
+{
+    margin-block-end: 0px;
+}
+
+#footer
+{
+    display: none;
+}
+
 `;
 
 // Inject dark mode style sheet into document head.
