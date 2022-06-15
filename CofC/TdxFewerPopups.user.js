@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TDX Fewer Popups
-// @version      0.0.3
+// @version      0.0.4
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxFewerPopups.user.js
 // @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxFewerPopups.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
@@ -20,7 +20,7 @@
 // _blank   - New tab or new window, depending on browser settings
 // _parent  - Parent of the current context; same as _self if no parent
 // _top     - Topmost ancestor of current context; same as _self if no ancestors
-const defaultTarget = '_top';
+const defaultTarget = '_blank';
 
 // Same valid targets as above.
 // Note: after saving an update, if target is not _blank there's no in-page way to navigate back to the ticket detail page.
