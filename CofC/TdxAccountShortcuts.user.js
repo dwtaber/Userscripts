@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TDX Account Shortcuts
-// @version      2022.6.7.0
+// @version      2022.6.7.1
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxAccountShortcuts.user.js
 // @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxAccountShortcuts.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
@@ -14,6 +14,8 @@
 // ==/UserScript==
 
 
+/* Easily configurable bits start here! */
+
 // Organization field will prefill with this name.
 let orgName = "College of Charleston";
 
@@ -23,6 +25,9 @@ let accounts = [
     {name: "Parent", id: 59055},
     {name: "Alumni", id: 45431}
 ];
+
+/* End of easily configurable bits! */
+
 
 // Takes the TDX account name and ID provided and produces the node for
 // a button that selects that account without going through the search.
