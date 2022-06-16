@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TDX Fewer Popups
-// @version      0.0.4
+// @version      0.0.5
 // @downloadURL  https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxFewerPopups.user.js
 // @updateURL    https://raw.githubusercontent.com/dwtaber/Userscripts/master/CofC/TdxFewerPopups.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
@@ -48,8 +48,7 @@ function openWinToOpen (onclickNode, newTarget)
 
 // After saving an update, there's no in-page way to navigate back to the ticket detail page.
 // This is a workaround until I figure out something cleaner.
-let updateLink = document.querySelector('#divUpdateFromActions')
-if (updateLink != null) {openWinToOpen(updateLink, updateTarget)}
+document.querySelectorAll('#btnUpdateTicket, #divUpdateFromActions').forEach( x => openWinToOpen(x, updateTarget) )
 
 // Strip openWinHref function from links, since they seem to have a usable href attribute to fall back to.
 document.querySelectorAll('a[onclick*=openWinHref]').forEach( x => removeOpenWinHref(x, defaultTarget) );
