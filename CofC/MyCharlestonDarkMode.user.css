@@ -1,9 +1,9 @@
 /*
-==UserScript==
+==UserStyle==
 @name         MyCharleston Admin Dark Mode
 @version      2022.08.25.0
-@downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonDarkMode.user.js
-@updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonDarkMode.user.js
+@downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonDarkMode.user.css
+@updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonDarkMode.user.css
 @namespace    https://github.com/dwtaber/Userscripts
 @supportURL   https://github.com/dwtaber/Userscripts
 @description  Dark mode for MyCharleston admin console
@@ -12,8 +12,8 @@
 @include      https://my.cofc.edu/jsp/*
 @include      https://my.cofc.edu/cp/*
 @exclude      https://my.cofc.edu/cp/home/displaylogin
-@grant        none
-==/UserScript==
+@preprocessor default
+==/UserStyle==
 */
 
 body
