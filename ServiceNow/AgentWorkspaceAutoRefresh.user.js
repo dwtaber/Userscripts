@@ -3,6 +3,7 @@
 // @namespace    https://github.com/dwtaber/Userscripts
 // @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/ServiceNow/AgentWorkspaceAutoRefresh.user.js
 // @updateURL    https://github.com/dwtaber/Userscripts/raw/master/ServiceNow/AgentWorkspaceAutoRefresh.user.js
+// @supportURL   https://github.com/dwtaber/Userscripts/issues
 // @version      0.2
 // @description  Auto-refresh Agent Workspace List
 // @author       Dan Taber (dwtaber@gmail.com)

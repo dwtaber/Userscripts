@@ -4,7 +4,7 @@
 // @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonFixMenuScrollbar.user.js
 // @updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/MyCharlestonFixMenuScrollbar.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
-// @supportURL   https://github.com/dwtaber/Userscripts
+// @supportURL   https://github.com/dwtaber/Userscripts/issues
 // @description  The frame containing the left-hand menu bar won't have a horizontal scrollbar unless the content width actually requires it.
 // @author       Dan Taber
 // @include      https://my.cofc.edu/jsp/admin/menu.jsp*
