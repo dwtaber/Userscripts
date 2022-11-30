@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Faster Banner Searches
 // @version      0.3.0
-// @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/FasterBannerSearches.user.js
-// @updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/FasterBannerSearches.user.js
+// @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/FasterBannerLookup.user.js
+// @updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/FasterBannerLookup.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
 // @supportURL   https://github.com/dwtaber/Userscripts
 // @description  Suppresses per-keystroke search updates to return results faster.
