@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         Faster Banner Searches
-// @version      0.3.0
+// @name         Faster Banner Lookups
+// @version      0.3.1
 // @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/CofC/FasterBannerLookup.user.js
 // @updateURL    https://github.com/dwtaber/Userscripts/raw/master/CofC/FasterBannerLookup.user.js
 // @namespace    https://github.com/dwtaber/Userscripts
