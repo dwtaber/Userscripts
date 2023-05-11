@@ -7,7 +7,7 @@
 // @version      0.3
 // @description  Hides the "this is the primary ticket for..." notification on incidents
 // @author       Dan Taber (dwtaber@gmail.com)
-// @match        https://*.service-now.com/now/workspace/agent/record*
+// @match        https://*.service-now.com/now/workspace/agent/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=service-now.com
 // @grant        none
 // ==/UserScript==
