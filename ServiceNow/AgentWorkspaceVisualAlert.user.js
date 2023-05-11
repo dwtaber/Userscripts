@@ -4,7 +4,7 @@
 // @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/ServiceNow/AgentWorkspaceVisualAlert.user.js
 // @updateURL    https://github.com/dwtaber/Userscripts/raw/master/ServiceNow/AgentWorkspaceVisualAlert.user.js
 // @supportURL   https://github.com/dwtaber/Userscripts/issues
-// @version      0.1
+// @version      0.2
 // @description  Recolor list background when not empty
 // @author       Dan Taber (dwtaber@gmail.com)
 // @match        https://*.service-now.com/now/workspace/agent/*
@@ -39,6 +39,7 @@ function setAlert()
         else
         {
             gridStyle.backgroundColor = "#ffffff"
+            emptyIndicator.style.visibility = 'hidden'
         }
     }
 }
