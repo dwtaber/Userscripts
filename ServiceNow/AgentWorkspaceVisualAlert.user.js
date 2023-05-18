@@ -4,7 +4,7 @@
 // @downloadURL  https://github.com/dwtaber/Userscripts/raw/master/ServiceNow/AgentWorkspaceVisualAlert.user.js
 // @updateURL    https://github.com/dwtaber/Userscripts/raw/master/ServiceNow/AgentWorkspaceVisualAlert.user.js
 // @supportURL   https://github.com/dwtaber/Userscripts/issues
-// @version      0.2
+// @version      0.3
 // @description  Recolor list background when not empty
 // @author       Dan Taber (dwtaber@gmail.com)
 // @match        https://*.service-now.com/now/workspace/agent/*
@@ -12,8 +12,33 @@
 // @grant        none
 // ==/UserScript==
 
+// Configure these to taste.
 let alertColor = "#ff006666"
+let nonAlertColor = ""
 let refreshSeconds = 1;
+
+
+function deepQuerySelectorAll(selector, root) {
+    root = root || document;
+    const results = Array.from(root.querySelectorAll(selector));
+    const pushNestedResults = function (root) {
+        deepQuerySelectorAll(selector, root)
+            .forEach(elem => {
+                if (!results.includes(elem)) {
+                    results.push(elem);
+                }
+            });
+    };
+    if (root.shadowRoot) {
+        pushNestedResults(root.shadowRoot);
+    }
+    for (const elem of root.querySelectorAll('*')) {
+        if (elem.shadowRoot) {
+            pushNestedResults(elem.shadowRoot);
+        }
+    }
+    return results;
+}
 
 function testLocation()
 {
@@ -24,23 +49,21 @@ function setAlert()
 {
     if (testLocation() == true)
     {
-        var grid = document.querySelector("sn-workspace-list-module")
-                           .shadowRoot.querySelector("now-record-list-connected")
-                           .shadowRoot.querySelector("now-record-list")
-                           .shadowRoot.querySelector("now-grid")
+        let grids = deepQuerySelectorAll("now-grid")
 
-        var emptyIndicator = grid.shadowRoot.querySelector("sn-record-list-state-empty")
-        var gridStyle = grid.style
+        grids.forEach(grid => {
+            let emptyIndicator = grid.shadowRoot.querySelector("sn-record-list-state-empty")
 
-        if (emptyIndicator == null)
-        {
-            gridStyle.backgroundColor = alertColor
-        }
-        else
-        {
-            gridStyle.backgroundColor = "#ffffff"
-            emptyIndicator.style.visibility = 'hidden'
-        }
+            if (emptyIndicator == null)
+            {
+                grid.style.backgroundColor = alertColor
+            }
+            else
+            {
+                grid.style.backgroundColor = nonAlertColor
+                emptyIndicator.style.visibility = 'hidden'
+            }
+        });
     }
 }
 
