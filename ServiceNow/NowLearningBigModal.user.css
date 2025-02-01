@@ -1,0 +1,28 @@
+/* Makes SN Learning modals full-height. */
+
+body div[modal-render="true"]
+{
+    height: 100%;
+}
+
+.modal-dialog
+{
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.modal-content
+{
+    height: 100%;
+}
+
+.modal-content div.ng-scope
+{
+    height: 98%;
+}
+
+iframe.scorm-iframe
+{
+    height: 100% !important;
+}
